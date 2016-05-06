@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>前端工程与性能优化 （转） | wcy 的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文转自：前端工程与性能优化
+img[title=高性能网站建设指南]{width:250px;} h3{border:0px!important;}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每个参与过开发企业级 web 应用的前端工程师或许都曾思考过前端性能优化方面的问题。我们有雅虎 14 条性能优化原则，还有两本很经典的性能优化指导书：《高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端工程与性能优化 （转）">
+<meta property="og:url" content="http://wcy.me/2014/12/09/MY-Beautiful-WEB-code1/index.html">
+<meta property="og:site_name" content="wcy 的博客">
+<meta property="og:description" content="本文转自：前端工程与性能优化
+img[title=高性能网站建设指南]{width:250px;} h3{border:0px!important;}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每个参与过开发企业级 web 应用的前端工程师或许都曾思考过前端性能优化方面的问题。我们有雅虎 14 条性能优化原则，还有两本很经典的性能优化指导书：《高">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image1.jpg">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image2.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image3.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image4.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image5.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image6.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image7.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image8.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image9.png">
+<meta property="og:image" content="http://wcy.me/photo/best_web_site/image10.png">
+<meta property="og:updated_time" content="2014-12-24T09:37:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端工程与性能优化 （转）">
+<meta name="twitter:description" content="本文转自：前端工程与性能优化
+img[title=高性能网站建设指南]{width:250px;} h3{border:0px!important;}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每个参与过开发企业级 web 应用的前端工程师或许都曾思考过前端性能优化方面的问题。我们有雅虎 14 条性能优化原则，还有两本很经典的性能优化指导书：《高">
+<meta name="twitter:image" content="http://wcy.me/photo/best_web_site/image1.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="wcy 的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dean</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dean</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dean</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="photo-MY-Beautiful-WEB-code1" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/09/MY-Beautiful-WEB-code1/" class="article-date">
+  	<time datetime="2014-12-09T02:58:56.000Z" itemprop="datePublished">2014-12-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端工程与性能优化 （转）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端优化/">前端优化</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文转自：<a href="http://fex.baidu.com/blog/2014/03/fis-optimize/" target="_blank" rel="external">前端工程与性能优化</a></p>
+<p><style>img[title=高性能网站建设指南]{width:250px;} h3{border:0px!important;}</style><br><img src="/photo/best_web_site/image1.jpg" alt="高性能网站建设指南" title="高性能网站建设指南"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每个参与过开发企业级 web 应用的前端工程师或许都曾思考过前端性能优化方面的问题。我们有雅虎 14 条性能优化原则，还有两本很经典的性能优化指导书：《高性能网站建设指南》、《高性能网站建设进阶指南》。经验丰富的工程师对于前端性能优化方法耳濡目染，基本都能一一列举出来。这些性能优化原则大概是在 7 年前提出的，对于 web 性能优化至今都有非常重要的指导意义。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，对于构建大型 web 应用的团队来说，要坚持贯彻这些优化原则并不是一件十分容易的事。因为优化原则中很多要求与工程管理相违背，比如“把 css 放在头部”和“把 js 放在尾部”这两条原则，我们不能让整个团队的工程师在写样式和脚本引用的时候都去修改同一份的页面文件。这会严重影响团队成员间并行开发的效率，尤其是在团队有版本管理的情况下，每天要花大量的时间进行代码修改合并，这项成本是难以接受的。因此在前端工程界，总会看到周期性的性能优化工作，辛勤的前端工程师们每到月圆之夜就会倾巢出动根据优化原则做一次最佳实践。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文从一个全新的视角来思考 web 性能优化与前端工程之间的关系，通过解读百度前端集成解决方案小组（F.I.S）在打造高性能前端架构并统一百度 40 多条前端产品线的过程中所经历的技术尝试，揭示前端性能优化在前端架构及开发工具设计层面的实现思路。<br><br></p>
+<blockquote>
+<p>###性能优化原则及分类#######</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;笔者先假设本文的读者是有前端开发经验的工程师，并对企业级 web 应用开发及性能优化有一定的思考。因此我不会重复介绍雅虎 14 条性能优化原则，如果您没有这些前续知识的，请移步<a href="https://developer.yahoo.com/performance/rules.html" target="_blank" rel="external">这里</a>来学习。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，我们把雅虎 14 条优化原则，《高性能网站建设指南》以及《高性能网站建设进阶指南》中提到的优化点做一次梳理，如果按照优化方向分类可以得到这样一张表格：</p>
+<table><thead><tr><th style="width: 80px;"><h4>优化方向</h4></th><th style="text-align: center;"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>请求数量</td><td>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</td></tr><tr><td>请求带宽</td><td>开启 GZip，精简 JavaScript，移除重复脚本，图像优化</td></tr><tr><td>缓存利用</td><td>使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存</td></tr><tr><td>页面结构</td><td>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</td></tr><tr><td>代码校验</td><td>避免 CSS 表达式，避免重定向</td></tr></tbody></table>
+
+
+<a id="more"></a>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前大多数前端团队可以利用<a href="http://yui.github.io/yuicompressor/" target="_blank" rel="external">yui compressor</a>或者<a href="https://code.google.com/p/closure-compiler/" target="_blank" rel="external">google closure compiler</a>等压缩工具很容易做到“精简 javascript ”这条原则，同样的，也可以使用图片压缩工具对图像进行压缩，实现“图像优化”原则，这两条原则是对单个资源的处理，因此不会引起任何工程方面的问题；很多团队也通过引入代码校验流程来确保实现“避免 css 表达式”和“避免重定向”原则；目前绝大多数互联网公司也已经开启了服务端的 Gzip 压缩，并使用 CDN 实现静态资源的缓存和快速访问；一些技术实力雄厚的前端团队甚至研发出了自动 CSS Sprites 工具，解决了 CSS Sprites 在工程维护方面的难题。使用“查找 - 替换”思路，我们似乎也可以很好的实现“划分主域”原则。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们把以上这些已经成熟应用到实际生产中的优化手段去除掉，留下那些还没有很好实现的优化原则，再来回顾一下之前的性能优化分类:</p>
+<table><thead><tr><th style="width: 80px;"><h4>优化方向</h4></th><th style="text-align: center;"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>请求数量</td><td>合并脚本和样式表，拆分初始化负载</td></tr><tr><td>请求带宽</td><td>移除重复脚本</td></tr><tr><td>缓存利用</td><td>添加 Expires 头，配置 ETag，使 Ajax 可缓存</td></tr><tr><td>页面结构</td><td>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</td></tr></tbody></table>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;诚然，不可否认现在有很多顶尖的前端团队可以将上述还剩下的优化原则也都一一解决，但业界大多数团队都还没能很好的解决这些问题，因此接下来本文将就这些原则的解决方案做进一步的分析与讲解，从而为那些还没有进入前端工业化开发的团队提供一些基础技术建设意见，也借此机会与业界顶尖的前端团队在工业化工程化方向上交流一下彼此的心得。</p>
+<blockquote>
+<p>###静态资源版本更新与缓存#######</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如表格 2 所示，在“缓存利用”分类中保留了“添加 Expires 头”和“配置 ETag ”两项，或许有些人会质疑，明明这两项只要配置了服务器的相关选项就可以实现，为什么说它们难以解决呢？确实，开启这两项很容易，但开启了缓存后，我们的项目就开始面临另一个挑战：如何更新这些缓存。</p>
+<p>相信大多数团队也找到了类似的答案，它和《高性能网站建设指南》关于“添加 Expires 头”所说的原则一样——修订文件名。即：</p>
+<p>思路没错，但要怎么改变链接呢？变成什么样的链接才能有效更新缓存，又能最大限度避免那些没有修改过的文件缓存不失效呢？</p>
+<p>先来看看现在一般前端团队的做法：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a.js?t=20130825&quot;&gt;&lt;/script&gt;
+</code></pre><p>或者</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a.js?v=1.0.0&quot;&gt;&lt;/script&gt;
+</code></pre><p>大家会采用添加 query 的形式修改链接。这样做是比较直观的解决方案，但在访问量较大的网站，这么做可能将面临一些新的问题。<br>通常一个大型的 web 应用几乎每天都会有迭代和更新，发布新版本也就是发布新的静态资源和页面的过程。以上述代码为例，假设现在线上运行着 index.html 文件，并且使用了线上的 a.js 资源。index.html 的内容为：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a.js?v=1.0.0&quot;&gt;&lt;/script&gt;
+</code></pre><p>这次我们更新了页面中的一些内容，得到一个 index.html 文件，并开发了新的与之匹配的 a.js 资源来完成页面交互，新的 index.html 文件的内容因此而变成了：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a.js?v=1.0.1&quot;&gt;&lt;/script&gt;
+</code></pre><blockquote>
+<p>好了，现在要开始将两份新的文件发布到线上去。可以看到，a.html 和 a.js 的资源实际上是要覆盖线上的同名文件的。不管怎样，在发布的过程中，index.html 和 a.js 总有一个先后的顺序，从而中间出现一段或大或小的时间间隔。对于一个大型互联网应用来说即使在一个很小的时间间隔内，都有可能出现新用户访问，而在这个时间间隔中访问了网站的用户会发生什么情况呢：</p>
+<ul>
+<li>如果先覆盖 index.html，后覆盖 a.js，用户在这个时间间隙访问，会得到新的 index.html 配合旧的 a.js 的情况，从而出现错误的页面。</li>
+<li>如果先覆盖 a.js，后覆盖 index.html，用户在这个间隙访问，会得到旧的 index.html 配合新的 a.js 的情况，从而也出现了错误的页面。<br>这就是为什么大型 web 应用在版本上线的过程中经常会较集中的出现前端报错日志的原因，也是一些互联网公司选择加班到半夜等待访问低峰期再上线的原因之一。此外，由于静态资源文件版本更新是“覆盖式”的，而页面需要通过修改 query 来更新，对于使用 CDN 缓存的 web 产品来说，还可能面临 CDN 缓存攻击的问题。我们再来观察一下前面说的版本更新手段：</li>
+</ul>
+</blockquote>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a.js?v=1.0.0&quot;&gt;&lt;/script&gt;
+</code></pre><blockquote>
+<ul>
+<li>我们不难预测，a.js 的下一个版本是“ 1.0.1 ”，那么就可以刻意构造一串这样的请求“ a.js?v=1.0.1 ”、“ a.js?v=1.0.2 ”、……让 CDN 将当前的资源缓存为“未来的版本”。这样当这个页面所用的资源有更新时，即使更改了链接地址，也会因为 CDN 的原因返回给用户旧版本的静态资源，从而造成页面错误。即便不是刻意制造的攻击，在上线间隙出现访问也可能导致区域性的 CDN 缓存错误。</li>
+</ul>
+<ul>
+<li>此外，当版本有更新时，修改所有引用链接也是一件与工程管理相悖的事，至少我们需要一个可以“查找 - 替换”的工具来自动化的解决版本号修改的问题。</li>
+</ul>
+<ul>
+<li>对付这个问题，目前来说最优方案就是 基于文件内容的 hash 版本冗余机制 了。也就是说，我们希望工程师源码是这么写的：</li>
+</ul>
+</blockquote>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>但是线上代码是这样的：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;a_8244e91.js&quot;&gt;&lt;/script&gt;
+</code></pre><blockquote>
+<p>其中”_82244e91 ”这串字符是根据 a.js 的文件内容进行 hash 运算得到的，只有文件内容发生变化了才会有更改。由于版本序列是与文件名写在一起的，而不是同名文件覆盖，因此不会出现上述说的那些问题。那么这么做都有哪些好处呢？</p>
+<ul>
+<li>线上的 a.js 不是同名文件覆盖，而是文件名 +hash 的冗余，所以可以先上线静态资源，再上线 html 页面，不存在间隙问题；</li>
+<li>遇到问题回滚版本的时候，无需回滚 a.js，只须回滚页面即可；</li>
+<li>由于静态资源版本号是文件内容的 hash，因此所有静态资源可以开启永久强缓存，只有更新了内容的文件才会缓存失效，缓存利用率大增；</li>
+<li>修改静态资源后会在线上产生新的文件，一个文件对应一个版本，因此不会受到构造 CDN 缓存形式的攻击</li>
+</ul>
+</blockquote>
+<p>虽然这种方案是相比之下最完美的解决方案，但它无法通过手工的形式来维护，因为要依靠手工的形式来计算和替换 hash 只，并生成相应的文件将是一项非常繁琐且容易出错的工作。因此，我们需要借助工具。有了这样的思路，我们下面就来了解一下 fis 是如何完成这项工作的。</p>
+<p>首先，之所以有这种工具需求，完全是因为 web 应用运行的根本机制决定的：web 应用所需的资源是以字面的形式通知浏览器下载而聚合在一起运行的。这种资源加载策略使得 web 应用从本质上区别于传统桌面应用的版本更新方式，也是大型 web 应用需要工具处理的最根本原因。为了实现资源定位的字面量替换操作，前端构建工具理论上需要识别所有资源定位的标记，其中包括：</p>
+<ul>
+<li>css 中的@import url(path)、background:url(path)、backgournd-image:url(path)、filter 中的 src</li>
+<li>js 中的自定义资源定位函数，在 fis 中我们将其规定为__uri(path)。</li>
+<li>html 中的<code>&lt;script src=” path ”&gt;、&lt;link href=” path ”&gt;、&lt;img src=” path ”&gt;</code>、已经 embed、audio、video、object 等具有资源加载功能的标签。</li>
+</ul>
+<p>为了工程上的维护方便，我们希望工程师在源码中写的是相对路径，而工具可以将其替换为线上的绝对路径，从而避免相对路径定位错误的问题（比如 js 中需要定位图片路径时不能使用相对路径的情况）。<br><img src="/photo/best_web_site/image2.png" alt="" title=" "><br>fis 有一个非常棒的资源定位系统，它是根据用户自己的配置来指定资源发布后的地址，然后由 fis 的资源定位系统识别文件中的定位标记，计算内容 hash，并根据配置替换为上线后的绝对 url 路径。</p>
+<p>要想实现具备 hash 版本生成功能的构建工具不是“查找 - 替换”这么简单的，我们考虑这样一种情况：<br><img src="/photo/best_web_site/image3.png" alt="" title=" "></p>
+<p>由于我们的资源版本号是通过对文件内容进行 hash 运算得到，如上图所示，index.html 中引用的 a.css 文件的内容其实也包含了 a.png 的 hash 运算结果，因此我们在修改 index.html 中 a.css 的引用时，不能直接计算 a.css 的内容 hash，而是要先计算出 a.png 的内容 hash，替换 a.css 中的引用，得到了 a.css 的最终内容，再做 hash 运算，最后替换 index.html 中的引用。</p>
+<p>这意味着构建工具需要具备“递归编译”的能力，这也是为什么 fis 团队不得不放弃 gruntjs 等 task-based 系统的根本原因。针对前端项目的构建工具必须是具备递归处理能力的。此外，由于文件之间的交叉引用等原因，fis 构建工具还实现了构建缓存等机制，以提升构建速度。</p>
+<p>在解决了基于内容 hash 的版本更新问题之后，我们可以将所有前端静态资源开启永久强缓存，每次版本发布都可以首先让静态资源全量上线，再进一步上线模板或者页面文件，再也不用担心各种缓存和时间间隙的问题了！</p>
+<blockquote>
+<h3 id="静态资源管理与模板框架"><a href="#静态资源管理与模板框架" class="headerlink" title="静态资源管理与模板框架"></a>静态资源管理与模板框架</h3></blockquote>
+<p>让我们再来看看前面的优化原则表还剩些什么：</p>
+<table><thead><tr><th style="width: 80px;"><h4>优化方向</h4></th><th style="text-align: center;"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>请求数量</td><td>合并脚本和样式表，拆分初始化负载</td></tr><tr><td>请求带宽</td><td>移除重复脚本</td></tr><tr><td>缓存利用</td><td>使 Ajax 可缓存</td></tr><tr><td>页面结构</td><td>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</td></tr></tbody></table>
+
+<p>很不幸，剩下的优化原则都不是使用工具就能很好实现的。或许有人会辩驳：“我用某某工具可以实现脚本和样式表合并”。嗯，必须承认，使用工具进行资源合并并替换引用或许是一个不错的办法，但在大型 web 应用，这种方式有一些非常严重的缺陷，来看一个很熟悉的例子：</p>
+<p><img src="/photo/best_web_site/image4.png" alt="" title=" "></p>
+<p>某个 web 产品页面有 A、B、C 三个资源</p>
+<p><img src="/photo/best_web_site/image5.png" alt="" title=" "></p>
+<p>工程师根据“减少 HTTP 请求”的优化原则合并了资源</p>
+<p><img src="/photo/best_web_site/image6.png" alt="" title=" "></p>
+<p>产品经理要求 C 模块按需出现，此时 C 资源已出现多余的可能</p>
+<p><img src="/photo/best_web_site/image7.png" alt="" title=" "></p>
+<p>C 模块不再需要了，注释掉吧！但 C 资源通常不敢轻易剔除</p>
+<p><img src="/photo/best_web_site/image8.png" alt="" title=" "></p>
+<p>不知不觉中，性能优化变成了性能恶化……</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;事实上，使用工具在线下进行静态资源合并是无法解决资源按需加载的问题的。如果解决不了按需加载，则势必会导致资源的冗余；此外，线下通过工具实现的资源合并通常会使得资源加载和使用的分离，比如在页面头部或配置文件中写资源引用及合并信息，而用到这些资源的 html 组件写在了页面其他地方，这种书写方式在工程上非常容易引起维护不同步的问题，导致使用资源的代码删除了，引用资源的代码却还在的情况。因此，在工业上要实现资源合并至少要满足如下需求：</p>
+<pre><code>1. 确实能减少 HTTP 请求，这是基本要求（合并）
+2. 在使用资源的地方引用资源（就近依赖），不使用不加载（按需）
+3. 虽然资源引用不是集中书写的，但资源引用的代码最终还能出现在页面头部（css）或尾部（js）
+4. 能够避免重复加载资源（去重）
+</code></pre><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将以上要求综合考虑，不难发现，单纯依靠前端技术或者工具处理的是很难达到这些理想要求的。现代大型 web 应用所展示的页面绝大多数都是使用服务端动态语言拼接生成的。有的产品使用模板引擎，比如 smarty、velocity，有的则干脆直接使用动态语言，比如 php、python。无论使用哪种方式实现，前端工程师开发的 html 绝大多数最终都不是以静态的 html 在线上运行的，接下来我会讲述一种新的模板架构设计，用以实现前面说到那些性能优化原则，同时满足工程开发和维护的需要，这种架构设计的核心思想就是：</p>
+<p>考虑一段这样的页面代码：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;A.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;B.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;C.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;html of A&lt;/div&gt;
+        &lt;div&gt;html of B&lt;/div&gt;
+        &lt;div&gt;html of C&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>根据资源合并需求中的第二项，我们希望资源引用与使用能尽量靠近，这样将来维护起来会更容易一些，因此，理想的源码是：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;A.css&quot;&gt;&lt;div&gt;html of A&lt;/div&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;B.css&quot;&gt;&lt;div&gt;html of B&lt;/div&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;C.css&quot;&gt;&lt;div&gt;html of C&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当然，把这样的页面直接送达给浏览器用户是会有严重的页面闪烁问题的，所以我们实际上仍然希望最终页面输出的结果还是如最开始的截图一样，将 css 放在头部输出。这就意味着，页面结构需要有一些调整，并且有能力收集资源加载需求，那么我们考虑一下这样的源码：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+        &lt;!--[CSS LINKS PLACEHOLDER]--&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {require name=&quot;A.css&quot;}&lt;div&gt;html of A&lt;/div&gt;
+        {require name=&quot;B.css&quot;}&lt;div&gt;html of B&lt;/div&gt;
+        {require name=&quot;C.css&quot;}&lt;div&gt;html of C&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在页面的头部插入一个 html 注释“<!--[CSS LINKS PLACEHOLDER]-->”作为占位，而将原来字面书写的资源引用改成模板接口（require）调用，该接口负责收集页面所需资源。require 接口实现非常简单，就是准备一个数组，收集资源引用，并且可以去重。最后在页面输出的前一刻，我们将 require 在运行时收集到的“ A.css ”、“ B.css ”、“ C.css ”三个资源拼接成 html 标签，替换掉注释占位“<!--[CSS LINKS PLACEHOLDER]-->”，从而得到我们需要的页面结构。</p>
+<p>经过 fis 团队的总结，我们发现模板层面只要实现三个开发接口，既可以比较完美的实现目前遗留的大部分性能优化原则，这三个接口分别是：</p>
+<ul>
+<li>require(String id)：收集资源加载需求的接口，参数是资源 id。</li>
+<li>widget(String template_id)：加载拆分成小组件模板的接口。你可以叫它为 load、component 或者 pagelet 之类的。总之，我们需要一个接口把一个大的页面模板拆分成一个个的小部分来维护，最后在原来的大页面以组件为单位来加载这些小部件。</li>
+<li>script(String code)：收集写在模板中的 js 脚本，使之出现的页面底部，从而实现性能优化原则中的“将 js 放在页面底部”原则。</li>
+</ul>
+<p>实现了这些接口之后，一个重构后的模板页面的源代码可能看起来就是这样的了：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+        &lt;!--[CSS LINKS PLACEHOLDER]--&gt;
+        {require name=&quot;jquery.js&quot;}
+        {require name=&quot;bootstrap.css&quot;}
+    &lt;/head&gt;
+    &lt;body&gt;
+        {require name=&quot;A/A.css&quot;}{widget name=&quot;A/A.tpl&quot;}
+        {script}console.log(&apos;A loaded&apos;){/script}
+
+
+        {require name=&quot;B/B.css&quot;}{widget name=&quot;B/B.tpl&quot;}
+        {require name=&quot;C/C.css&quot;}{widget name=&quot;C/C.tpl&quot;}
+
+        &lt;!--[SCRIPTS PLACEHOLDER]--&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>而最终在模板解析的过程中，资源收集与去重、页面 script 收集、占位符替换操作，最终从服务端发送出来的 html 代码为：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;bootstrap.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;A/A.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;B/B.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;C/C.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;html of A&lt;/div&gt;
+        &lt;div&gt;html of B&lt;/div&gt;
+        &lt;div&gt;html of C&lt;/div&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;console.log(&apos;A loaded&apos;);&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>不难看出，我们目前已经实现了“按需加载”，“将脚本放在底部”，“将样式表放在头部”三项优化原则。</p>
+<p>前面讲到静态资源在上线后需要添加 hash 戳作为版本标识，那么这种使用模板语言来收集的静态资源该如何实现这项功能呢？答案是：静态资源依赖关系表。 假设前面讲到的模板源代码所对应的目录结构为下图所示：<br><img src="/photo/best_web_site/image9.png" alt="" title=" "></p>
+<p>那么我们可以使用工具扫描整个 project 目录，然后创建一张资源表，同时记录每个资源的部署路径，可以得到这样的一张表：</p>
+<pre><code>{
+    &quot;res&quot;: {
+        &quot;A/A.css&quot;: {
+            &quot;uri&quot;: &quot;/A/A_1688c82.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;B/B.css&quot;: {
+            &quot;uri&quot;: &quot;/B/B_52923ed.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;C/C.css&quot;: {
+            &quot;uri&quot;: &quot;/C/C_6dda653.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;bootstrap.css&quot;: {
+            &quot;uri&quot;: &quot;bootstrap_08f2256.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;jquery.js&quot;: {
+            &quot;uri&quot;: &quot;jquery_9155343.css&quot;,
+            &quot;type&quot;: &quot;js&quot;
+        },
+    },
+    &quot;pkg&quot;: {}
+}
+</code></pre><p>接下来，我们讨论如何在基于表的设计思想上是如何实现静态资源合并的。或许有些团队使用过 combo 服务，也就是我们在最终拼接生成页面资源引用的时候，并不是生成多个独立的 link 标签，而是将资源地址拼接成一个 url 路径，请求一种线上的动态资源合并服务，从而实现减少 HTTP 请求的需求，比如：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/combo?files=bootstrap_08f2256.css,A/A_1688c82.css,B/B_52923ed.css,C/C_6dda653.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;html of A&lt;/div&gt;
+        &lt;div&gt;html of B&lt;/div&gt;
+        &lt;div&gt;html of C&lt;/div&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;jquery_9155343.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;console.log(&apos;A loaded&apos;);&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>这个“/combo?files=file1,file2,file3,…”的 url 请求响应就是动态 combo 服务提供的，它的原理很简单，就是根据 get 请求的 files 参数找到对应的多个文件，合并成一个文件来响应请求，并将其缓存，以加快访问速度。</p>
+<p>这种方法很巧妙，有些服务器甚至直接集成了这类模块来方便的开启此项服务，这种做法也是大多数大型 web 应用的资源合并做法。但它也存在一些缺陷：</p>
+<ul>
+<li>浏览器有 url 长度限制，因此不能无限制的合并资源。</li>
+<li>如果用户在网站内有公共资源的两个页面间跳转访问，由于两个页面的 combo 的 url 不一样导致用户不能利用浏览器缓存来加快对公共资源的访问速度。</li>
+</ul>
+<p>对于上述第二条缺陷，可以举个例子来看说明：</p>
+<ul>
+<li>假设网站有两个页面 A 和 B</li>
+<li>A 页面使用了 a，b，c，d 四个资源</li>
+<li>B 页面使用了 a，b，e，f 四个资源</li>
+<li>如果使用 combo 服务，我们会得：<blockquote>
+<ul>
+<li>A 页面的资源引用为：/combo?files=a,b,c,d</li>
+<li>B 页面的资源引用为：/combo?files=a,b,e,f</li>
+</ul>
+</blockquote>
+</li>
+<li>两个页面引用的资源是不同的 url，因此浏览器会请求两个合并后的资源文件，跨页面访问没能很好的利用 a、b 这两个资源的缓存。</li>
+</ul>
+<p>很明显，如果 combo 服务能聪明的知道 A 页面使用的资源引用为“/combo?files=a,b ”和“/combo?files=c,d ”，而 B 页面使用的资源引用为“/combo?files=a,b ”，“/combo?files=e,f ”就好了。这样当用户在访问 A 页面之后再访问 B 页面时，只需要下载 B 页面的第二个 combo 文件即可，第一个文件已经在访问 A 页面时缓存好了的。</p>
+<p>基于这样的思考，fis 在资源表上新增了一个字段，取名为“ pkg ”，就是资源合并生成的新资源，表的结构会变成：</p>
+<pre><code>{
+    &quot;res&quot;: {
+        &quot;A/A.css&quot;: {
+            &quot;uri&quot;: &quot;/A/A_1688c82.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;B/B.css&quot;: {
+            &quot;uri&quot;: &quot;/B/B_52923ed.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;C/C.css&quot;: {
+            &quot;uri&quot;: &quot;/C/C_6dda653.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;bootstrap.css&quot;: {
+            &quot;uri&quot;: &quot;bootstrap_08f2256.css&quot;,
+            &quot;type&quot;: &quot;css&quot;
+        },
+        &quot;jquery.js&quot;: {
+            &quot;uri&quot;: &quot;jquery_9155343.css&quot;,
+            &quot;type&quot;: &quot;js&quot;
+        },
+    },
+    &quot;pkg&quot;: {
+        &quot;p0&quot;: {
+            &quot;uri&quot;: &quot;/pkg/utils_b967346.css&quot;,
+            &quot;type&quot;: &quot;css&quot;,
+            &quot;has&quot;: [&quot;bootstrap.css&quot;, &quot;A/A.css&quot;]
+        },
+        &quot;p1&quot;: {
+            &quot;uri&quot;: &quot;/pkg/others_0d4552a.css&quot;,
+            &quot;type&quot;: &quot;css&quot;,
+            &quot;has&quot;: [&quot;B/B.css&quot;, &quot;C/C.css&quot;]
+        }
+    }
+}
+</code></pre><p>相比之前的表，可以看到新表中多了一个 pkg 字段，并且记录了打包后的文件所包含的独立资源。这样，我们重新设计一下{require name=” id ”}这个模板接口：在查表的时候，如果一个静态资源有 pkg 字段，那么就去加载 pkg 字段所指向的打包文件，否则加载资源本身。比如执行{require name=” bootstrap.css ”}，查表得知 bootstrap.css 被打包在了“ p0 ”中，因此取出 p0 包的 url “/pkg/utils_b967346.css ”，并且记录页面已加载了“ bootstrap.css ”和“ A/A.css ”两个资源。这样一来，之前的模板代码执行之后得到的 html 就变成了：</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;hello world&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;pkg/utils_b967346.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;pkg/others_0d4552a.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;html of A&lt;/div&gt;
+        &lt;div&gt;html of B&lt;/div&gt;
+        &lt;div&gt;html of C&lt;/div&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;jquery_9155343.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot;&gt;console.log(&apos;A loaded&apos;);&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>css 资源请求数由原来的 4 个减少为 2 个。 这样的打包结果是怎么来的呢？答案是配置得到的。 我们来看一下带有打包结果的资源表的 fis 配置：</p>
+<pre><code>fis.config.set(&apos;pack&apos;, {
+    &apos;pkg/util.css&apos;: [ &apos;bootstrap.css&apos;, &apos;A/A.css&apos;],
+    &apos;pkg/other.css&apos;: [ &apos;**.css&apos; ]
+});
+</code></pre><p>我们将“ bootstrap.css ”、“ A/A.css ”打包在一起，其他 css 另外打包，从而生成两个打包文件，当页面需要打包文件中的资源时，模块框架就会收集并计算出最优的资源加载结果，从而解决静态资源合并的问题。</p>
+<p>这样做的原因是为了弥补 combo 在前面讲到的两点技术上的不足而设计的。但也不难发现这种打包策略是需要配置的，这就意味着维护成本的增加。但好在它有两个优势可以一定程度上弥补这个问题：</p>
+<blockquote>
+<ol>
+<li>打包的资源只是原来独立资源的备份。打包与否不会导致资源的丢失，最多是没有合并的很好而已。<ol>
+<li>配置可以由工程师根据经验人工维护，也可以由统计日志生成，这为性能优化自适应网站设计提供了非常好的基础。</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<p>关于第二点，fis 有这样辅助系统来支持自适应打包算法：<br><img src="/photo/best_web_site/image10.png" alt="" title=" "></p>
+<p>至此，我们通过基于表的静态资源管理系统和三个模板接口实现了几个重要的性能优化原则，现在我们再来回顾一下前面的性能优化原则分类表，剔除掉已经做到了的，看看还剩下哪些没做到的：</p>
+<table><thead><tr><th style="width:80px"><h4>优化方向</h4></th><th style="text-align:center"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>请求数量</td><td>拆分初始化负载</td></tr><tr><td>请求带宽</td><td>拆分初始化负载</td></tr><tr><td>缓存利用</td><td>使 Ajax 可缓存</td></tr><tr><td>页面结构</td><td>尽早刷新文档的输出</td></tr></tbody></table>
+
+<p>“拆分初始化负载”的目标是将页面一开始加载时不需要执行的资源从所有资源中分离出来，等到需要的时候再加载。工程师通常没有耐心去区分资源的分类情况，但我们可以利用组件化框架接口来帮助工程师管理资源的使用。还是从例子开始思考：</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;hello world&lt;/title&gt;
+    {require name=&quot;jquery.js&quot;}
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id=&quot;myBtn&quot;&gt;Click Me&lt;/button&gt;
+    {script}
+        $(&apos;#myBtn&apos;).click(function(){
+            var dialog = require(&apos;dialog/dialog.js&apos;);
+            dialog.alert(&apos;you catch me!&apos;);
+        });
+    {/script}
+
+    &lt;!--[SCRIPTS PLACEHOLDER]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>在 fis 给百度内部团队开发的架构中，如果这样书写代码，页面最终的执行结果会变成：</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;hello world&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id=&quot;myBtn&quot;&gt;Click Me&lt;/button&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/jquery_9151577.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/dialog/dialog_ae8c228.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    $(&apos;#myBtn&apos;).click(function(){
+        var dialog = require(&apos;dialog/dialog.js&apos;);
+        dialog.alert(&apos;you catch me!&apos;);
+    });
+    &lt;/script&gt;
+
+    &lt;!--[SCRIPTS PLACEHOLDER]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>fis 系统会分析页面中 require(id)函数的调用，并将依赖关系记录到资源表对应资源的 deps 字段中，从而在页面渲染查表时可以加载依赖的资源。但此时 dialog.js 是以 script 标签的形式同步加载的，这样会在页面初始化时出现资源的浪费。因此，fis 团队提供了 require.async 的接口，用于异步加载一些资源，源码修改为：</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;hello world&lt;/title&gt;
+    {require name=&quot;jquery.js&quot;}
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id=&quot;myBtn&quot;&gt;Click Me&lt;/button&gt;
+    {script}
+        $(&apos;#myBtn&apos;).click(function() {
+            require.async(&apos;dialog/dialog.js&apos;, function( dialog ) {
+                dialog.alert(&apos;you catch me!&apos;);
+            });
+        });
+    {/script}
+
+    &lt;!--[SCRIPTS PLACEHOLDER]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>这样书写之后，fis 系统会在表里以 async 字段来标准资源依赖关系是异步的。fis 提供的静态资源管理系统会将页面输出的结果修改为：</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;hello world&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id=&quot;myBtn&quot;&gt;Click Me&lt;/button&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/jquery_9151577.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;/dialog/dialog_ae8c228.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    $(&apos;#myBtn&apos;).click(function() {
+        require.async(&apos;dialog/dialog.js&apos;, function( dialog ) {
+            dialog.alert(&apos;you catch me!&apos;);
+        });
+    });
+    &lt;/script&gt;
+
+    &lt;!--[SCRIPTS PLACEHOLDER]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>dialog.js 不会在页面以 script src 的形式输出，而是变成了资源注册，这样，当页面点击按钮触发 require.async 执行的时候，async 函数才会查表找到资源的 url 并加载它，加载完毕后触发回调函数。</p>
+<p>到目前为止，我们又以架构的形式实现了一项优化原则（拆分初始化负载），回顾我们的优化分类表，现在仅有两项没能做到了：</p>
+<table><thead><tr><th style="width:80px"><h4>优化方向</h4></th><th style="text-align:center"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>缓存利用</td><td>使 Ajax 可缓存</td></tr><tr><td>页面结构</td><td>尽早刷新文档的输出</td></tr></tbody></table>
+
+<p>剩下的两项优化原则要做到并不容易，真正可缓存的 Ajax 在现实开发中比较少见，而尽早刷新文档的输出的情况 facebook 在 2010 年的 velocity 上提到过，就是 BigPipe 技术。当时 facebook 团队还讲到了 Quickling 和 PageCache 两项技术，其中的 PageCache 算是比较彻底的实现 Ajax 可缓存的优化原则了。fis 团队也曾与某产品线合作基于静态资源表、模板组件化等技术实现了页面的 PipeLine 输出、以及 Quickling 和 PageCache 功能，但最终效果没有达到理想的性能优化预期，因此这两个方向尚在探索中，相信在不久的将来会有新的突破。</p>
+<blockquote>
+<p>总结</p>
+</blockquote>
+<p>其实在前端开发工程管理领域还有很多细节值得探索和挖掘，提升前端团队生产力水平并不是一句空话，它需要我们能对前端开发及代码运行有更深刻的认识，对性能优化原则有更细致的分析与研究。fis 团队一直致力于从架构而非经验的角度实现性能优化原则；解决前端工程师开发、调试、部署中遇到的工程问题；提供组件化框架，提高代码复用率；提供开发工具集，提升工程师的开发效率。在前端工业化开发的所有环节均有可节省的人力成本，这些成本非常可观，相信现在很多大型互联网公司也都有了这样的共识。 本文只是将这个领域中很小的一部分知识的展开讨论，抛砖引玉，希望能为业界相关领域的工作者提供一些不一样的思路。欢迎关注fis项目，对本文有任何意见或建议都可以在 <a href="https://github.com/fex-team/fis-plus" target="_blank" rel="external">fis</a> 开源项目中进行反馈和讨论。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/12/23/SVNCommand/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          SVN 命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/05/CSS-length-change/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS 长度转换</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="MY-Beautiful-WEB-code1" data-title="前端工程与性能优化 （转）" data-url="http://wcy.me/2014/12/09/MY-Beautiful-WEB-code1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Dean
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

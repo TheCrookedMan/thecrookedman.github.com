@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>HTML5 新特性 （三） 杂记 | wcy 的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. 标记元素 (Mark Element)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用&amp;lt;mark&amp;gt;修饰一下。
+ Search Results 
+ The">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5 新特性 （三） 杂记">
+<meta property="og:url" content="http://wcy.me/2014/12/03/HTML5-NEW-PROPERTY3/index.html">
+<meta property="og:site_name" content="wcy 的博客">
+<meta property="og:description" content="1. 标记元素 (Mark Element)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用&amp;lt;mark&amp;gt;修饰一下。
+ Search Results 
+ The">
+<meta property="og:updated_time" content="2014-12-04T07:41:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5 新特性 （三） 杂记">
+<meta name="twitter:description" content="1. 标记元素 (Mark Element)&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用&amp;lt;mark&amp;gt;修饰一下。
+ Search Results 
+ The">
+  
+    <link rel="alternative" href="/atom.xml" title="wcy 的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dean</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dean</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dean</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="photo-HTML5-NEW-PROPERTY3" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/03/HTML5-NEW-PROPERTY3/" class="article-date">
+  	<time datetime="2014-12-03T02:50:39.000Z" itemprop="datePublished">2014-12-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML5 新特性 （三） 杂记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-标记元素-Mark-Element"><a href="#1-标记元素-Mark-Element" class="headerlink" title="1. 标记元素 (Mark Element)"></a>1. 标记元素 (Mark Element)</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你可以把它当做高亮标签。被这个标签修饰的字符串应当和用户当前的行动相关。比如说，当我在某博客中搜索“Open your Mind”时，我可以利用一些JavaScript将出现的词组用<code>&lt;mark&gt;</code>修饰一下。</p>
+<p></p><h3> Search Results </h3><p></p>
+<p> They were interrupted, just after Quato said, <mark>“Open your Mind”</mark>. </p>
+
+<pre><code>&lt;h3&gt; Search Results &lt;/h3&gt;
+&lt;p&gt; They were interrupted, just after Quato said, &lt;mark&gt;&quot;Open your Mind&quot;&lt;/mark&gt;. &lt;/p&gt;
+</code></pre><h1 id="2-重新定义-Small-Element-redefined"><a href="#2-重新定义-Small-Element-redefined" class="headerlink" title="2. 重新定义 (Small Element redefined)"></a>2. 重新定义<small> (Small Element redefined)</small></h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在HTML4或XHTML中，<code>&lt;small&gt;</code> 元素已经存在。然而，却没有如何正确使用这一元素的完整说明。在HTML5中，<code>&lt;small&gt;</code> 被用来定义小字。试想下你网站底部的版权状态，根据对此元素新的HTML5定义，<code>&lt;small&gt;</code>可以正确地诠释这些信息。</p>
+<h1 id="3-必要属性-Required-Attribute"><a href="#3-必要属性-Required-Attribute" class="headerlink" title="3. 必要属性 (Required Attribute)"></a>3. 必要属性 (Required Attribute)</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5中的新属性“required”指定了某一输入是否必需。有两种方法声明这一属性。</p>
+<pre><code>&lt;input type=&quot;text&quot; name=&quot;someInput&quot; required&gt;
+&lt;input type=&quot;text&quot; name=&quot;someInput&quot; required=&quot;required&quot;&gt;
+</code></pre><p>当文本框被指定必需时，如果空白的话表格就不能提交。下面是一个如何使用的例子。</p>
+<pre><code>&lt;form method=&quot;post&quot; action=&quot;&quot;&gt;
+    &lt;label for=&quot;someInput&quot;&gt; Your Name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;someInput&quot; name=&quot;someInput&quot; placeholder=&quot;Douglas Quaid&quot; required&gt;
+    &lt;button type=&quot;submit&quot;&gt;Go&lt;/button&gt;
+&lt;/form&gt;
+</code></pre><p>在上面那个例子中，如果输入内容空且表格被提交，输入框将被高亮显示。</p>
+<h1 id="4-Autofocus-属性-Autofocus-Attribute"><a href="#4-Autofocus-属性-Autofocus-Attribute" class="headerlink" title="4. Autofocus 属性 (Autofocus Attribute)"></a>4. Autofocus 属性 (Autofocus Attribute)</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同样，HTML5的解决方案消除了对JavaScript的需要。如果一个特定的输入应该是“选择”或聚焦，默认情况下，我们现在可以利用自动聚焦属性。</p>
+<pre><code>&lt;input type=&quot;text&quot; name=&quot;someInput&quot; placeholder=&quot;Douglas Quaid&quot; required autofocus&gt;
+</code></pre><h1 id="5-Audio-支持-Audio-Support"><a href="#5-Audio-支持-Audio-Support" class="headerlink" title="5. Audio 支持 (Audio Support)"></a>5. Audio 支持 (Audio Support)</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前我们需要依靠第三方插件来渲染音频。然而在HTML5中，<audio>元素被引进来了。</audio></p>
+<pre><code>&lt;audio autoplay=&quot;autoplay&quot; controls=&quot;controls&quot;&gt;
+     &lt;source src=&quot;file.ogg&quot; /&gt;
+     &lt;source src=&quot;file.mp3&quot; /&gt;
+     &lt;a href=&quot;file.mp3&quot;&gt;Download this file.&lt;/a&gt;
+&lt;/audio&gt;
+</code></pre><h4 style="color:#d14">Internet Explorer 9+, Firefox, Opera, Chrome 以及 Safari 支持 <code>&lt;audio&gt;</code> 标签。</h4><br>当使用<code>&lt;audio&gt;</code>元素时请记得包含两种音频格式。FireFox想要.ogg格式的文件，而Webkit浏览器则需要.mp3格式的。<br><h4 style="color:#d14"><code>autoplay</code> 属性在 iPhone5 上不生效。苹果禁止<code>autoplay</code>属性来进行自动播放音频。必须要用户手动点击来触发播放.</h4>
+
+<h1 id="6-Video-支持-Video-Support"><a href="#6-Video-支持-Video-Support" class="headerlink" title="6. Video 支持 (Video Support)"></a>6. Video 支持 (Video Support)</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5中不仅有<code>&lt;audio&gt;</code>元素，而且还有<code>&lt;video&gt;</code>。然而，和<code>&lt;audio&gt;</code>类似，HTML5中并没有指定视频解码器，它留给了浏览器来决定。虽然Safari和Internet Explorer9可以支持H.264格式的视频，Firefox和Opera是坚持开源Theora 和Vorbis格式。因此，指定HTML5的视频时，你必须提供这两种格式。</p>
+<pre><code>&lt;video controls preload&gt;
+    &lt;source src=&quot;cohagenPhoneCall.ogv&quot; type=&quot;video/ogg; codecs=&apos;vorbis, theora&apos;&quot; /&gt;
+    &lt;source src=&quot;cohagenPhoneCall.mp4&quot; type=&quot;video/mp4; &apos;codecs=&apos;avc1.42E01E, mp4a.40.2&apos;&quot; /&gt;
+    &lt;p&gt; Your browser is old. &lt;a href=&quot;cohagenPhoneCall.mp4&quot;&gt;Download this video instead.&lt;/a&gt; &lt;/p&gt;
+&lt;/video&gt;
+</code></pre><ul>
+<li>视频预载 (Preload attribute in Videos element)<blockquote>
+<p>当用户访问页面时这一属性使得视频得以预载。为了实现这个功能，可以在<code>&lt;video&gt;</code>元素中加上<code>preload=&quot;preload&quot;</code>或者只是<code>preload</code>。</p>
+</blockquote>
+</li>
+</ul>
+<pre><code>&lt;video preload&gt;
+</code></pre><ul>
+<li>显示控制条 (Display Controls)</li>
+</ul>
+<blockquote>
+<p>如果你使用过上面的每一个提到的技术点，你可能已经注意到，使用上面的代码，视频仅仅显示的是张图片，没有控制条。为了渲染出播放控制条，我们必须在video元素内指定controls属性。</p>
+</blockquote>
+<pre><code>&lt;video preload controls&gt;
+</code></pre><h1 id="7-正规表达式-Regular-Expressions"><a href="#7-正规表达式-Regular-Expressions" class="headerlink" title="7. 正规表达式 (Regular Expressions)"></a>7. 正规表达式 (Regular Expressions)</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在HTML4或XHTML中，你需要用一些正规表达式来验证特定的文本。而HTML5中新的pattern属性让我们能够在标签处直接插入一个正规表达式。</p>
+<pre><code>&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+&lt;label for=&quot;username&quot;&gt;Create a Username: &lt;/label&gt;
+    &lt;input type=&quot;text&quot;
+    name=&quot;username&quot;
+    id=&quot;username&quot;
+    placeholder=&quot;4 &lt;&gt; 10&quot;
+    pattern=&quot;[A-Za-z]{4,10}&quot;
+    autofocus
+    required&gt;
+&lt;button type=&quot;submit&quot;&gt;Go &lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/12/03/HTML5-NEW-PROPERTY4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          HTML5 新特性 （四） Placeholder
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/12/02/HTML5-NEW-PROPERTY2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML5 新特性 （二） 标签语义化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="HTML5-NEW-PROPERTY3" data-title="HTML5 新特性 （三） 杂记" data-url="http://wcy.me/2014/12/03/HTML5-NEW-PROPERTY3/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Dean
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

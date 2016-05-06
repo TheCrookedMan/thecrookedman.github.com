@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>HTML5 新特性 （一） 新的文档结构 | wcy 的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天是11月的最后一天了,来上海也有8个月了.这两天项目上线,又是一个不眠之夜.我们的冬哥正在飞快的敲着JAVA代码,忙着解决阻挡着我们上线的最后一块绊脚石。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;外面下起了大雨,12月份的上海不是特别冷.今晚看来">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5 新特性 （一） 新的文档结构">
+<meta property="og:url" content="http://wcy.me/2014/11/30/HTML5-NEW-PROPERTY/index.html">
+<meta property="og:site_name" content="wcy 的博客">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天是11月的最后一天了,来上海也有8个月了.这两天项目上线,又是一个不眠之夜.我们的冬哥正在飞快的敲着JAVA代码,忙着解决阻挡着我们上线的最后一块绊脚石。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;外面下起了大雨,12月份的上海不是特别冷.今晚看来">
+<meta property="og:updated_time" content="2014-12-03T02:50:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5 新特性 （一） 新的文档结构">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;今天是11月的最后一天了,来上海也有8个月了.这两天项目上线,又是一个不眠之夜.我们的冬哥正在飞快的敲着JAVA代码,忙着解决阻挡着我们上线的最后一块绊脚石。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;外面下起了大雨,12月份的上海不是特别冷.今晚看来">
+  
+    <link rel="alternative" href="/atom.xml" title="wcy 的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dean</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dean</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dean</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="photo-HTML5-NEW-PROPERTY" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/11/30/HTML5-NEW-PROPERTY/" class="article-date">
+  	<time datetime="2014-11-29T17:51:17.000Z" itemprop="datePublished">2014-11-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML5 新特性 （一） 新的文档结构
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天是11月的最后一天了,来上海也有8个月了.这两天项目上线,又是一个不眠之夜.我们的冬哥正在飞快的敲着JAVA代码,忙着解决阻挡着我们上线的最后一块绊脚石。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;外面下起了大雨,12月份的上海不是特别冷.今晚看来是回不去了,得住公司了.哈哈,这下有机会睡一下老板的龙榻了 ╮（￣﹏￣）╭　。在夜深人静的时候，听着 <a href="http://baike.baidu.com/view/958882.htm" target="_blank" rel="external">马修·连恩</a> 的 <a href="http://music.baidu.com/artist/107384?fm=altg4" target="_blank" rel="external">《不列瑟农》</a>。一个人静静的整理代码,也是一种享受啊…废话不多说了，开打。。。。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5 的一些新特性出来很久了,2007年W3C（万维网联盟）立项HTML5，直至2014年10月底，这个长达八年的规范终于正式定稿。之后W3C会继续制定HTML5.1的草案，其中包括HTML 5.0的候选推荐标准，再加上任何被排除在外的不稳定功能。到2014年，HTML 5.1规范的出炉将经历类似步骤。任何不稳定功能将被剔除，产生HTML 5.1候选推荐标准，此后会制定HTML 5.2的草案，加入不稳定功能。之后HTML 5.3、5.4……标准会一直升级下去。HTML 5标准计划将在2022年完成。我也是醉了，不知什么时候是个头啊。。。</p>
+<p>以下文章转载自： <a href="http://www.html5jscss.com/html5-element.html" target="_blank" rel="external">HTML 5的革新——更简洁的结构</a></p>
+<h3 id="新的文档类型-DOCTYPE"><a href="#新的文档类型-DOCTYPE" class="headerlink" title="新的文档类型 DOCTYPE"></a>新的文档类型 DOCTYPE</h3><p>先来解释一下文档类型 DOCTYPE：文档类型位于HTML源文件的第一行，在HTML4的标准中，DOCTYPE在被归在 <a href="http://www.w3school.com.cn/tags/tag_doctype.asp" target="_blank" rel="external">HTML 标签</a>一章中，</p>
+<h3 style="color:#F93">DOCTYPE由来历史</h3>
+
+<a id="more"></a>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说说历史吧，其实 DOCTYPE 之所以出现是由于早期的Netscape 4和Explorer 4对css进行解析时，并未遵守W3C标准，这时的解析方式就被我们称之为quirks mode(怪异模式)。而且这个黑色艺术的缔造者就是微软，微软在开发Explorer 5时改进了对W3C标准的支持，以至于旧的一些网页出现了错误的渲染效果（其实是依照规范是正确的，也可以说他们之前制作的网页没有依据规范来）。于是微软想出了一个新奇的方案：在开始渲染页面之前，IE5会先检查DOCTYPE来激活新的标准模式，而老旧的网页一般没有DOCTYPE，Explorer 5就会像老旧浏览器一样渲染它们，所以浏览器就有了两种渲染模式：“怪异模式（quirks mode）”和“标准模式（strict mode）”。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而接着为了激活标准模式呢（顺应大潮么），网页制作者就得在前面加上 DOCTYPE 。后来Mozilla发布1.1版本时，数以万计的网页在Mozilla浏览器上支离破碎，原来是因为，虽然加上DOCTYPE之后虽然以标准模式渲染，但他们实际上仍依赖于某个特定的quirks 模式，于是Mozill公司又创建了“almost strict moede（准标准模式）”。于是就有了三种<a href="http://hsivonen.iki.fi/doctype/" target="_blank" rel="external">浏览器模式！</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而Mozill公司创建的“almost strict moede（准标准模式）”从字面意思上看与标准模式非常类似，但确实有小的差别。主要体现在对于表格单元格内垂直方向布局渲染差异。IE8 开始、Firefox、Chrome、Safari、Opera 7.5 开始，这些浏览器的标准模式更加严格的遵循了 CSS2.1 规范，故对于在目前看来不太“标准”的以前的标准模式，被赋予了“近似标准模式”的名字。但是在较早的 IE6 IE7 以及 Opera 7.5 之前版本中，浏览器无法严格遵循 CSS2.1 规范，故对于它们来说没有这个近似标准模式，也可以理解为它们的近似标准模式就是标准模式。其实在大多数浏览器，大多数 DOCTYPE 声明触发的是almost strict mode（准标准模式）。</p>
+<h3 style="color:#090">渲染模式</h3><br>浏览器的工作模式常被称为“渲染模式”。实际上浏览器不同的工作模式不仅对渲染有影响，对代码的解析以及脚本的行为也同样有影响。你删除了 DOCTYPE 时，以哪种“渲染模式”展示您html页面的权利就完全交给了浏览器，每种浏览器可能都有他们一套渲染模式~这肯定会影响代码验证，而且也决定了浏览器如何显示你的Web文档。<br><br><h3 style="color:#090">渲染模式向后兼容</h3><br>IE 的版本号一路从 6.0 升至了目前的 9.0，但若我们不书写 DOCTYPE 或者使用了能够触发混杂模式的 DOCTYPE，那我们所面对的浏览器仍相当于是那个十几年前的老古董 IE5.5。而其他那些浏览器的混杂模式和标准模式之间却没有想 IE 中这么大的差别。所以你只要在页面第一行加入下面代码就不会出现“怪异模式（quirks mode）”（点击quirksmode官网网站<a href="http://www.quirksmode.org/css/quirksmode.html" target="_blank" rel="external">了解更多怪异模式信息</a>）。<br><br>     &lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”  “<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" target="_blank" rel="external">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</a><br><br>——<br>看了上面那一大段代码和 DOCTYPE 出现的原因，你是不是觉得 DOCTYPE 本不应该出现，干脆把它去掉。但是我们知道将 DOCTYPE 删除就是将html页面以哪种渲染模式的权利给浏览器。单不说有几种 DOCTYPE ，浏览器就那么多种类在了。W3C说：别担心，既然不能删除，那我我来简化它！哈哈哈<del>~</del><br><br>    &lt;!DOCTYPE html &gt;<br><br>——<br><br>就只需要这15个字符。非常简单，我们再也不需要担心会敲错。而且在 HTML5 草案中，更加明确的规定了那三种模式的定义，所以能触发所有现代浏览器的strict mode（标准模式）。/p&gt;如果力求最简，则 HTML5 的 DOCTYPE 是最佳选择；如果力求稳妥，则较早的 HTML4.01 Strict 的 DOCTYPE 也是一种好的选择，在各主流浏览器中触发的模式与上面的 HTML5 的完全一致.<br><br><h3 style="font-size:16px;color:#F93">DOCTYPE 开启的的条件</h3>
+
+<ul>
+<li>1.对于那些浏览器不能识别的doctype声明，浏览器采用quirks mode解析</li>
+<li>2.在doctype声明中，没有使用DTD声明或者使用HTML4以下（不包括HTML4）的DTD声明时，基本所有的浏览器都是使用quirks mode呈现，其他的则使用strict mode解析（可以这么说，在现有的有doctype声明的网页，绝大多数是采用strict mode进行解析的）。</li>
+<li>3.在ie6中，如果在doctype声明前有一个xml声明(比如:<code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;</code>)，则采用quirks mode解析(这条规则在ie7中已经移除了)。</li>
+<li>4.不推荐在 DOCTYPE 之前加入任何非空白内容。</li>
+</ul>
+<h3 id="根元素"><a href="#根元素" class="headerlink" title="根元素"></a>根元素</h3><p>一个页面就好比是一棵树，而HTML元素就是页面里所有元素的根。换句话说，一个HTML页面的根元素始终是 <code>html</code></p>
+<pre><code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;lang=&quot;en&quot;xml:lang=&quot;en&quot;&gt;
+</code></pre><h2 id="html4的根元素代码"><a href="#html4的根元素代码" class="headerlink" title="html4的根元素代码"></a>html4的根元素代码</h2><p>我们可以讨论一下xmlns属性。它的意思是：在这个页面上的元素位于XHTML命名空间<a href="http://www.w3.org/1999/xhtml之中。但是HTML" target="_blank" rel="external">http://www.w3.org/1999/xhtml之中。但是HTML</a> 5的元素都是具有这个命名空间的，因此不必再写明了。不管有没有这个属性，HTML 5页面在所有浏览器中将会有一致的表现。而在HTML 5只有lang属性有效，你可以保留xml:lang,但是你得保证它跟lang的属性值相同。好了去掉不要，现在html根元素就是这样了：</p>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+</code></pre><p>HTML 5的根元素</p>
+<hr>
+<h3 id="head元素"><a href="#head元素" class="headerlink" title="head元素"></a>head元素</h3><p>head元素是根元素的第一个元素，它里面的信息是网页本身的信息，而不是网页的本体。（主体在body里）藏在head里都是好东西特别是对于做seoer来说。</p>
+<h5 style="color:#F93">meta元素</h5>
+
+<p><code>meta</code> 标签的作用就是知名所用的字符的编码，不指定编码可能会导致安全漏洞</p>
+<pre><code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+</code></pre><h2 id="HTML-4指定字符编码的代码"><a href="#HTML-4指定字符编码的代码" class="headerlink" title="HTML 4指定字符编码的代码"></a>HTML 4指定字符编码的代码</h2><p>又是这么多，现在html5已经把它变成像下面那样。</p>
+<pre><code>&lt;meta  charset=&quot;utf-8&quot; /&gt;
+</code></pre><p>HTML 5指定字符编码的代码</p>
+<hr>
+<p>head元素里还有很多元素譬如：<code>title</code>，因为其他属性html5没有重新再定义，所以我就介绍 <code>link</code> 增加的一些链接关系.</p>
+<h5 style="color:#090">链接关系</h5>
+
+<p>普通的<code>a</code>只是链接到某个页面，链接关系则提供了一种方式以解释为什么链接到那个页面<br>这里我们首先来来说 <code>rel=&quot;stylesheet&quot;</code> ，看下面代码:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;  /&gt;
+</code></pre><p>html4样式链接</p>
+<hr>
+<p>因为Web中样式就只有CSS，所以html5做了小小的优化，把<code>type</code>去掉了，如下:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;  /&gt;
+</code></pre><p>html5样式链接</p>
+<hr>
+<p>除了样式链接，html5把js的引入的type也去掉了，因为Web中前端脚本也只有js一种。</p>
+<pre><code>&lt;script src=&quot;path/to/script.js&quot;&gt;&lt;/script&gt;
+</code></pre><hr>
+<p>其他链接关系，因为链接能影响权重等，所以还是要了解一下。</p>
+<ul>
+<li><code>rel=&quot;alternatr&quot;</code><br>HTML5里它的定义已得到澄清，属性值是RSS或者Atom等媒介类型</li>
+<li><code>rel=&quot;archives&quot;</code><br>表示所引用文档的一组收藏，包括记录、文档或者有历史价值的材料。一个blog的索引页可以使用rel”archives”链接到该blog过去所有发表文章的索引目录</li>
+<li><code>rel=&quot;author&quot;</code><br>用于链接到页面作者的相关信息，譬如“关于作者”页面。</li>
+<li><code>rel=&quot;external&quot;</code><br>表示该链接与当前文档不同，并不属于该站点，譬如访客留言所包含的链接就是用上。</li>
+<li><code>rel=&quot;start&quot;，&quot;prev&quot;，&quot;next&quot;</code><br>表示同一系列的页面之间的关系。</li>
+<li><code>rel=&quot;icon&quot;</code><br>浏览器标签卡上的小图标。</li>
+<li><code>rel=&quot;license&quot;</code><br>微格式。</li>
+<li><code>rel=&quot;nofollow&quot;</code><br>表示链接未经页面的作者或者出版者的认可，或者表示出于对方的商业合作关系才被添加的。经常跟 external 连用</li>
+<li><code>rel=&quot;noreferrer&quot;</code><br>表示点击这个不回泄漏referrer信息，但是现在很多浏览器不支持这个属性。</li>
+<li><code>rel=&quot;pingback&quot;</code><br>它的作用是：当被其他网站链接时，网站会自动收到通知，wordpress里实现了这个机制，在写新文章的时候告诉作者你链接了他们。</li>
+<li><code>rel=&quot;prefetch&quot;</code><br>有些搜索引擎加上这个链接后会给某些搜索结果后面加上rel=”prefetch”，表示这个比其他受欢迎的多。</li>
+<li><code>rel=&quot;search&quot;</code><br>表示所引用的链接页面是搜索文章或者其他文档的，内部搜索页。</li>
+<li><code>rel=&quot;sidebar&quot;</code><br>表示所引用的文件如果被获取，那么器目的是要显示在次要的浏览范围，就是说点击这个链接，会提示用户创建一个收藏夹项目，但从收藏夹选择该项目时所链接的文档将在浏览器的侧边栏打开。</li>
+<li><code>rel=&quot;tag&quot;</code><br>表示标签，譬如文章的分类、关键字。对SEOer来说，这些新的链接很有用。毕竟链接又称锚点对网站的权重有很大影响。标签语义化对SEO也有影响。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/12/02/HTML5-NEW-PROPERTY2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          HTML5 新特性 （二） 标签语义化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/26/JavaScript类型转换/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript 类型转换</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="HTML5-NEW-PROPERTY" data-title="HTML5 新特性 （一） 新的文档结构" data-url="http://wcy.me/2014/11/30/HTML5-NEW-PROPERTY/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Dean
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

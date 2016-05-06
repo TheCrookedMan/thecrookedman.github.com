@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>JavaScript 类型转换 | wcy 的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ECMAScript 有 5 种原始类型，Undefined、Null、Boolean、Number 和 String。 原始类型详解
+其他类型转化为数字
+Undefined &amp;nbsp;&amp;nbsp;   ==&amp;gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp;  Number
+
+var a; //undefined
+var num = new Number(a);
+console.log(num.v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 类型转换">
+<meta property="og:url" content="http://wcy.me/2014/11/26/JavaScript类型转换/index.html">
+<meta property="og:site_name" content="wcy 的博客">
+<meta property="og:description" content="ECMAScript 有 5 种原始类型，Undefined、Null、Boolean、Number 和 String。 原始类型详解
+其他类型转化为数字
+Undefined &amp;nbsp;&amp;nbsp;   ==&amp;gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp;  Number
+
+var a; //undefined
+var num = new Number(a);
+console.log(num.v">
+<meta property="og:updated_time" content="2014-11-27T07:05:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript 类型转换">
+<meta name="twitter:description" content="ECMAScript 有 5 种原始类型，Undefined、Null、Boolean、Number 和 String。 原始类型详解
+其他类型转化为数字
+Undefined &amp;nbsp;&amp;nbsp;   ==&amp;gt;  &amp;nbsp;&amp;nbsp;&amp;nbsp;  Number
+
+var a; //undefined
+var num = new Number(a);
+console.log(num.v">
+  
+    <link rel="alternative" href="/atom.xml" title="wcy 的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Dean</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>About</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Dean</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://avatars1.githubusercontent.com/u/9653758?v=3&amp;s=460" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Dean</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/TheCrookedMan/blog/tree/master" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="photo-JavaScript类型转换" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/11/26/JavaScript类型转换/" class="article-date">
+  	<time datetime="2014-11-26T06:38:27.000Z" itemprop="datePublished">2014-11-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript 类型转换
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ECMAScript 有 5 种原始类型，Undefined、Null、Boolean、Number 和 String。 <a href="http://www.w3school.com.cn/js/pro_js_primitivetypes.asp" target="_blank" rel="external">原始类型详解</a></p>
+<h3 id="其他类型转化为数字"><a href="#其他类型转化为数字" class="headerlink" title="其他类型转化为数字"></a>其他类型转化为数字</h3><blockquote>
+<p>Undefined &nbsp;&nbsp;   ==&gt;  &nbsp;&nbsp;&nbsp;  Number</p>
+</blockquote>
+<pre><code>var a; //undefined
+var num = new Number(a);
+console.log(num.valueOf()); //返回 NaN
+
+
+var a; //undefined
+console.log(+a); //返回 NaN
+</code></pre><a id="more"></a>
+<blockquote>
+<p>Null &nbsp;&nbsp;   ==&gt;  &nbsp;&nbsp;&nbsp;  Number</p>
+</blockquote>
+<pre><code>var a = null; //null
+var num = new Number(a);
+console.log(num.valueOf()); //返回 0
+
+
+var a = null; //null
+console.log(+a); //返回 0
+</code></pre><blockquote>
+<p>Boolean &nbsp;&nbsp;   ==&gt;  &nbsp;&nbsp;&nbsp;  Number</p>
+</blockquote>
+<pre><code>var boo = false;
+console.log(+boo); // 0
+
+var foo = true;
+console.log(+foo); // 1
+</code></pre><blockquote>
+<p>String &nbsp;&nbsp;   ==&gt;  &nbsp;&nbsp;&nbsp;  Number</p>
+</blockquote>
+<pre><code>var n1 = &quot;123456&quot;;
+console.log(+n1); // 123456
+
+var n2 = &quot;zzzzzzzz&quot;;
+console.log(+n2); // NaN
+</code></pre><h3 id="不同类型的基础数据之间的加法，数据先转换为number，然后转换为string-如果有string类型数据参与运算"><a href="#不同类型的基础数据之间的加法，数据先转换为number，然后转换为string-如果有string类型数据参与运算" class="headerlink" title="不同类型的基础数据之间的加法，数据先转换为number，然后转换为string(如果有string类型数据参与运算)"></a>不同类型的基础数据之间的加法，数据先转换为number，然后转换为string(如果有string类型数据参与运算)</h3><blockquote>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="+运算符"></a>+运算符</h3><p>  如果某个运算数是字符串，那么采用下列规则：<br>  如果两个运算数都是字符串，把第二个字符串连接到第一个上。<br>  如果只有一个运算数是字符串，把另一个运算数转换成字符串，结果是两个字符串连接成的字符串。<br>  原理：首先调用对象中的 <code>valueOf()</code> 方法转换为符合相关运算的值。如果转换的值无效在调用对象中的 <code>toString()</code> 方法转换为字符窜。</p>
+</blockquote>
+<pre><code>var al = null; //null
+var bl; //undefined
+console.log(al+bl); // NaN
+
+
+var cl = false;
+console.log(al+cl); // 0+0 = 0
+
+var dl = 1;
+var el = true;
+console.log(dl+el); // 1 + 1 = 2
+
+var fl = &quot;1&quot;;
+console.log(dl+fl); // 1 + &quot;1&quot; = &quot;11&quot;
+
+
+var gl = 3;
+var vl = 7;
+var ll = &quot;0&quot;;
+console.log(gl+vl+ll); // 3 + 7 + &quot;0&quot; = 10 + &quot;0&quot; = &quot;100&quot;
+
+var gla = 3;
+var vla = 7;
+var lla = &quot;0&quot;;
+console.log( gla + ( vla+lla ) ); // 3 + (7 + &quot;0&quot;) = 3 + &quot;70&quot; = &quot;370&quot;
+
+var str = &quot;str&quot;;
+var sn = null;
+console.log(str + sn); // &quot;strnull&quot;
+
+var str = &quot;str&quot;;
+var sn;
+console.log(str + sn); // &quot;strundefined&quot;
+
+var str = &quot;str&quot;;
+var sn = true;
+console.log(str + sn); // &quot;strtrue&quot;
+
+var str = &quot;str&quot;;
+var sn = true;
+console.log(sn + str); // &quot;truestr&quot;
+
+var str = &quot;str&quot;;
+var sn = true;
+var nn = 0;
+console.log(sn + nn + str); // 0 + true + &quot;str&quot; = 0 + 1 + &quot;str&quot; = &quot;1&quot; + &quot;str&quot; = &quot;1str &quot;
+
+var nm = 4;
+var bn = true;
+var sh;
+var str = &quot;scc&quot;;
+console.log(nm + bn + sh + str); // 4 + true + undefined + &quot;scc&quot; = 4 + 1 + undefined + &quot;scc&quot; = 5 + undefined + &quot;scc&quot; = NaN + &quot;scc&quot; = &quot;NaNscc&quot;
+</code></pre><h3 id="对象参与加减法运算"><a href="#对象参与加减法运算" class="headerlink" title="对象参与加减法运算"></a>对象参与加减法运算</h3><blockquote>
+<p>  对象参与基础类型数据运算，先转化为基础类型。先调用其valueOf方法，如果返回的不是基础类型，再调用其toString方法,如果返回的还不是基础类型，则抛出错误。但是，Date数据刚好相反</p>
+</blockquote>
+<pre><code>Date.prototype.toString = function(){
+    console.log(&quot;这里是 toString 方法。&quot;);
+    return 2;
+}
+
+Date.prototype.valueOf = function(){
+    console.log(&quot;这里是 valueOf 方法。&quot;);
+    return 3;
+}
+
+var a = new Date(),b = new Date();
+
+console.log( a + b); //调用toString，2 + 2，结果是4
+
+// 再重写toString方法
+
+Date.prototype.toString = function(){
+    console.log(&quot;这里是 toString 方法。&quot;);
+    return {};
+}
+
+var c = new Date,d = new Date;
+
+console.log( c + d ); // 调用toString方法返回的不是基础类型，再调用valueOf，3 + 3，结果是6
+
+// 再重写valueOf方法
+Date.prototype.valueOf = function(){
+    console.log(&quot;这里是 valueOf 方法。&quot;);
+    return {};
+}
+
+var e = new Date,f = new Date;
+
+console.log( e + f ); // TypeError: Cannot convert object to primitive value
+</code></pre><h3 id="数据前有加号‘-’，可以让字符串转化为数字"><a href="#数据前有加号‘-’，可以让字符串转化为数字" class="headerlink" title="数据前有加号‘+’，可以让字符串转化为数字"></a>数据前有加号‘+’，可以让字符串转化为数字</h3><pre><code>console.log(+&quot;10000&quot;+86); // 10086
+
+console.log(+&quot;str&quot;+86); // NaN
+</code></pre><h3 id="Js中提供-parseInt-方法-将数值转换为-整数"><a href="#Js中提供-parseInt-方法-将数值转换为-整数" class="headerlink" title="Js中提供 parseInt() 方法 将数值转换为 整数"></a>Js中提供 <code>parseInt()</code> 方法 将数值转换为 整数</h3><pre><code>parseInt(&quot;123456&quot;);  // 123456
+parseInt(0);  // 0
+parseInt(&quot;0&quot;);  // 0
+parseInt(&quot;123.456&quot;);  // 123
+parseInt(&quot;-123.456&quot;);  // -123
+parseInt(&apos;06&apos;); // 6
+
+parseInt(&apos;08&apos;); // 8 ，但是早期一些浏览器返回的是 0 。大部分浏览器都已修正这个问题。如果低版本的浏览器出现这个问题使用  parseInt(&quot;08&quot;,10) .
+
+parseInt(&quot;500g&quot;); // 500
+parseInt(&quot;g500&quot;); // NaN
+</code></pre><h3 id="我们可以利用-ECMAScript-运算符的特性来自己写一个parseInt-方法。"><a href="#我们可以利用-ECMAScript-运算符的特性来自己写一个parseInt-方法。" class="headerlink" title="我们可以利用 ECMAScript 运算符的特性来自己写一个parseInt()方法。"></a>我们可以利用 ECMAScript 运算符的特性来自己写一个<code>parseInt()</code>方法。</h3><pre><code>function parseInt(n) {
+    return n*1^0^0 || 0;
+}
+
+//验证
+parseInt(&quot;123456&quot;);  // 123456
+parseInt(0);  // 0
+parseInt(&quot;0&quot;);  // 0
+parseInt(&quot;123.456&quot;);  // 123
+parseInt(&quot;-123.456&quot;);  // -123
+parseInt(&apos;06&apos;); // 6
+
+parseInt(&apos;08&apos;); // 8
+
+parseInt(&quot;500g&quot;); // 0
+parseInt(&quot;g500&quot;); // 0
+
+注意了，以上函数能表示的整数有效范围是 -2147483648 ~ 2147483648
+为了在js中表达更大范围的数值，还有一个函数提供参考，如下：
+
+function parseInt(number) {
+    return Infinity === number ? 0 : (number*1 || 0).toFixed(0)*1;
+}
+</code></pre><h3 id="其他类型转换为布尔值"><a href="#其他类型转换为布尔值" class="headerlink" title="其他类型转换为布尔值"></a>其他类型转换为布尔值</h3><pre><code>console.log(!!5);           // true
+console.log(!!NaN);         // false
+console.log(!!undefined);   // false
+console.log(!!null);        // false
+console.log(!!false);       // false
+console.log(!!-100);        // true
+console.log(!!function(){});// true
+</code></pre><h4 id="JS-中三个取整函数的区别："><a href="#JS-中三个取整函数的区别：" class="headerlink" title="JS 中三个取整函数的区别："></a>JS 中三个取整函数的区别：</h4><pre><code>// Math.ceil();取大于等于参数的最小整数。
+
+console.log(Math.ceil(8.7));  // 9
+console.log(Math.ceil(-8.7)); // -8
+
+// Math.floor():取小于等于参数的最小整数。
+
+console.log(Math.floor(8.7));  // 8
+console.log(Math.floor(-8.7)); // -9
+
+//Math.round():&quot;四舍五入&quot;取整数。
+
+console.log(Math.round(8.7));  // 9
+console.log(Math.round(-8.7)); // -9
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/30/HTML5-NEW-PROPERTY/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          HTML5 新特性 （一） 新的文档结构
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/20/Linux-Base-Command/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LINUX 命令</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript类型转换" data-title="JavaScript 类型转换" data-url="http://wcy.me/2014/11/26/JavaScript类型转换/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Dean
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
