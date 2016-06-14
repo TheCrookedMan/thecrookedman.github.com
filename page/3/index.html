@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
 					</div>
 				</section>
 				
@@ -197,6 +197,72 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="photo-MY-Beautiful-WEB-code1" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/12/09/MY-Beautiful-WEB-code1/" class="article-date">
+  	<time datetime="2014-12-09T02:58:56.000Z" itemprop="datePublished">2014-12-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/09/MY-Beautiful-WEB-code1/">前端工程与性能优化 （转）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文转自：<a href="http://fex.baidu.com/blog/2014/03/fis-optimize/">前端工程与性能优化</a></p>
+<p><style>img[title=高性能网站建设指南]{width:250px;} h3{border:0px!important;}</style><br><img src="/photo/best_web_site/image1.jpg" alt="高性能网站建设指南" title="高性能网站建设指南"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每个参与过开发企业级 web 应用的前端工程师或许都曾思考过前端性能优化方面的问题。我们有雅虎 14 条性能优化原则，还有两本很经典的性能优化指导书：《高性能网站建设指南》、《高性能网站建设进阶指南》。经验丰富的工程师对于前端性能优化方法耳濡目染，基本都能一一列举出来。这些性能优化原则大概是在 7 年前提出的，对于 web 性能优化至今都有非常重要的指导意义。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，对于构建大型 web 应用的团队来说，要坚持贯彻这些优化原则并不是一件十分容易的事。因为优化原则中很多要求与工程管理相违背，比如“把 css 放在头部”和“把 js 放在尾部”这两条原则，我们不能让整个团队的工程师在写样式和脚本引用的时候都去修改同一份的页面文件。这会严重影响团队成员间并行开发的效率，尤其是在团队有版本管理的情况下，每天要花大量的时间进行代码修改合并，这项成本是难以接受的。因此在前端工程界，总会看到周期性的性能优化工作，辛勤的前端工程师们每到月圆之夜就会倾巢出动根据优化原则做一次最佳实践。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文从一个全新的视角来思考 web 性能优化与前端工程之间的关系，通过解读百度前端集成解决方案小组（F.I.S）在打造高性能前端架构并统一百度 40 多条前端产品线的过程中所经历的技术尝试，揭示前端性能优化在前端架构及开发工具设计层面的实现思路。<br><br></p>
+<blockquote>
+<p>###性能优化原则及分类#######</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;笔者先假设本文的读者是有前端开发经验的工程师，并对企业级 web 应用开发及性能优化有一定的思考。因此我不会重复介绍雅虎 14 条性能优化原则，如果您没有这些前续知识的，请移步<a href="https://developer.yahoo.com/performance/rules.html">这里</a>来学习。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，我们把雅虎 14 条优化原则，《高性能网站建设指南》以及《高性能网站建设进阶指南》中提到的优化点做一次梳理，如果按照优化方向分类可以得到这样一张表格：</p>
+<table><thead><tr><th style="width: 80px;"><h4>优化方向</h4></th><th style="text-align: center;"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>请求数量</td><td>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</td></tr><tr><td>请求带宽</td><td>开启 GZip，精简 JavaScript，移除重复脚本，图像优化</td></tr><tr><td>缓存利用</td><td>使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存</td></tr><tr><td>页面结构</td><td>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</td></tr><tr><td>代码校验</td><td>避免 CSS 表达式，避免重定向</td></tr></tbody></table>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端优化/">前端优化</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2014/12/09/MY-Beautiful-WEB-code1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="photo-CSS-length-change" class="article article-type-photo" itemscope itemprop="blogPost">
   
@@ -853,77 +919,6 @@ if (!’pattern’ in document.createElement(’input’) ) {
       
         <p class="article-more-link">
           <a  href="/2014/11/30/HTML5-NEW-PROPERTY/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="photo-JavaScript类型转换" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/11/26/JavaScript类型转换/" class="article-date">
-  	<time datetime="2014-11-26T06:38:27.000Z" itemprop="datePublished">2014-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/11/26/JavaScript类型转换/">JavaScript 类型转换</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ECMAScript 有 5 种原始类型，Undefined、Null、Boolean、Number 和 String。 <a href="http://www.w3school.com.cn/js/pro_js_primitivetypes.asp">原始类型详解</a></p>
-<h3 id="其他类型转化为数字"><a href="#其他类型转化为数字" class="headerlink" title="其他类型转化为数字"></a>其他类型转化为数字</h3><blockquote>
-<p>Undefined &nbsp;&nbsp;   ==&gt;  &nbsp;&nbsp;&nbsp;  Number</p>
-</blockquote>
-<pre><code>var a; //undefined
-var num = new Number(a);
-console.log(num.valueOf()); //返回 NaN
-
-
-var a; //undefined
-console.log(+a); //返回 NaN
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/11/26/JavaScript类型转换/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

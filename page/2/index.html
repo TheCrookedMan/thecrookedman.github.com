@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
 					</div>
 				</section>
 				
@@ -197,6 +197,118 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="photo-MacOs 安装Compass问题" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/03/MacOs 安装Compass问题/" class="article-date">
+  	<time datetime="2016-03-02T18:27:52.000Z" itemprop="datePublished">2016-03-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/03/MacOs 安装Compass问题/">Mac Os安装Compass问题解决方案</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Mac-Os安装Compass问题解决方案"><a href="#Mac-Os安装Compass问题解决方案" class="headerlink" title="Mac Os安装Compass问题解决方案"></a>Mac Os安装Compass问题解决方案</h1><pre><code>$ gem install sass
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+You don&apos;t have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+</code></pre><h2 id="没有权限、以-sudo-方式-执行"><a href="#没有权限、以-sudo-方式-执行" class="headerlink" title="没有权限、以 sudo 方式 执行"></a>没有权限、以 sudo 方式 执行</h2><pre><code>$ sudo gem install compass
+Building native extensions.  This could take a while...
+ERROR:  Error installing compass:
+    ERROR: Failed to build gem native extension.
+
+    /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby -r ./siteconf20150924-435-e3lpzd.rb extconf.rb
+checking for ffi.h... *** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+    --with-opt-dir
+    --without-opt-dir
+    --with-opt-include
+    --without-opt-include=${opt-dir}/include
+    --with-opt-lib
+    --without-opt-lib=${opt-dir}/lib
+    --with-make-prog
+    --without-make-prog
+    --srcdir=.
+    --curdir
+    --ruby=/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/bin/ruby
+    --with-ffi_c-dir
+    --without-ffi_c-dir
+    --with-ffi_c-include
+    --without-ffi_c-include=${ffi_c-dir}/include
+    --with-ffi_c-lib
+    --without-ffi_c-lib=${ffi_c-dir}/
+    --with-libffi-config
+    --without-libffi-config
+    --with-pkg-config
+    --without-pkg-config
+/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:434:in `try_do&apos;: The compiler failed to generate an executable file. (RuntimeError)
+You have to install development tools first.
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:549:in `block in try_compile&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:502:in `with_werror&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:549:in `try_compile&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:1044:in `block in have_header&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:895:in `block in checking_for&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:340:in `block (2 levels) in postpone&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:310:in `open&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:340:in `block in postpone&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:310:in `open&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:336:in `postpone&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:894:in `checking_for&apos;
+    from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/mkmf.rb:1043:in `have_header&apos;
+    from extconf.rb:16:in `&lt;main&gt;&apos;
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /Library/Ruby/Gems/2.0.0/gems/ffi-1.9.10 for inspection.
+Results logged to /Library/Ruby/Gems/2.0.0/extensions/universal-darwin-14/2.0.0/ffi-1.9.10/gem_make.out
+</code></pre><h2 id="解决方案：先执行-xcode-select-–install、再-sudo-gem-install-compass"><a href="#解决方案：先执行-xcode-select-–install、再-sudo-gem-install-compass" class="headerlink" title="解决方案：先执行 xcode-select –install、再 sudo gem install compass"></a>解决方案：先执行 xcode-select –install、再 sudo gem install compass</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac-Os/">Mac Os</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="photo-HTTPS证书生成" class="article article-type-photo" itemscope itemprop="blogPost">
   
@@ -986,72 +1098,6 @@ svn add *.php(添加当前目录下所有的php文件)
       
         <p class="article-more-link">
           <a  href="/2014/12/23/SVNCommand/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="photo-MY-Beautiful-WEB-code1" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/12/09/MY-Beautiful-WEB-code1/" class="article-date">
-  	<time datetime="2014-12-09T02:58:56.000Z" itemprop="datePublished">2014-12-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/09/MY-Beautiful-WEB-code1/">前端工程与性能优化 （转）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文转自：<a href="http://fex.baidu.com/blog/2014/03/fis-optimize/">前端工程与性能优化</a></p>
-<p><style>img[title=高性能网站建设指南]{width:250px;} h3{border:0px!important;}</style><br><img src="/photo/best_web_site/image1.jpg" alt="高性能网站建设指南" title="高性能网站建设指南"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每个参与过开发企业级 web 应用的前端工程师或许都曾思考过前端性能优化方面的问题。我们有雅虎 14 条性能优化原则，还有两本很经典的性能优化指导书：《高性能网站建设指南》、《高性能网站建设进阶指南》。经验丰富的工程师对于前端性能优化方法耳濡目染，基本都能一一列举出来。这些性能优化原则大概是在 7 年前提出的，对于 web 性能优化至今都有非常重要的指导意义。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然而，对于构建大型 web 应用的团队来说，要坚持贯彻这些优化原则并不是一件十分容易的事。因为优化原则中很多要求与工程管理相违背，比如“把 css 放在头部”和“把 js 放在尾部”这两条原则，我们不能让整个团队的工程师在写样式和脚本引用的时候都去修改同一份的页面文件。这会严重影响团队成员间并行开发的效率，尤其是在团队有版本管理的情况下，每天要花大量的时间进行代码修改合并，这项成本是难以接受的。因此在前端工程界，总会看到周期性的性能优化工作，辛勤的前端工程师们每到月圆之夜就会倾巢出动根据优化原则做一次最佳实践。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文从一个全新的视角来思考 web 性能优化与前端工程之间的关系，通过解读百度前端集成解决方案小组（F.I.S）在打造高性能前端架构并统一百度 40 多条前端产品线的过程中所经历的技术尝试，揭示前端性能优化在前端架构及开发工具设计层面的实现思路。<br><br></p>
-<blockquote>
-<p>###性能优化原则及分类#######</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;笔者先假设本文的读者是有前端开发经验的工程师，并对企业级 web 应用开发及性能优化有一定的思考。因此我不会重复介绍雅虎 14 条性能优化原则，如果您没有这些前续知识的，请移步<a href="https://developer.yahoo.com/performance/rules.html">这里</a>来学习。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先，我们把雅虎 14 条优化原则，《高性能网站建设指南》以及《高性能网站建设进阶指南》中提到的优化点做一次梳理，如果按照优化方向分类可以得到这样一张表格：</p>
-<table><thead><tr><th style="width: 80px;"><h4>优化方向</h4></th><th style="text-align: center;"><h4>优化手段</h4></th></tr></thead><tbody><tr><td>请求数量</td><td>合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域</td></tr><tr><td>请求带宽</td><td>开启 GZip，精简 JavaScript，移除重复脚本，图像优化</td></tr><tr><td>缓存利用</td><td>使用 CDN，使用外部 JavaScript 和 CSS，添加 Expires 头，减少 DNS 查找，配置 ETag，使 AjaX 可缓存</td></tr><tr><td>页面结构</td><td>将样式表放在顶部，将脚本放在底部，尽早刷新文档的输出</td></tr><tr><td>代码校验</td><td>避免 CSS 表达式，避免重定向</td></tr></tbody></table>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端优化/">前端优化</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2014/12/09/MY-Beautiful-WEB-code1/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
