@@ -28,7 +28,7 @@ git config --global user.email you@yourdomain.example.com
 
 #配置到缓存 默认15分钟
 git config --g">
-<meta property="og:updated_time" content="2014-12-25T14:45:37.000Z">
+<meta property="og:updated_time" content="2016-05-22T06:31:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 命令">
 <meta name="twitter:description" content="转自:Git 常用命令整理
@@ -458,6 +458,31 @@ git remote set-head origin master   # 设置远程仓库的HEAD指向master分�
 </code></pre><p>也可以命令设置跟踪远程库和本地库</p>
 <pre><code>git branch --set-upstream master origin/master
 git branch --set-upstream develop origin/develop
+</code></pre><h1 id="更新远程代码到本地"><a href="#更新远程代码到本地" class="headerlink" title="更新远程代码到本地"></a>更新远程代码到本地</h1><pre><code>chenyuwudeMacBook-Pro:runningcat chenyuwu$ git fetch runningcat master:temp
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From github.com:TheCrookedMan/runningcat
+ * [new branch]      master     -&gt; temp
+   afd5e0b..bfb2a11  master     -&gt; runningcat/master
+chenyuwudeMacBook-Pro:
+chenyuwudeMacBook-Pro:runningcat chenyuwu$ git diff temp
+diff --git a/src/scss/_variables.scss b/src/scss/_variables.scss
+index 899a8c3..e69de29 100644
+--- a/src/scss/_variables.scss
++++ b/src/scss/_variables.scss
+@@ -1 +0,0 @@
+-.adsf{width:10px;}
+chenyuwudeMacBook-Pro:
+chenyuwudeMacBook-Pro:runningcat chenyuwu$ git merge temp
+Updating afd5e0b..bfb2a11
+Fast-forward
+ src/scss/_variables.scss | 1 +
+ 1 file changed, 1 insertion(+)
+chenyuwudeMacBook-Pro:
+chenyuwudeMacBook-Pro:runningcat chenyuwu$  git branch -d temp
+Deleted branch temp (was bfb2a11).
 </code></pre>
       
     </div>
