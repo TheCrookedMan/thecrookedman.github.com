@@ -4,26 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>易配通公众号网站《工作流》架构搭建（一） | wcy 的博客</title>
+  <title>svn local delete, incoming delete upon update 解决办法 | wcy 的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术选型
-为什么使用React＋redux为什么使用ES6为什么使用gulpwebpackKoaJs 替换 ejs
-模块：btn、modal、loading">
+  <meta name="description" content="svn local delete, incoming delete upon update 解决办法
+1.In your working directory, recreate that conflicting file:$ touch foo
+2.Revert that file to the state SVN likes (that means deleted):$ svn revert f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="易配通公众号网站《工作流》架构搭建（一）">
-<meta property="og:url" content="http://wcy.me/2016/04/28/Website Architecture（1）/index.html">
+<meta property="og:title" content="svn local delete, incoming delete upon update 解决办法">
+<meta property="og:url" content="http://wcy.me/2016/06/21/SVNCommand-bug-1/index.html">
 <meta property="og:site_name" content="wcy 的博客">
-<meta property="og:description" content="技术选型
-为什么使用React＋redux为什么使用ES6为什么使用gulpwebpackKoaJs 替换 ejs
-模块：btn、modal、loading">
-<meta property="og:image" content="http://wcy.me/photo/网站架构/20151024145149_451.png">
-<meta property="og:updated_time" content="2016-04-27T17:37:05.000Z">
+<meta property="og:description" content="svn local delete, incoming delete upon update 解决办法
+1.In your working directory, recreate that conflicting file:$ touch foo
+2.Revert that file to the state SVN likes (that means deleted):$ svn revert f">
+<meta property="og:updated_time" content="2016-06-21T08:20:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="易配通公众号网站《工作流》架构搭建（一）">
-<meta name="twitter:description" content="技术选型
-为什么使用React＋redux为什么使用ES6为什么使用gulpwebpackKoaJs 替换 ejs
-模块：btn、modal、loading">
-<meta name="twitter:image" content="http://wcy.me/photo/网站架构/20151024145149_451.png">
+<meta name="twitter:title" content="svn local delete, incoming delete upon update 解决办法">
+<meta name="twitter:description" content="svn local delete, incoming delete upon update 解决办法
+1.In your working directory, recreate that conflicting file:$ touch foo
+2.Revert that file to the state SVN likes (that means deleted):$ svn revert f">
   
     <link rel="alternative" href="/atom.xml" title="wcy 的博客" type="application/atom+xml">
   
@@ -86,7 +84,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -123,7 +121,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+						<a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 12.5px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 15px;">SVN</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/shell/" style="font-size: 12.5px;">shell</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/前端框架原理/" style="font-size: 10px;">前端框架原理</a> <a href="/tags/前端编码规范/" style="font-size: 15px;">前端编码规范</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
 					</div>
 				</section>
 				
@@ -205,11 +203,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="web-Website Architecture（1）" class="article article-type-web" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="photo-SVNCommand-bug-1" class="article article-type-photo" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/28/Website Architecture（1）/" class="article-date">
-  	<time datetime="2016-04-27T17:37:05.000Z" itemprop="datePublished">2016-04-28</time>
+      <a href="/2016/06/21/SVNCommand-bug-1/" class="article-date">
+  	<time datetime="2016-06-20T16:00:00.000Z" itemprop="datePublished">2016-06-21</time>
 </a>
     </div>
   
@@ -222,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      易配通公众号网站《工作流》架构搭建（一）
+      svn local delete, incoming delete upon update 解决办法
     </h1>
   
 
@@ -231,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Website-Architecture/">Website Architecture</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li></ul>
 	</div>
 
         
@@ -242,9 +240,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p><img src="/photo/网站架构/20151024145149_451.png" alt="技术选型"></p>
-<p>为什么使用React＋redux<br>为什么使用ES6<br>为什么使用gulp<br>webpack<br>KoaJs 替换 ejs</p>
-<p>模块：btn、modal、loading</p>
+        <p>svn local delete, incoming delete upon update 解决办法</p>
+<h1 id="1-In-your-working-directory-recreate-that-conflicting-file"><a href="#1-In-your-working-directory-recreate-that-conflicting-file" class="headerlink" title="1.In your working directory, recreate that conflicting file:"></a>1.In your working directory, recreate that conflicting file:</h1><pre><code>$ touch foo
+</code></pre><h1 id="2-Revert-that-file-to-the-state-SVN-likes-that-means-deleted"><a href="#2-Revert-that-file-to-the-state-SVN-likes-that-means-deleted" class="headerlink" title="2.Revert that file to the state SVN likes (that means deleted):"></a>2.Revert that file to the state SVN likes (that means deleted):</h1><pre><code>$ svn revert foo
+</code></pre><h1 id="3-Now-delete-that-file"><a href="#3-Now-delete-that-file" class="headerlink" title="3.Now delete that file:"></a>3.Now delete that file:</h1><p>$ rm foo</p>
+<h1 id="4-Conflict-resolved"><a href="#4-Conflict-resolved" class="headerlink" title="4.Conflict resolved:"></a>4.Conflict resolved:</h1><pre><code>$ svn st
+</code></pre><h1 id="Done"><a href="#Done" class="headerlink" title="Done."></a>Done.</h1><p>最后还需要指定更新文件：svn up application.js</p>
 
       
     </div>
@@ -254,18 +255,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/14/防止表单自动填充用户名、密码信息/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/06/22/shell脚本初始化安装node服务/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          防止表单自动填充用户名、密码信息
+          shell脚本初始化安装node服务
         
       </div>
     </a>
   
   
-    <a href="/2016/04/21/linux-chown/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LINUX 命令</div>
+    <a href="/2016/06/14/防止表单自动填充用户名、密码信息/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">防止表单自动填充用户名、密码信息</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -300,7 +301,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Website Architecture（1）" data-title="易配通公众号网站《工作流》架构搭建（一）" data-url="http://wcy.me/2016/04/28/Website Architecture（1）/"></div>
+	<div class="ds-thread" data-thread-key="SVNCommand-bug-1" data-title="svn local delete, incoming delete upon update 解决办法" data-url="http://wcy.me/2016/06/21/SVNCommand-bug-1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

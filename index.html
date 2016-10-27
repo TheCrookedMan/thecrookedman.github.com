@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 13.33px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 13.33px;">SVN</a> <a href="/tags/Website-Architecture/" style="font-size: 10px;">Website Architecture</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
+						<a href="/tags/CSS/" style="font-size: 12.5px;">CSS</a> <a href="/tags/Chrome/" style="font-size: 10px;">Chrome</a> <a href="/tags/Cross-domain/" style="font-size: 10px;">Cross-domain</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 20px;">HTML5</a> <a href="/tags/HTTPS/" style="font-size: 10px;">HTTPS</a> <a href="/tags/Hybrid/" style="font-size: 10px;">Hybrid</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Linux/" style="font-size: 17.5px;">Linux</a> <a href="/tags/Mac-Os/" style="font-size: 10px;">Mac Os</a> <a href="/tags/MongoDB/" style="font-size: 12.5px;">MongoDB</a> <a href="/tags/SVN/" style="font-size: 15px;">SVN</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react-native/" style="font-size: 10px;">react-native</a> <a href="/tags/shell/" style="font-size: 12.5px;">shell</a> <a href="/tags/web-移动端/" style="font-size: 10px;">web 移动端</a> <a href="/tags/前端优化/" style="font-size: 10px;">前端优化</a> <a href="/tags/前端框架原理/" style="font-size: 10px;">前端框架原理</a> <a href="/tags/前端编码规范/" style="font-size: 15px;">前端编码规范</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a> <a href="/tags/页面模板/" style="font-size: 10px;">页面模板</a>
 					</div>
 				</section>
 				
@@ -198,6 +198,1462 @@
 
       <div class="body-wrap">
   
+    <article id="photo-编码规范/前端开发编码规范（二）" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/15/编码规范/前端开发编码规范（二）/" class="article-date">
+  	<time datetime="2016-10-15T08:57:23.000Z" itemprop="datePublished">2016-10-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/15/编码规范/前端开发编码规范（二）/">前端编码规范（二）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="HTML规范"><a href="#HTML规范" class="headerlink" title="HTML规范"></a>HTML规范</h1><p>转载自：<a href="http://www.css88.com/archives/5364" target="_blank" rel="external">前端编码规范（2）—— HTML 规范</a></p>
+<h2 id="文档类型"><a href="#文档类型" class="headerlink" title="文档类型"></a>文档类型</h2><p>推荐使用 HTML5 的文档类型申明： &lt;!DOCTYPE html&gt;.</p>
+<p>（建议使用 text/html 格式的 HTML。避免使用 XHTML。XHTML 以及它的属性，比如 application/xhtml+xml 在浏览器中的应用支持与优化空间都十分有限）。</p>
+<p>HTML 中最好不要将无内容元素[1] 的标签闭合，例如：使用 <br> 而非 <br>.</p>
+<hr>
+<h2 id="HTML-验证"><a href="#HTML-验证" class="headerlink" title="HTML 验证"></a>HTML 验证</h2><p>一般情况下，建议使用能通过标准规范验证的 HTML 代码，除非在性能优化和控制文件大小上不得不做出让步。</p>
+<p>使用诸如 W3C HTML validator 这样的工具来进行检测。</p>
+<p>规范化的 HTML 是显现技术要求与局限的显著质量基线，它促进了 HTML 被更好地运用。</p>
+<h4 id="不推荐"><a href="#不推荐" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;title&gt;Test&lt;/title&gt;
+&lt;article&gt;This is only a test.
+</code></pre><h4 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Test&lt;/title&gt;
+&lt;article&gt;This is only a test.&lt;/article&gt;
+</code></pre><h4 id="省略可选标签"><a href="#省略可选标签" class="headerlink" title="省略可选标签"></a>省略可选标签</h4><p>HTML5 规范中规定了 HTML 标签是可以省略的。但从可读性来说，在开发的源文件中最好不要这样做，因为省略标签可能会导致一些问题。</p>
+<p>省略一些可选的标签确实使得页面大小减少，这很有用，尤其是对于一些大型网站来说。为了达到这一目的，我们可以在开发后期对页面进行压缩处理，在这个环节中这些可选的标签完全就可以省略掉了。</p>
+<hr>
+<h4 id="脚本加载"><a href="#脚本加载" class="headerlink" title="脚本加载"></a>脚本加载</h4><p>出于性能考虑，脚本异步加载很关键。一段脚本放置在 <head> 内，比如 <code>&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;</code>，其加载会一直阻塞 DOM 解析，直至它完全地加载和执行完毕。这会造成页面显示的延迟。特别是一些重量级的脚本，对用户体验来说那真是一个巨大的影响。</head></p>
+<p>异步加载脚本可缓解这种性能影响。如果只需兼容 IE10+，可将 HTML5 的 async 属性加至脚本中，它可防止阻塞 DOM 的解析，甚至你可以将脚本引用写在 <head> 里也没有影响。</head></p>
+<p>如需兼容老旧的浏览器，实践表明可使用用来动态注入脚本的脚本加载器。你可以考虑 <a href="http://yepnopejs.com/" target="_blank" rel="external">yepnope</a> 或 <a href="http://labjs.com/" target="_blank" rel="external">labjs</a>。注入脚本的一个问题是：<a href="https://www.igvita.com/2014/05/20/script-injected-async-scripts-considered-harmful/" target="_blank" rel="external">一直要等到 CSS 对象文档已就绪，它们才开始加载</a>（短暂地在 CSS 加载完毕之后），这就对需要及时触发的 JS 造成了一定的延迟，这多多少少也影响了用户体验吧。</p>
+<p>终上所述，兼容老旧浏览器(IE9-)时，应该遵循以下最佳实践。</p>
+<p>脚本引用写在 body 结束标签之前，并带上 async 属性。这虽然在老旧浏览器中不会异步加载脚本，但它只阻塞了 body 结束标签之前的 DOM 解析，这就大大降低了其阻塞影响。而在现代浏览器中，脚本将在 DOM 解析器发现 body 尾部的 script 标签才进行加载，此时加载属于异步加载，不会阻塞 CSSOM（但其执行仍发生在 CSSOM 之后）。</p>
+<h4 id="所有浏览器中，推荐"><a href="#所有浏览器中，推荐" class="headerlink" title="所有浏览器中，推荐"></a>所有浏览器中，推荐</h4><pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- body goes here --&gt;
+
+    &lt;script src=&quot;main.js&quot; async&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="只在现代浏览器中，推荐"><a href="#只在现代浏览器中，推荐" class="headerlink" title="只在现代浏览器中，推荐"></a>只在现代浏览器中，推荐</h4><pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+    &lt;script src=&quot;main.js&quot; async&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- body goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="语义化"><a href="#语义化" class="headerlink" title="语义化"></a>语义化</h2><p>根据元素（有时被错误地称作“标签”）其被创造出来时的初始意义来使用它。打个比方，用 heading 元素来定义头部标题，p 元素来定义文字段落，用 a 元素来定义链接锚点，等等。</p>
+<p>有根据有目的地使用 HTML 元素，对于可访问性、代码重用、代码效率来说意义重大。</p>
+<p>以下示例列出了一些的语义化 HTML 主要情况：</p>
+<h4 id="不推荐-1"><a href="#不推荐-1" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;b&gt;My page title&lt;/b&gt;
+&lt;div class=&quot;top-navigation&quot;&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#news&quot;&gt;News&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;news-page&quot;&gt;
+  &lt;div class=&quot;page-section news&quot;&gt;
+    &lt;div class=&quot;title&quot;&gt;All news articles&lt;/div&gt;
+    &lt;div class=&quot;news-article&quot;&gt;
+      &lt;h2&gt;Bad article&lt;/h2&gt;
+      &lt;div class=&quot;intro&quot;&gt;Introduction sub-title&lt;/div&gt;
+      &lt;div class=&quot;content&quot;&gt;This is a very bad example for HTML semantics&lt;/div&gt;
+      &lt;div class=&quot;article-side-notes&quot;&gt;I think I&apos;m more on the side and should not receive the main credits&lt;/div&gt;
+      &lt;div class=&quot;article-foot-notes&quot;&gt;
+        This article was created by David &lt;div class=&quot;time&quot;&gt;2014-01-01 00:00&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-footer&quot;&gt;
+      Related sections: Events, Public holidays
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;page-footer&quot;&gt;
+  Copyright 2014
+&lt;/div&gt;
+</code></pre><h4 id="推荐-1"><a href="#推荐-1" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;!-- The page header should go into a header element --&gt;
+&lt;header&gt;
+  &lt;!-- As this title belongs to the page structure it&apos;s a heading and h1 should be used --&gt;
+  &lt;h1&gt;My page title&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;!-- All navigation should go into a nav element --&gt;
+&lt;nav class=&quot;top-navigation&quot;&gt;
+  &lt;!-- A listing of elements should always go to UL (OL for ordered listings) --&gt;
+  &lt;ul&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#news&quot;&gt;News&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- The main part of the page should go into a main element (also use role=&quot;main&quot; for accessibility) --&gt;
+&lt;main class=&quot;news-page&quot; role=&quot;main&quot;&gt;
+  &lt;!-- A section of a page should go into a section element. Divide a page into sections with semantic elements. --&gt;
+  &lt;section class=&quot;page-section news&quot;&gt;
+    &lt;!-- A section header should go into a section element --&gt;
+    &lt;header&gt;
+      &lt;!-- As a page section belongs to the page structure heading elements should be used (in this case h2) --&gt;
+      &lt;h2 class=&quot;title&quot;&gt;All news articles&lt;/h2&gt;
+    &lt;/header&gt;
+
+    &lt;!-- If a section / module can be seen as an article (news article, blog entry, products teaser, any other
+     re-usable module / section that can occur multiple times on a page) a article element should be used --&gt;
+    &lt;article class=&quot;news-article&quot;&gt;
+      &lt;!-- An article can contain a header that contains the summary / introduction information of the article --&gt;
+      &lt;header&gt;
+        &lt;!-- As a article title does not belong to the overall page structure there should not be any heading tag! --&gt;
+        &lt;div class=&quot;article-title&quot;&gt;Good article&lt;/div&gt;
+        &lt;!-- Small can optionally be used to reduce importance --&gt;
+        &lt;small class=&quot;intro&quot;&gt;Introduction sub-title&lt;/small&gt;
+      &lt;/header&gt;
+
+      &lt;!-- For the main content in a section or article there is no semantic element --&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;p&gt;This is a good example for HTML semantics&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;!-- For content that is represented as side note or less important information in a given context use aside --&gt;
+      &lt;aside class=&quot;article-side-notes&quot;&gt;
+        &lt;p&gt;I think I&apos;m more on the side and should not receive the main credits&lt;/p&gt;
+      &lt;/aside&gt;
+      &lt;!-- Articles can also contain footers. If you have footnotes for an article place them into a footer element --&gt;
+      &lt;footer class=&quot;article-foot-notes&quot;&gt;
+        &lt;!-- The time element can be used to annotate a timestamp. Use the datetime attribute to specify ISO time
+         while the actual text in the time element can also be more human readable / relative --&gt;
+        &lt;p&gt;This article was created by David &lt;time datetime=&quot;2014-01-01 00:00&quot; class=&quot;time&quot;&gt;1 month ago&lt;/time&gt;&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/article&gt;
+
+    &lt;!-- In a section, footnotes or similar information can also go into a footer element --&gt;
+    &lt;footer class=&quot;section-footer&quot;&gt;
+      &lt;p&gt;Related sections: Events, Public holidays&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;!-- Your page footer should go into a global footer element --&gt;
+&lt;footer class=&quot;page-footer&quot;&gt;
+  Copyright 2014
+&lt;/footer&gt;
+</code></pre><h2 id="多媒体回朔"><a href="#多媒体回朔" class="headerlink" title="多媒体回朔"></a>多媒体回朔</h2><p>对页面上的媒体而言，像图片、视频、canvas 动画等，要确保其有可替代的接入接口。图片文件我们可采用有意义的备选文本（alt），视频和音频文件我们可以为其加上说明文字或字幕。</p>
+<p>提供可替代内容对可用性来说十分重要。试想，一位盲人用户如何能知晓一张图片是什么，要是没有 @alt 的话。</p>
+<p>（图片的 alt 属性是可不填写内容的，纯装饰性的图片就可用这么做：alt=””）。</p>
+<h4 id="不推荐-2"><a href="#不推荐-2" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;img src=&quot;luke-skywalker.jpg&quot;&gt;
+</code></pre><h4 id="推荐-2"><a href="#推荐-2" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;img src=&quot;luke-skywalker.jpg&quot; alt=&quot;Luke skywalker riding an alien horse&quot;&gt;
+</code></pre><p>尽量用 alt 标签去描述图片，设想你需要对于那些只能通过语音或者看不见图片的用户表达图片到底是什么。</p>
+<h4 id="不推荐-3"><a href="#不推荐-3" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;img src=&quot;huge-spaceship-approaching-earth.jpg&quot; alt=&quot;Header image&quot;&gt;
+</code></pre><h4 id="推荐-3"><a href="#推荐-3" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;img src=&quot;huge-spaceship-approaching-earth.jpg&quot; alt=&quot;A huge spaceship that is approaching the earth&quot;&gt;
+</code></pre><h2 id="关注点分离"><a href="#关注点分离" class="headerlink" title="关注点分离"></a>关注点分离</h2><p>理解 web 中如何和为何区分不同的关注点，这很重要。这里的关注点主要指的是：信息（HTML 结构）、外观（CSS）和行为（JavaScript）。为了使它们成为可维护的干净整洁的代码，我们要尽可能的将它们分离开来。</p>
+<p>严格地保证结构、表现、行为三者分离，并尽量使三者之间没有太多的交互和联系。</p>
+<p>就是说，尽量在文档和模板中只包含结构性的 HTML；而将所有表现代码，移入样式表中；将所有动作行为，移入脚本之中。</p>
+<p>在此之外，为使得它们之间的联系尽可能的小，在文档和模板中也尽量少地引入样式和脚本文件。</p>
+<p>清晰的分层意味着：</p>
+<ul>
+<li>不使用超过一到两张样式表（i.e. main.css, vendor.css）</li>
+<li>不使用超过一到两个脚本（学会用合并脚本）</li>
+<li>不使用行内样式<code>（&lt;style&gt;.no-good {}&lt;/style&gt;）</code></li>
+<li>不在元素上使用 <code>style 属性（&lt;hr style=&quot;border-top: 5px solid black&quot;&gt;）</code></li>
+<li>不使用行内脚本 <code>（&lt;script&gt;alert(&#39;no good&#39;)&lt;/script&gt;）</code></li>
+<li>不使用表象元素 <code>（i.e. &lt;b&gt;, &lt;u&gt;, &lt;center&gt;, &lt;font&gt;, &lt;b&gt;）</code></li>
+<li>不使用表象 <code>class 名（i.e. red, left, center）</code></li>
+</ul>
+<h4 id="不推荐-4"><a href="#不推荐-4" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;base.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;grid.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;type.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;modules/teaser.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 style=&quot;font-size: 3rem&quot;&gt;&lt;/h1&gt;
+  &lt;b&gt;I&apos;m a subtitle and I&apos;m bold!&lt;/b&gt;
+  &lt;center&gt;Dare you center me!&lt;/center&gt;
+  &lt;script&gt;
+    alert(&apos;Just dont...&apos;);
+  &lt;/script&gt;
+  &lt;div class=&quot;red&quot;&gt;I&apos;m important!&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="推荐-4"><a href="#推荐-4" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;!-- Concatinate your style sheets into a single one --&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Don&apos;t use style attributes but assign sensible classes and apply styles in the stylesheet --&gt;
+  &lt;h1 class=&quot;title&quot;&gt;&lt;/h1&gt;
+  &lt;!-- Don&apos;t use presentational elements and assign sensible classes --&gt;
+  &lt;div class=&quot;sub-title&quot;&gt;I&apos;m a subtitle and I&apos;m bold!&lt;/div&gt;
+  &lt;!-- Maybe your comments get centered in your presentation but that decision is up to the stylesheet --&gt;
+  &lt;span class=&quot;comment&quot;&gt;Dare you center me!&lt;/span&gt;
+  &lt;!-- You wanted to make it red because it&apos;s important so then also name the class important and decide in the stylesheet
+   what you want to do with it --&gt;
+  &lt;div class=&quot;important&quot;&gt;I&apos;m important!&lt;/div&gt;
+
+  &lt;!-- Put all your scripts into files and concatinate them into a single one --&gt;
+  &lt;script async src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="HTML-内容至上"><a href="#HTML-内容至上" class="headerlink" title="HTML 内容至上"></a>HTML 内容至上</h2><p>不要让非内容信息污染了你的 HTML。现在貌似有一种倾向：通过 HTML 来解决设计问题，这是显然是不对的。HTML 就应该只关注内容。</p>
+<p>HTML 标签的目的，就是为了不断地展示内容信息。</p>
+<ul>
+<li>不要引入一些特定的 HTML 结构来解决一些视觉设计问题</li>
+<li>不要将 img 元素当做专门用来做视觉设计的元素</li>
+</ul>
+<p>以下例子展示了误将 HTML 用来解决设计问题的这两种情况：</p>
+<h4 id="不推荐-5"><a href="#不推荐-5" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;!-- We should not introduce an additional element just to solve a design problem  --&gt;
+&lt;span class=&quot;text-box&quot;&gt;
+  &lt;span class=&quot;square&quot;&gt;&lt;/span&gt;
+  See the square next to me?
+&lt;/span&gt;
+
+
+.text-box &gt; .square {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+}
+</code></pre><h4 id="推荐-5"><a href="#推荐-5" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;!-- That&apos;s clean markup! --&gt;
+&lt;span class=&quot;text-box&quot;&gt;
+  See the square next to me?
+&lt;/span&gt;
+
+
+/* We use a :before pseudo element to solve the design problem of placing a colored square in front of the text content */
+.text-box:before {
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+}
+</code></pre><p>图片和 SVG 图形能被引入到 HTML 中的唯一理由是它们呈现出了与内容相关的一些信息。</p>
+<h4 id="不推荐-6"><a href="#不推荐-6" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;!-- Content images should never be used for design elements!  --&gt;
+&lt;span class=&quot;text-box&quot;&gt;
+  &lt;img src=&quot;square.svg&quot; alt=&quot;Square&quot; /&gt;
+  See the square next to me?
+&lt;/span&gt;
+</code></pre><h4 id="推荐-6"><a href="#推荐-6" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;!-- That&apos;s clean markup! --&gt;
+&lt;span class=&quot;text-box&quot;&gt;
+  See the square next to me?
+&lt;/span&gt;
+
+/* We use a :before pseudo element with a background image to solve the problem */
+.text-box:before {
+  content: &quot;&quot;;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(square.svg) no-repeat;
+  background-size: 100%;
+}
+</code></pre><h2 id="Type-属性"><a href="#Type-属性" class="headerlink" title="Type 属性"></a>Type 属性</h2><p>省略样式表与脚本上的 type 属性。鉴于 HTML5 中以上两者默认的 type 值就是 text/css 和 text/javascript，所以 type 属性一般是可以忽略掉的。甚至在老旧版本的浏览器中这么做也是安全可靠的。</p>
+<h4 id="不推荐-7"><a href="#不推荐-7" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot; type=&quot;text/css&quot;&gt;
+&lt;script src=&quot;main.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="推荐-7"><a href="#推荐-7" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+&lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+</code></pre><h2 id="可用性"><a href="#可用性" class="headerlink" title="可用性"></a>可用性</h2><p>如果 HTML5 语义化标签使用得当，许多可用性问题已经引刃而解。ARIA 规则在一些语义化的元素上可为其添上默认的可用性角色属性，使用得当的话已使网站的可用性大部分成立。假如你使用 <code>nav</code>, <code>aside</code>, <code>main</code>, <code>footer</code> 等元素，ARIA 规则会在其上应用一些关联的默认值。<br>更多细节可参考 <a href="">ARIA specification</a></p>
+<p>另外一些角色属性则能够用来呈现更多可用性情景（i.e. role=”tab”）。</p>
+<h2 id="Tab-Index-在可用性上的运用"><a href="#Tab-Index-在可用性上的运用" class="headerlink" title="Tab Index 在可用性上的运用"></a>Tab Index 在可用性上的运用</h2><p>检查文档中的 tab 切换顺序并传值给元素上的 tabindex，这可以依据元素的重要性来重新排列其 tab 切换顺序。你可以设置 <code>tabindex=&quot;-1&quot;</code> 在任何元素上来禁用其 tab 切换。</p>
+<p>当你在一个默认不可聚焦的元素上增加了功能，你应该总是为其加上 <code>tabindex</code> 属性使其变为可聚焦状态，而且这也会激活其 CSS 的伪类 :focus。选择合适的 <code>tabindex</code> 值，或是直接使用 <code>tabindex=&quot;0&quot;</code> 将元素们组织成同一 tab 顺序水平，并强制干预其自然阅读顺序。</p>
+<h2 id="微格式在-SEO-和可用性上的运用"><a href="#微格式在-SEO-和可用性上的运用" class="headerlink" title="微格式在 SEO 和可用性上的运用"></a>微格式在 SEO 和可用性上的运用</h2><p>如果 SEO 和可用性环境条件允许的话，建议考虑采用微格式。微格式是通过在元素标签上申明一系列特定数据来达成特定语义的方法。</p>
+<p>谷歌、微软和雅虎对如何使用这些额外的数据一定程度上的达成一致，如果正确的使用，这将给搜索引擎优化带来巨大的好处。</p>
+<p>你可以访问 <a href="http://schema.org/" target="_blank" rel="external">schema.org</a> 获得更多内容细节。</p>
+<p>看一个电影网站的简单例子：</p>
+<h4 id="不带微格式"><a href="#不带微格式" class="headerlink" title="不带微格式"></a>不带微格式</h4><pre><code>&lt;div&gt;
+ &lt;h1&gt;Avatar&lt;/h1&gt;
+ &lt;span&gt;Director: James Cameron (born August 16, 1954)&lt;/span&gt;
+ &lt;span&gt;Science fiction&lt;/span&gt;
+ &lt;a href=&quot;../movies/avatar-theatrical-trailer.html&quot;&gt;Trailer&lt;/a&gt;
+&lt;/div&gt;
+</code></pre><h4 id="带微格式"><a href="#带微格式" class="headerlink" title="带微格式"></a>带微格式</h4><pre><code>&lt;div itemscope itemtype =&quot;http://schema.org/Movie&quot;&gt;
+  &lt;h1 itemprop=&quot;name&quot;&gt;Avatar&lt;/h1&gt;
+  &lt;div itemprop=&quot;director&quot; itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;
+  Director: &lt;span itemprop=&quot;name&quot;&gt;James Cameron&lt;/span&gt; (born &lt;span itemprop=&quot;birthDate&quot;&gt;August 16, 1954)&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;span itemprop=&quot;genre&quot;&gt;Science fiction&lt;/span&gt;
+  &lt;a href=&quot;../movies/avatar-theatrical-trailer.html&quot; itemprop=&quot;trailer&quot;&gt;Trailer&lt;/a&gt;
+&lt;/div&gt;
+</code></pre><h2 id="ID-和锚点"><a href="#ID-和锚点" class="headerlink" title="ID 和锚点"></a>ID 和锚点</h2><p>通常一个比较好的做法是将页面内所有的头部标题元素都加上 ID. 这样做，页面 URL 的 hash 中带上对应的 ID 名称，即形成描点，方便跳转至对应元素所处位置。</p>
+<p>打个比方，当你在浏览器中输入 URL <a href="http://your-site.com/about#best-practices，浏览器将定位至以下" target="_blank" rel="external">http://your-site.com/about#best-practices，浏览器将定位至以下</a> H3 上。</p>
+<pre><code>&lt;h3 id=&quot;best-practices&quot;&gt;Best practices&lt;/h3&gt;
+</code></pre><h2 id="格式化规则"><a href="#格式化规则" class="headerlink" title="格式化规则"></a>格式化规则</h2><p>在每一个块状元素，列表元素和表格元素后，加上一新空白行，并对其子孙元素进行缩进。内联元素写在一行内，块状元素还有列表和表格要另起一行。</p>
+<p>（如果由于换行的空格引发了不可预计的问题，那将所有元素并入一行也是可以接受的，格式警告总好过错误警告）。</p>
+<p>推荐</p>
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Space&lt;/em&gt;, the final frontier.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Moe&lt;/li&gt;
+  &lt;li&gt;Larry&lt;/li&gt;
+  &lt;li&gt;Curly&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Income&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Taxes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$ 5.00&lt;/td&gt;
+      &lt;td&gt;$ 4.50&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre><h2 id="HTML-引号"><a href="#HTML-引号" class="headerlink" title="HTML 引号"></a>HTML 引号</h2><p>使用双引号(“”) 而不是单引号(”) 。</p>
+<h4 id="不推荐-8"><a href="#不推荐-8" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;div class=&apos;news-article&apos;&gt;&lt;/div&gt;
+</code></pre><h4 id="推荐-8"><a href="#推荐-8" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;div class=&quot;news-article&quot;&gt;&lt;/div&gt;
+</code></pre><p>此处的空白元素指的是以下元素：<code>area</code>, <code>base</code>, <code>br</code>, <code>col</code>, <code>command</code>, <code>embed</code>, <code>hr</code>, <code>img</code>, <code>input</code>, <code>keygen</code>, <code>link</code>, <code>meta</code>, <code>param</code>, <code>source</code>, <code>track</code>, <code>wbr</code>.</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端编码规范/">前端编码规范</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="photo-编码规范/前端编码规范（三）" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/15/编码规范/前端编码规范（三）/" class="article-date">
+  	<time datetime="2016-10-15T08:57:23.000Z" itemprop="datePublished">2016-10-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/15/编码规范/前端编码规范（三）/">前端编码规范（三）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript-规范"><a href="#JavaScript-规范" class="headerlink" title="JavaScript 规范"></a>JavaScript 规范</h1><p>转载自：<a href="http://www.css88.com/archives/5366" target="_blank" rel="external">前端编码风格规范（3）—— JavaScript 规范</a></p>
+<h3 id="全局命名空间污染与-IIFE"><a href="#全局命名空间污染与-IIFE" class="headerlink" title="全局命名空间污染与 IIFE"></a>全局命名空间污染与 IIFE</h3><p>总是将代码包裹成一个 IIFE(Immediately-Invoked Function Expression)，用以创建独立隔绝的定义域。这一举措可防止全局命名空间被污染。</p>
+<p>IIFE 还可确保你的代码不会轻易被其它全局命名空间里的代码所修改（i.e. 第三方库，window 引用，被覆盖的未定义的关键字等等）。</p>
+<h4 id="不推荐"><a href="#不推荐" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>var x = 10,
+    y = 100;
+
+// Declaring variables in the global scope is resulting in global scope pollution. All variables declared like this
+// will be stored in the window object. This is very unclean and needs to be avoided.
+console.log(window.x + &apos; &apos; + window.y);
+</code></pre><h4 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h4><pre><code>// We declare a IIFE and pass parameters into the function that we will use from the global space
+(function(log, w, undefined){
+  &apos;use strict&apos;;
+
+  var x = 10,
+      y = 100;
+
+  // Will output &apos;true true&apos;
+  log((w.x === undefined) + &apos; &apos; + (w.y === undefined));
+
+}(window.console.log, window));
+</code></pre><h3 id="IIFE（立即执行的函数表达式）"><a href="#IIFE（立即执行的函数表达式）" class="headerlink" title="IIFE（立即执行的函数表达式）"></a>IIFE（立即执行的函数表达式）</h3><p>无论何时，想要创建一个新的封闭的定义域，那就用 IIFE。它不仅避免了干扰，也使得内存在执行完后立即释放。</p>
+<p>所有脚本文件建议都从 IIFE 开始。</p>
+<p>立即执行的函数表达式的执行括号应该写在外包括号内。虽然写在内还是写在外都是有效的，但写在内使得整个表达式看起来更像一个整体，因此推荐这么做。</p>
+<h4 id="不推荐-1"><a href="#不推荐-1" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>(function(){})();
+</code></pre><h4 id="推荐-1"><a href="#推荐-1" class="headerlink" title="推荐"></a>推荐</h4><pre><code>(function(){}());
+</code></pre><p>so，用下列写法来格式化你的 IIFE 代码：</p>
+<pre><code>(function(){
+  &apos;use strict&apos;;
+
+  // Code goes here
+
+}());
+</code></pre><p>如果你想引用全局变量或者是外层 IIFE 的变量，可以通过下列方式传参：</p>
+<pre><code>(function($, w, d){
+  &apos;use strict&apos;;
+
+  $(function() {
+    w.alert(d.querySelectorAll(&apos;div&apos;).length);
+  });
+}(jQuery, window, document));
+</code></pre><h2 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h2><p>ECMAScript 5 严格模式可在整个脚本或独个方法内被激活。它对应不同的 javascript 语境会做更加严格的错误检查。严格模式也确保了 javascript 代码更加的健壮，运行的也更加快速。</p>
+<p>严格模式会阻止使用在未来很可能被引入的预留关键字。</p>
+<p>你应该在你的脚本中启用严格模式，最好是在独立的 IIFE 中应用它。避免在你的脚本第一行使用它而导致你的所有脚本都启动了严格模式，这有可能会引发一些第三方类库的问题。</p>
+<h4 id="不推荐-2"><a href="#不推荐-2" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>// Script starts here
+&apos;use strict&apos;;
+
+(function(){
+
+  // Your code starts here
+
+}());
+</code></pre><h4 id="推荐-2"><a href="#推荐-2" class="headerlink" title="推荐"></a>推荐</h4><pre><code>(function(){
+  &apos;use strict&apos;;
+
+  // Your code starts here
+
+}());
+</code></pre><h2 id="变量申明"><a href="#变量申明" class="headerlink" title="变量申明"></a>变量申明</h2><p>总是使用 var 来声明变量。如不指定 var，变量将被隐式地声明为全局变量，这将对变量难以控制。如果没有声明，变量处于什么定义域就变得不清（可以是在 Document 或 Window 中，也可以很容易地进入本地定义域）。所以，请总是使用 var 来声明变量。</p>
+<p>采用严格模式带来的好处是，当你手误输入错误的变量名时，它可以通过报错信息来帮助你定位错误出处。</p>
+<h4 id="不推荐-3"><a href="#不推荐-3" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>x = 10;
+y = 100;
+</code></pre><h4 id="推荐-3"><a href="#推荐-3" class="headerlink" title="推荐"></a>推荐</h4><pre><code>var x = 10,
+    y = 100;
+</code></pre><h2 id="理解-JavaScript-的定义域和定义域提升"><a href="#理解-JavaScript-的定义域和定义域提升" class="headerlink" title="理解 JavaScript 的定义域和定义域提升"></a>理解 JavaScript 的定义域和定义域提升</h2><p>在 JavaScript 中变量和方法定义会自动提升到执行之前。JavaScript 只有 function 级的定义域，而无其他很多编程语言中的块定义域，所以使得你在某一 function 内的某语句和循环体中定义了一个变量，此变量可作用于整个 function 内，而不仅仅是在此语句或循环体中，因为它们的声明被 JavaScript 自动提升了。</p>
+<p>我们通过例子来看清楚这到底是怎么一回事：</p>
+<h4 id="原function"><a href="#原function" class="headerlink" title="原function"></a>原function</h4><pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var a = 10;
+
+  for(var i = 0; i &lt; a; i++) {
+    var b = i * i;
+    log(b);
+  }
+
+  if(a === 10) {
+    var f = function() {
+      log(a);
+    };
+    f();
+  }
+
+  function x() {
+    log(&apos;Mr. X!&apos;);
+  }
+  x();
+
+}(window.console.log));
+</code></pre><h4 id="被JS提升过后"><a href="#被JS提升过后" class="headerlink" title="被JS提升过后"></a>被JS提升过后</h4><pre><code>(function(log){
+  &apos;use strict&apos;;
+  // All variables used in the closure will be hoisted to the top of the function
+  var a,
+      i,
+      b,
+      f;
+  // All functions in the closure will be hoisted to the top
+  function x() {
+    log(&apos;Mr. X!&apos;);
+  }
+
+  a = 10;
+
+  for(i = 0; i &lt; a; i++) {
+    b = i * i;
+    log(b);
+  }
+
+  if(a === 10) {
+    // Function assignments will only result in hoisted variables but the function body will not be hoisted
+    // Only by using a real function declaration the whole function will be hoisted with its body
+    f = function() {
+      log(a);
+    };
+    f();
+  }
+
+  x();
+
+}(window.console.log));
+</code></pre><p>根据以上提升过程，你是否可理解以下代码？</p>
+<h4 id="有效代码"><a href="#有效代码" class="headerlink" title="有效代码"></a>有效代码</h4><pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var a = 10;
+
+  i = 5;
+
+  x();
+
+  for(var i; i &lt; a; i++) {
+    log(b);
+    var b = i * i;
+  }
+
+  if(a === 10) {
+    f = function() {
+      log(a);
+    };
+    f();
+
+    var f;
+  }
+
+  function x() {
+    log(&apos;Mr. X!&apos;);
+  }
+
+}(window.console.log));
+</code></pre><p>正如你所看到的这段令人充满困惑与误解的代码导致了出人意料的结果。只有良好的声明习惯，也就是下一章节我们要提到的声明规则，才能尽可能的避免这类错误风险。</p>
+<p>提升声明</p>
+<p>为避免上一章节所述的变量和方法定义被自动提升造成误解，把风险降到最低，我们应该手动地显示地去声明变量与方法。也就是说，所有的变量以及方法，应当定义在 function 内的首行。</p>
+<p>只用一个 var 关键字声明，多个变量用逗号隔开。        </p>
+<h4 id="不推荐-4"><a href="#不推荐-4" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var a = 10;
+  var b = 10;
+
+  for(var i = 0; i &lt; 10; i++) {
+    var c = a * b * i;
+  }
+
+  function f() {
+
+  }
+
+  var d = 100;
+  var x = function() {
+    return d * d;
+  };
+  log(x());
+
+}(window.console.log));
+</code></pre><h4 id="推荐-4"><a href="#推荐-4" class="headerlink" title="推荐"></a>推荐</h4><pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var a = 10,
+      b = 10,
+      i,
+      c,
+      d,
+      x;
+
+  function f() {
+
+  }
+
+  for(i = 0; i &lt; 10; i++) {
+    c = a * b * i;
+  }
+
+
+
+  d = 100;
+  x = function() {
+    return d * d;
+  };
+  log(x());
+
+}(window.console.log));
+</code></pre><p>把赋值尽量写在变量申明中。</p>
+<h4 id="不推荐-5"><a href="#不推荐-5" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>var a,
+    b,
+    c;
+
+a = 10;
+b = 10;
+c = 100;
+</code></pre><h4 id="推荐-5"><a href="#推荐-5" class="headerlink" title="推荐"></a>推荐</h4><pre><code>var a = 10,
+    b = 10,
+    c = 100;
+</code></pre><h2 id="总是使用带类型判断的比较判断"><a href="#总是使用带类型判断的比较判断" class="headerlink" title="总是使用带类型判断的比较判断"></a>总是使用带类型判断的比较判断</h2><p>总是使用 <code>===</code> 精确的比较操作符，避免在判断的过程中，由 JavaScript 的强制类型转换所造成的困扰。</p>
+<p>如果你使用 <code>===</code> 操作符，那比较的双方必须是同一类型为前提的条件下才会有效。</p>
+<p>如果你想了解更多关于强制类型转换的信息，你可以读一读 <a href="http://dmitrysoshnikov.com/notes/note-2-ecmascript-equality-operators/" target="_blank" rel="external">Dmitry Soshnikov</a> 的这篇文章。</p>
+<p>在只使用 <code>==</code> 的情况下，JavaScript 所带来的强制类型转换使得判断结果跟踪变得复杂，下面的例子可以看出这样的结果有多怪了：</p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  log(&apos;0&apos; == 0); // true
+  log(&apos;&apos; == false); // true
+  log(&apos;1&apos; == true); // true
+  log(null == undefined); // true
+
+  var x = {
+    valueOf: function() {
+      return &apos;X&apos;;
+    }
+  };
+
+  log(x == &apos;X&apos;);
+
+}(window.console.log));
+</code></pre><h2 id="明智地使用真假判断"><a href="#明智地使用真假判断" class="headerlink" title="明智地使用真假判断"></a>明智地使用真假判断</h2><p>当我们在一个 if 条件语句中使用变量或表达式时，会做真假判断。if(a == true) 是不同于 if(a) 的。后者的判断比较特殊，我们称其为真假判断。这种判断会通过特殊的操作将其转换为 true 或 false，下列表达式统统返回 false：false, 0, undefined, null, NaN, ‘’（空字符串）.</p>
+<p>这种真假判断在我们只求结果而不关心过程的情况下，非常的有帮助。</p>
+<p>以下示例展示了真假判断是如何工作的：</p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  function logTruthyFalsy(expr) {
+    if(expr) {
+      log(&apos;truthy&apos;);
+    } else {
+      log(&apos;falsy&apos;);
+    }
+  }
+
+  logTruthyFalsy(true); // truthy
+  logTruthyFalsy(1); // truthy
+  logTruthyFalsy({}); // truthy
+  logTruthyFalsy([]); // truthy
+  logTruthyFalsy(&apos;0&apos;); // truthy
+
+  logTruthyFalsy(false); // falsy
+  logTruthyFalsy(0); // falsy
+  logTruthyFalsy(undefined); // falsy
+  logTruthyFalsy(null); // falsy
+  logTruthyFalsy(NaN); // falsy
+  logTruthyFalsy(&apos;&apos;); // falsy
+
+}(window.console.log));
+</code></pre><h2 id="变量赋值时的逻辑操作"><a href="#变量赋值时的逻辑操作" class="headerlink" title="变量赋值时的逻辑操作"></a>变量赋值时的逻辑操作</h2><p>逻辑操作符 <code>||</code> 和 <code>&amp;&amp;</code> 也可被用来返回布尔值。如果操作对象为非布尔对象，那每个表达式将会被自左向右地做真假判断。基于此操作，最终总有一个表达式被返回回来。这在变量赋值时，是可以用来简化你的代码的。</p>
+<h4 id="不推荐-6"><a href="#不推荐-6" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>if(!x) {
+  if(!y) {
+    x = 1;
+  } else {
+    x = y;
+  }
+}
+</code></pre><h4 id="推荐-6"><a href="#推荐-6" class="headerlink" title="推荐"></a>推荐</h4><pre><code>x = x || y || 1;
+</code></pre><p>这一小技巧经常用来给方法设定默认的参数。</p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  function multiply(a, b) {
+    a = a || 1;
+    b = b || 1;
+
+    log(&apos;Result &apos; + a * b);
+  }
+
+  multiply(); // Result 1
+  multiply(10); // Result 10
+  multiply(3, NaN); // Result 3
+  multiply(9, 5); // Result 45
+
+}(window.console.log));
+</code></pre><h2 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h2><p>总是使用分号，因为隐式的代码嵌套会引发难以察觉的问题。当然我们更要从根本上来杜绝这些问题[1] 。以下几个示例展示了缺少分号的危害：</p>
+<pre><code>// 1.
+MyClass.prototype.myMethod = function() {
+  return 42;
+}  // No semicolon here.
+
+(function() {
+  // Some initialization code wrapped in a function to create a scope for locals.
+})();
+
+
+var x = {
+  &apos;i&apos;: 1,
+  &apos;j&apos;: 2
+}  // No semicolon here.
+
+// 2.  Trying to do one thing on Internet Explorer and another on Firefox.
+// I know you&apos;d never write code like this, but throw me a bone.
+[ffVersion, ieVersion][isIE]();
+
+
+var THINGS_TO_EAT = [apples, oysters, sprayOnCheese]  // No semicolon here.
+
+// 3. conditional execution a la bash
+-1 == resultOfOperation() || die();
+</code></pre><p><strong>So what happens?</strong></p>
+<ul>
+<li>JavaScript 错误 —— 首先返回 42 的那个 function 被第二个 function 当中参数传入调用，接着数字 42 也被“调用”而导致出错。</li>
+<li>八成你会得到 ‘no such property in undefined’ 的错误提示，因为在真实环境中的调用是这个样子：<code>x[ffVersion, ieVersion][isIE]()</code>.</li>
+<li><code>die</code> 总是被调用。因为数组减 1 的结果是 NaN，它不等于任何东西（无论 <code>resultOfOperation</code> 是否返回 <code>NaN</code>）。所以最终的结果是 <code>die()</code> 执行完所获得值将赋给 <code>THINGS_TO_EAT</code>.</li>
+</ul>
+<p><strong>Why?</strong></p>
+<p>JavaScript 中语句要以分号结束，否则它将会继续执行下去，不管换不换行。以上的每一个示例中，函数声明或对象或数组，都变成了在一句语句体内。要知道闭合圆括号并不代表语句结束，JavaScript 不会终结语句，除非它的下一个 token 是一个中缀符[2] 或者是圆括号操作符。</p>
+<p>这真是让人大吃一惊，所以乖乖地给语句末加上分号吧。</p>
+<p><strong>澄清：分号与函数</strong></p>
+<p>分号需要用在表达式的结尾，而并非函数声明的结尾。区分它们最好的例子是：</p>
+<pre><code>var foo = function() {
+  return true;
+};  // semicolon here.
+
+function foo() {
+  return true;
+}  // no semicolon here.
+</code></pre><h2 id="嵌套函数"><a href="#嵌套函数" class="headerlink" title="嵌套函数"></a>嵌套函数</h2><p>嵌套函数是非常有用的，比如用在持续创建和隐藏辅助函数的任务中。你可以非常自由随意地使用它们。</p>
+<h2 id="语句块内的函数声明"><a href="#语句块内的函数声明" class="headerlink" title="语句块内的函数声明"></a>语句块内的函数声明</h2><p>切勿在语句块内声明函数，在 ECMAScript 5 的严格模式下，这是不合法的。函数声明应该在定义域的顶层。但在语句块内可将函数申明转化为函数表达式赋值给变量。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>if (x) {
+  function foo() {}
+}
+</code></pre><p><strong>推荐</strong></p>
+<pre><code>if (x) {
+  var foo = function() {};
+}
+</code></pre><h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>基本上你无法避免出现异常，特别是在做大型开发时（使用应用开发框架等等）。</p>
+<p>在没有自定义异常的情况下，从有返回值的函数中返回错误信息一定非常的棘手，更别提多不优雅了。不好的解决方案包括了传第一个引用类型来接纳错误信息，或总是返回一个对象列表，其中包含着可能的错误对象。以上方式基本上是比较简陋的异常处理方式。适时可做自定义异常处理。</p>
+<p>在复杂的环境中，你可以考虑抛出对象而不仅仅是字符串（默认的抛出值）。</p>
+<pre><code>if(name === undefined) {
+  throw {
+    name: &apos;System Error&apos;,
+    message: &apos;A name should always be specified!&apos;
+  }
+}
+</code></pre><p>##标准特性##</p>
+<p>总是优先考虑使用标准特性。为了最大限度地保证扩展性与兼容性，总是首选标准的特性，而不是非标准的特性（例如：首选 string.charAt(3) 而不是 string[3]；首选 DOM 的操作方法来获得元素引用，而不是某一应用特定的快捷方法）。</p>
+<p>##简单的原型继承##</p>
+<p>如果你想在 JavaScript 中继承你的对象，请遵循一个简易的模式来创建此继承。如果你预计你会遇上复杂对象的继承，那可以考虑采用一个继承库，比如 Proto.js by Axel Rauschmayer.</p>
+<p>简易继承请用以下方式：</p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  // Constructor function
+  function Apple(name) {
+    this.name = name;
+  }
+  // Defining a method of apple
+  Apple.prototype.eat = function() {
+    log(&apos;Eating &apos; + this.name);
+  };
+
+  // Constructor function
+  function GrannySmithApple() {
+    // Invoking parent constructor
+    Apple.prototype.constructor.call(this, &apos;Granny Smith&apos;);
+  }
+  // Set parent prototype while creating a copy with Object.create
+  GrannySmithApple.prototype = Object.create(Apple.prototype);
+  // Set constructor to the sub type, otherwise points to Apple
+  GrannySmithApple.prototype.constructor = GrannySmithApple;
+
+  // Calling a super method
+  GrannySmithApple.prototype.eat = function() {
+    // Be sure to apply it onto our current object with call(this)
+    Apple.prototype.eat.call(this);
+
+    log(&apos;Poor Grany Smith&apos;);
+  };
+
+  // Instantiation
+  var apple = new Apple(&apos;Test Apple&apos;);
+  var grannyApple = new GrannySmithApple();
+
+  log(apple.name); // Test Apple
+  log(grannyApple.name); // Granny Smith
+
+  // Instance checks
+  log(apple instanceof Apple); // true
+  log(apple instanceof GrannySmithApple); // false
+
+  log(grannyApple instanceof Apple); // true
+  log(grannyApple instanceof GrannySmithApple); // true
+
+  // Calling method that calls super method
+  grannyApple.eat(); // Eating Granny Smith\nPoor Grany Smith
+
+}(window.console.log));
+</code></pre><h2 id="使用闭包"><a href="#使用闭包" class="headerlink" title="使用闭包"></a>使用闭包</h2><p>闭包的创建也许是 JS 最有用也是最易被忽略的能力了。<a href="http://jibbering.com/faq/faq_notes/closures.html" target="_blank" rel="external">关于闭包如何工作的合理解释。</a></p>
+<h2 id="切勿在循环中创建函数"><a href="#切勿在循环中创建函数" class="headerlink" title="切勿在循环中创建函数"></a>切勿在循环中创建函数</h2><p>在简单的循环语句中加入函数是非常容易形成闭包而带来隐患的。下面的例子就是一个典型的陷阱：</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log, w){
+  &apos;use strict&apos;;
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  for(i = 0; i &lt; numbers.length; i++) {
+    w.setTimeout(function() {
+      // At the moment when this gets executed the i variable, coming from the outer function scope
+      // is set to 3 and the current program is alerting the message 3 times
+      // &apos;Index 3 with number undefined
+      // If you understand closures in javascript you know how to deal with those cases
+      // It&apos;s best to just avoid functions / new closures in loops as this prevents those issues
+
+      w.alert(&apos;Index &apos; + i + &apos; with number &apos; + numbers[i]);
+    }, 0);
+  }
+
+}(window.console.log, window));
+</code></pre><p>接下来的改进虽然已经解决了上述例子中的问题或 bug，但还是违反了不在循环中创建函数或闭包的原则。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log, w){
+  &apos;use strict&apos;;
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  for(i = 0; i &lt; numbers.length; i++) {
+    // Creating a new closure scope with an IIFE solves the problem
+    // The delayed function will use index and number which are
+    // in their own closure scope (one closure per loop iteration).
+    // ---
+    // Still this is not recommended as we violate our rule to not
+    // create functions within loops and we are creating two!
+
+    (function(index, number){
+      w.setTimeout(function() {
+        // Will output as expected 0 &gt; 1, 1 &gt; 2, 2 &gt; 3
+        w.alert(&apos;Index &apos; + index + &apos; with number &apos; + number);
+      }, 0);
+    }(i, numbers[i]));
+  }
+
+}(window.console.log, window));
+</code></pre><p>接下来的改进已解决问题，而且也遵循了规范。可是，你会发现看上去似乎过于复杂繁冗了，应该会有更好的解决方案吧。</p>
+<p><strong>不完全推荐</strong></p>
+<pre><code>(function(log, w){
+  &apos;use strict&apos;;
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  // Create a function outside of the loop that will accept arguments to create a
+  // function closure scope. This function will return a function that executes in this
+  // closure parent scope.
+  function alertIndexWithNumber(index, number) {
+    return function() {
+      w.alert(&apos;Index &apos; + index + &apos; with number &apos; + number);
+    };
+  }
+
+  // First parameter is a function call that returns a function.
+  // ---
+  // This solves our problem and we don&apos;t create a function inside our loop
+  for(i = 0; i &lt; numbers.length; i++) {
+    w.setTimeout(alertIndexWithNumber(i, numbers[i]), 0);
+  }
+
+}(window.console.log, window));
+</code></pre><p>将循环语句转换为函数执行的方式问题能得到立马解决，每一次循环都会对应地创建一次闭包。函数式的风格更加值得推荐，而且看上去也更加地自然和可预料。</p>
+<p><strong>推荐</strong></p>
+<pre><code>(function(log, w){
+  &apos;use strict&apos;;
+
+  // numbers and i is defined in the current function closure
+  var numbers = [1, 2, 3],
+      i;
+
+  numbers.forEach(function(number, index) {
+    w.setTimeout(function() {
+      w.alert(&apos;Index &apos; + index + &apos; with number &apos; + number);
+    }, 0);
+  });
+
+}(window.console.log, window));
+</code></pre><h2 id="eval-函数（魔鬼）"><a href="#eval-函数（魔鬼）" class="headerlink" title="eval 函数（魔鬼）"></a>eval 函数（魔鬼）</h2><p><code>eval()</code> 不但混淆语境还很危险，总会有比这更好、更清晰、更安全的另一种方案来写你的代码，因此尽量不要使用 evil 函数。</p>
+<h2 id="this-关键字"><a href="#this-关键字" class="headerlink" title="this 关键字"></a>this 关键字</h2><p>只在对象构造器、方法和在设定的闭包中使用 this 关键字。this 的语义在此有些误导。它时而指向全局对象（大多数时），时而指向调用者的定义域（在 eval 中），时而指向 DOM 树中的某一节点（当用事件处理绑定到 HTML 属性上时），时而指向一个新创建的对象（在构造器中），还时而指向其它的一些对象（如果函数被 call() 和 apply() 执行和调用时）。</p>
+<p>正因为它是如此容易地被搞错，请限制它的使用场景：</p>
+<ul>
+<li>在构造函数中</li>
+<li>在对象的方法中（包括由此创建出的闭包内）</li>
+</ul>
+<h2 id="首选函数式风格"><a href="#首选函数式风格" class="headerlink" title="首选函数式风格"></a>首选函数式风格</h2><p>函数式编程让你可以简化代码并缩减维护成本，因为它容易复用，又适当地解耦和更少的依赖。</p>
+<p>接下来的例子中，在一组数字求和的同一问题上，比较了两种解决方案。第一个例子是经典的程序处理，而第二个例子则是采用了函数式编程和 ECMA Script 5.1 的数组方法。</p>
+<p>例外：往往在重代码性能轻代码维护的情况之下，要选择最优性能的解决方案而非维护性高的方案（比如用简单的循环语句代替 forEach）。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var arr = [10, 3, 7, 9, 100, 20],
+      sum = 0,
+      i;
+
+
+  for(i = 0; i &lt; arr.length; i++) {
+    sum += arr[i];
+  }
+
+  log(&apos;The sum of array &apos; + arr + &apos; is: &apos; + sum)
+
+}(window.console.log));
+</code></pre><p><strong>推荐</strong></p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var arr = [10, 3, 7, 9, 100, 20];
+
+  var sum = arr.reduce(function(prevValue, currentValue) {
+    return prevValue + currentValue;
+  }, 0);
+
+  log(&apos;The sum of array &apos; + arr + &apos; is: &apos; + sum);
+
+}(window.console.log));
+</code></pre><p>另一个例子通过某一规则对一个数组进行过滤匹配来创建一个新的数组。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var numbers = [11, 3, 7, 9, 100, 20, 14, 10],
+      numbersGreaterTen = [],
+      i;
+
+
+  for(i = 0; i &lt; numbers.length; i++) {
+    if(numbers[i] &gt; 10) {
+      numbersGreaterTen.push(numbers[i]);
+    }
+  }
+
+  log(&apos;From the list of numbers &apos; + numbers + &apos; only &apos; + numbersGreaterTen + &apos; are greater than ten&apos;);
+
+}(window.console.log));
+</code></pre><p><strong>推荐</strong></p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  var numbers = [11, 3, 7, 9, 100, 20, 14, 10];
+
+  var numbersGreaterTen = numbers.filter(function(element) {
+    return element &gt; 10;
+  });
+
+  log(&apos;From the list of numbers &apos; + numbers + &apos; only &apos; + numbersGreaterTen + &apos; are greater than ten&apos;);
+
+}(window.console.log));
+</code></pre><h2 id="使用-ECMA-Script-5"><a href="#使用-ECMA-Script-5" class="headerlink" title="使用 ECMA Script 5"></a>使用 ECMA Script 5</h2><p>建议使用 ECMA Script 5 中新增的语法糖和函数。这将简化你的程序，并让你的代码更加灵活和可复用。</p>
+<h4 id="数组和对象的属性迭代"><a href="#数组和对象的属性迭代" class="headerlink" title="数组和对象的属性迭代"></a>数组和对象的属性迭代</h4><p>用 ECMA5 的迭代方法来迭代数组。使用 <code>Array.forEach</code> 或者如果你要在特殊场合下中断迭代，那就用 <code>Array.every</code>。</p>
+<pre><code>(function(log){
+  &apos;use strict&apos;;
+
+  // Iterate over an array and break at a certain condition
+  [1, 2, 3, 4, 5].every(function(element, index, arr) {
+    log(element + &apos; at index &apos; + index + &apos; in array &apos; + arr);
+
+    if(index !== 5) {
+      return true;
+    }
+  });
+
+  // Defining a simple javascript object
+  var obj = {
+    a: &apos;A&apos;,
+    b: &apos;B&apos;,
+    &apos;c-d-e&apos;: &apos;CDE&apos;
+  };
+
+  // Iterating over the object keys
+  Object.keys(obj).forEach(function(element, index, arr) {
+    log(&apos;Key &apos; + element + &apos; has value &apos; + obj[element]);
+  });
+
+}(window.console.log));
+</code></pre><h2 id="不要使用-switch"><a href="#不要使用-switch" class="headerlink" title="不要使用 switch"></a>不要使用 switch</h2><p>switch 在所有的编程语言中都是个非常错误的难以控制的语句，建议用 if else 来替换它。</p>
+<h2 id="数组和对象字面量"><a href="#数组和对象字面量" class="headerlink" title="数组和对象字面量"></a>数组和对象字面量</h2><p>用数组和对象字面量来代替数组和对象构造器。数组构造器很容易让人在它的参数上犯错。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>// Length is 3.
+var a1 = new Array(x1, x2, x3);
+
+// Length is 2.
+var a2 = new Array(x1, x2);
+
+// If x1 is a number and it is a natural number the length will be x1.
+// If x1 is a number but not a natural number this will throw an exception.
+// Otherwise the array will have one element with x1 as its value.
+var a3 = new Array(x1);
+
+// Length is 0.
+var a4 = new Array();
+</code></pre><p>正因如此，如果将代码传参从两个变为一个，那数组很有可能发生意料不到的长度变化。为避免此类怪异状况，请总是采用更多可读的数组字面量。</p>
+<p><strong>推荐</strong></p>
+<pre><code>var a = [x1, x2, x3];
+var a2 = [x1, x2];
+var a3 = [x1];
+var a4 = [];
+</code></pre><p>对象构造器不会有类似的问题，但是为了可读性和统一性，我们应该使用对象字面量。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>var o = new Object();
+
+var o2 = new Object();
+o2.a = 0;
+o2.b = 1;
+o2.c = 2;
+o2[&apos;strange key&apos;] = 3;
+</code></pre><p>应该写成这样：</p>
+<p><strong>推荐</strong></p>
+<pre><code>var o = {};
+
+var o2 = {
+  a: 0,
+  b: 1,
+  c: 2,
+  &apos;strange key&apos;: 3
+};
+</code></pre><h2 id="修改内建对象的原型链"><a href="#修改内建对象的原型链" class="headerlink" title="修改内建对象的原型链"></a>修改内建对象的原型链</h2><p>修改内建的诸如 <code>Object.prototype</code> 和 <code>Array.prototype</code> 是被严厉禁止的。修改其它的内建对象比如 <code>Function.prototype</code>，虽危害没那么大，但始终还是会导致在开发过程中难以 debug 的问题，应当也要避免。</p>
+<h2 id="自定义-toString-方法"><a href="#自定义-toString-方法" class="headerlink" title="自定义 toString() 方法"></a>自定义 toString() 方法</h2><p>你可以通过自定义 <code>toString()</code> 来控制对象字符串化。这很好，但你必须保证你的方法总是成功并不会有其它副作用。如果你的方法达不到这样的标准，那将会引发严重的问题。如果 <code>toString()</code> 调用了一个方法，这个方法做了一个断言[3] ，当断言失败，它可能会输出它所在对象的名称，当然对象也需要调用 <code>toString()</code>。</p>
+<h2 id="圆括号"><a href="#圆括号" class="headerlink" title="圆括号"></a>圆括号</h2><p>一般在语法和语义上真正需要时才谨慎地使用圆括号。不要用在一元操作符上，例如 <code>delete</code>, <code>typeof</code> 和 <code>void</code>，或在关键字之后，例如 <code>return</code>, <code>throw</code>, <code>case</code>, <code>new</code> 等。</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>统一使用单引号(‘)，不使用双引号(“)。这在创建 HTML 字符串非常有好处：</p>
+<pre><code>var msg = &apos;This is some HTML &lt;div class=&quot;makes-sense&quot;&gt;&lt;/div&gt;&apos;;
+</code></pre><h2 id="三元条件判断（if-的快捷方法）"><a href="#三元条件判断（if-的快捷方法）" class="headerlink" title="三元条件判断（if 的快捷方法）"></a>三元条件判断（if 的快捷方法）</h2><p>用三元操作符分配或返回语句。在比较简单的情况下使用，避免在复杂的情况下使用。没人愿意用 10 行三元操作符把自己的脑子绕晕。</p>
+<p><strong>不推荐</strong></p>
+<pre><code>if(x === 10) {
+  return &apos;valid&apos;;
+} else {
+  return &apos;invalid&apos;;
+}
+</code></pre><p><strong>推荐</strong></p>
+<pre><code>return x === 10 ? &apos;valid&apos; : &apos;invalid&apos;;
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端编码规范/">前端编码规范</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="photo-编码规范/前端开发编码规范（一）" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/15/编码规范/前端开发编码规范（一）/" class="article-date">
+  	<time datetime="2016-10-15T08:40:23.000Z" itemprop="datePublished">2016-10-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/15/编码规范/前端开发编码规范（一）/">前端编码规范（一）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一般规范"><a href="#一般规范" class="headerlink" title="一般规范"></a>一般规范</h1><p>转载自：<a href="http://www.css88.com/archives/5361" target="_blank" rel="external">前端编码规范（1）—— 一般规范</a></p>
+<h2 id="文件-资源命名"><a href="#文件-资源命名" class="headerlink" title="文件/资源命名"></a>文件/资源命名</h2><p>在 web 项目中，所有的文件名应该都遵循同一命名约定。以可读性而言，减号（-）是用来分隔文件名的不二之选。同时它也是常见的 URL 分隔符（i.e. //example.com/blog/my-blog-entry or //s.example.com/images/big-black-background.jpg），所以理所当然的，减号应该也是用来分隔资源名称的好选择。</p>
+<p>请确保文件命名总是以字母开头而不是数字。而以特殊字符开头命名的文件，一般都有特殊的含义与用处（比如 compass[1] 中的下划线就是用来标记跳过直接编译的文件用的）。</p>
+<p>资源的字母名称必须全为小写，这是因为在某些对大小写字母敏感的操作系统中，当文件通过工具压缩混淆后，或者人为修改过后，大小写不同而导致引用文件不同的错误，很难被发现。</p>
+<p>还有一些情况下，需要对文件增加前后缀或特定的扩展名（比如 .min.js, .min.css），抑或一串前缀（比如 3fa89b.main.min.css）。这种情况下，建议使用点分隔符来区分这些在文件名中带有清晰意义的元数据。</p>
+<h4 id="不推荐"><a href="#不推荐" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>MyScript.js
+myCamelCaseName.css
+i_love_underscores.html
+1001-scripts.js
+my-file-min.css
+</code></pre><h4 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h4><pre><code>my-script.js
+my-camel-case-name.css
+i-love-underscores.html
+thousand-and-one-scripts.js
+my-file.min.css
+</code></pre><hr>
+<h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><p>不要指定引入资源所带的具体协议。</p>
+<p>当引入图片或其他媒体文件，还有样式和脚本时，URLs 所指向的具体路径，不要指定协议部分（http:, https:），除非这两者协议都不可用。</p>
+<p>不指定协议使得 URL 从绝对的获取路径转变为相对的，在请求资源协议无法确定时非常好用，而且还能为文件大小节省几个字节。</p>
+<h4 id="不推荐-1"><a href="#不推荐-1" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>&lt;script src=&quot;http://cdn.com/foundation.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="推荐-1"><a href="#推荐-1" class="headerlink" title="推荐"></a>推荐</h4><pre><code>&lt;script src=&quot;//cdn.com/foundation.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="不推荐-2"><a href="#不推荐-2" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>.example {
+  background: url(http://static.example.com/images/bg.jpg);
+}
+</code></pre><h4 id="推荐-2"><a href="#推荐-2" class="headerlink" title="推荐"></a>推荐</h4><pre><code>.example {
+  background: url(//static.example.com/images/bg.jpg);
+}
+</code></pre><hr>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>注释是你自己与你的小伙伴们了解代码写法和目的的唯一途径。特别是在写一些看似琐碎的无关紧要的代码时，由于记忆点不深刻，注释就变得尤为重要了。</p>
+<p>编写自解释代码只是一个传说，没有任何代码是可以完全自解释的。而代码注释，则是永远也不嫌多。</p>
+<p>当你写注释时一定要注意：不要写你的代码都干了些什么，而要写你的代码为什么要这么写，背后的考量是什么。当然也可以加入所思考问题或是解决方案的链接地址。</p>
+<h4 id="不推荐-3"><a href="#不推荐-3" class="headerlink" title="不推荐"></a>不推荐</h4><pre><code>var offset = 0;
+
+if(includeLabels) {
+  // Add offset of 20
+  offset = 20;
+}
+</code></pre><h4 id="推荐-3"><a href="#推荐-3" class="headerlink" title="推荐"></a>推荐</h4><pre><code>var offset = 0;
+
+if(includeLabels) {
+  // If the labels are included we need to have a minimum offset of 20 pixels
+  // We need to set it explicitly because of the following bug: http://somebrowservendor.com/issue-tracker/ISSUE-1
+  offset = 20;
+}
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端编码规范/">前端编码规范</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="web-双向绑定的实现（一）" class="article article-type-web" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/19/双向绑定的实现（一）/" class="article-date">
+  	<time datetime="2016-09-19T02:04:18.000Z" itemprop="datePublished">2016-09-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/19/双向绑定的实现（一）/">双向绑定的实现，基于脏值检查</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="双向绑定的实现（脏值检查）"><a href="#双向绑定的实现（脏值检查）" class="headerlink" title="双向绑定的实现（脏值检查）"></a>双向绑定的实现（脏值检查）</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">var Scope = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    this.$<span class="variable">$watchers</span> = [];</span><br><span class="line">&#125;</span><br><span class="line">Scope.prototype = &#123;</span><br><span class="line">    <span class="variable">$watch</span>: <span class="keyword">function</span>(watchExp, listener) &#123;</span><br><span class="line">        this.$<span class="variable">$watchers</span>.push(&#123;</span><br><span class="line">            watchExp: watchExp,</span><br><span class="line">            listener: listener || <span class="function"><span class="title">function</span></span>() &#123;&#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="variable">$digest</span>: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        var dirty;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            dirty = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span> (var i = 0; i &lt; this.$<span class="variable">$watchers</span>.length; i++) &#123;</span><br><span class="line">                var newValue = this.$<span class="variable">$watchers</span>[i].watchExp(),</span><br><span class="line">                    oldValue = this.$<span class="variable">$watchers</span>[i].last;</span><br><span class="line">                <span class="keyword">if</span> (newValue !== oldValue) &#123;</span><br><span class="line">                    this.$<span class="variable">$watchers</span>[i].listener(newValue, oldValue);</span><br><span class="line">                    dirty = <span class="literal">true</span>;</span><br><span class="line">                    this.$<span class="variable">$watchers</span>[i].last = newValue;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">while</span> (dirty)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 接下来实例化Scope对象</span><br><span class="line"></span><br><span class="line">var <span class="variable">$scope</span> = new Scope();</span><br><span class="line"></span><br><span class="line"><span class="variable">$scope</span>.name = <span class="string">'wuchenyu'</span>;</span><br><span class="line"><span class="variable">$scope</span>.<span class="variable">$watch</span>(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$scope</span>.name;</span><br><span class="line">&#125;, <span class="keyword">function</span>(newValue, oldValue) &#123;</span><br><span class="line">    console.log(newValue, oldValue); // 输出 wuchenyu  undefined </span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable">$scope</span>.<span class="variable">$digest</span>();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这样基本就实现了简单的 脏值 检查，现在把scope对象与我们DOM事件关联在一起就可以实现简单的双向绑定了。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">"zh-CN"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">    &lt;title&gt;双向绑定的实现（一）&lt;/title&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">"format-detection"</span> content=<span class="string">"telephone=no"</span> /&gt;</span><br><span class="line">    &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    input[<span class="built_in">type</span>=<span class="string">'text'</span>]&#123;</span><br><span class="line">        border-color: <span class="comment">#000;</span></span><br><span class="line">        display: block;</span><br><span class="line">    &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    输入：&lt;input <span class="built_in">type</span>=<span class="string">"text"</span>&gt;</span><br><span class="line">    &lt;br&gt;</span><br><span class="line">    输出：&lt;input <span class="built_in">type</span>=<span class="string">"text"</span>&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">var Scope = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    this.$<span class="variable">$watchers</span> = [];</span><br><span class="line">&#125;</span><br><span class="line">Scope.prototype = &#123;</span><br><span class="line">    <span class="variable">$watch</span>: <span class="keyword">function</span>(watchExp, listener) &#123;</span><br><span class="line">        this.$<span class="variable">$watchers</span>.push(&#123;</span><br><span class="line">            watchExp: watchExp,</span><br><span class="line">            listener: listener || <span class="function"><span class="title">function</span></span>() &#123;&#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="variable">$digest</span>: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        var dirty;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            dirty = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span> (var i = 0; i &lt; this.$<span class="variable">$watchers</span>.length; i++) &#123;</span><br><span class="line">                var newValue = this.$<span class="variable">$watchers</span>[i].watchExp(),</span><br><span class="line">                    oldValue = this.$<span class="variable">$watchers</span>[i].last;</span><br><span class="line">                <span class="keyword">if</span> (newValue !== oldValue) &#123;</span><br><span class="line">                    this.$<span class="variable">$watchers</span>[i].listener(newValue, oldValue);</span><br><span class="line">                    dirty = <span class="literal">true</span>;</span><br><span class="line">                    this.$<span class="variable">$watchers</span>[i].last = newValue;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">while</span> (dirty)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 接下来实例化Scope对象</span><br><span class="line"></span><br><span class="line">var <span class="variable">$scope</span> = new Scope();</span><br><span class="line"></span><br><span class="line"><span class="variable">$scope</span>.name = <span class="string">'wuchenyu'</span>;</span><br><span class="line"></span><br><span class="line">var element = document.querySelectorAll(<span class="string">'input'</span>);</span><br><span class="line"></span><br><span class="line">element[0].onkeyup = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    <span class="variable">$scope</span>.name = this.value;</span><br><span class="line">    <span class="variable">$scope</span>.<span class="variable">$digest</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$scope</span>.<span class="variable">$watch</span>(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> <span class="variable">$scope</span>.name;</span><br><span class="line">&#125;, <span class="keyword">function</span>(newValue, oldValue) &#123;</span><br><span class="line">    console.log(newValue, oldValue); // 输出 新值 和 旧值</span><br><span class="line">    element[1].value = newValue;</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端框架原理/">前端框架原理</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-git flow实践" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/05/git flow实践/" class="article-date">
+  	<time datetime="2016-09-04T16:39:06.000Z" itemprop="datePublished">2016-09-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-Flow-实践"><a href="#Git-Flow-实践" class="headerlink" title="Git Flow 实践"></a>Git Flow 实践</h1><h3 id="创建开发分支-develop"><a href="#创建开发分支-develop" class="headerlink" title="创建开发分支(develop)"></a>创建开发分支(develop)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch develop</span><br><span class="line">$ git push -u runningcat develop</span><br></pre></td></tr></table></figure>
+<h3 id="开始新的功能开发"><a href="#开始新的功能开发" class="headerlink" title="开始新的功能开发"></a>开始新的功能开发</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//基于develop分支在新增一个新功能开发的分支</span><br><span class="line">$ git checkout -b runningcat-feature-v1.0 develop</span><br><span class="line">$ git push -u runningcat runningcat-feature-v1.0</span><br></pre></td></tr></table></figure>
+<h3 id="功能开发完成，合并分支"><a href="#功能开发完成，合并分支" class="headerlink" title="功能开发完成，合并分支"></a>功能开发完成，合并分支</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 保证开发分支是最新的</span><br><span class="line">$ git pull runningcat develop</span><br><span class="line">// 切换至开发分支</span><br><span class="line">$ git checkout develop</span><br><span class="line">// 合并分支 （将新功能迭代开发的分支合并）</span><br><span class="line">$ git merge --no-ff runningcat-feature-v1.0</span><br><span class="line">// 将分支同步至线上</span><br><span class="line">$ git push runningcat develop</span><br><span class="line">// 删除新功能开发分支</span><br><span class="line">$ git branch <span class="_">-d</span> runningcat-feature-v1.0</span><br><span class="line">// 如果开发分支同步至线上，那么就需要删除线上的分支</span><br><span class="line">$ git push runningcat --delete runningcat-feature-v1.0</span><br></pre></td></tr></table></figure>
+<h3 id="开始-Release"><a href="#开始-Release" class="headerlink" title="开始 Release"></a>开始 Release</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 新增发布分支</span><br><span class="line">$ git checkout -b runningcat/release-0.1.0 develop</span><br><span class="line">// 发布中出现的问题，BUG的修复全部提交至 runningcat/release-0.1.0 分支，事后发布完成把 runningcat/release-0.1.0 分支合并至 develop 分支</span><br></pre></td></tr></table></figure>
+<h3 id="完成-Release"><a href="#完成-Release" class="headerlink" title="完成 Release"></a>完成 Release</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 切换到master分支</span><br><span class="line">$ git checkout master</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/release-0.1.0</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line">// 切换到 develop 分支</span><br><span class="line">$ git checkout develop</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/release-0.1.0</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line">// 删除本地 runningcat/release-0.1.0 分支</span><br><span class="line">$ git branch <span class="_">-d</span> runningcat/release-0.1.0</span><br><span class="line">// 删除线上 runningcat/release-0.1.0 分支（如果线上有的话）</span><br><span class="line">$ git push runningcat --delete runningcat/release-0.1.0</span><br><span class="line">// 标签</span><br><span class="line">$ git tag <span class="_">-a</span> v0.1.0 master</span><br><span class="line">// 同步标签</span><br><span class="line">$ git push --tags</span><br></pre></td></tr></table></figure>
+<h3 id="开始Hotfix"><a href="#开始Hotfix" class="headerlink" title="开始Hotfix"></a>开始Hotfix</h3><p>当我们在Production发现新的Bug时候，我们需要创建一个Hotfix, 完成Hotfix后，我们合并回Master和Develop分支，所以Hotfix的改动会进入下一个Release<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 创建hotfix分支</span><br><span class="line">$ git checkout -b runningcat/hotfix-0.1.1 master</span><br></pre></td></tr></table></figure></p>
+<h3 id="完成Hotfix"><a href="#完成Hotfix" class="headerlink" title="完成Hotfix"></a>完成Hotfix</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 切换到master（production）分支</span><br><span class="line">$ git checkout master</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/hotfix-0.1.1</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line">// 切换到develop分支</span><br><span class="line">$ git checkout develop</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/hotfix-0.1.1</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line">// 删除本地 hotfix（runningcat/hotfix-0.1.1）分支</span><br><span class="line">git branch <span class="_">-d</span> hotfix-0.1.1</span><br><span class="line"></span><br><span class="line">// 打标签</span><br><span class="line">git tag <span class="_">-a</span> v0.1.1 master</span><br><span class="line">// 同步标签</span><br><span class="line">git push --tags</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="photo-新建shell脚本" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/24/新建shell脚本/" class="article-date">
+  	<time datetime="2016-06-23T16:00:00.000Z" itemprop="datePublished">2016-06-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/24/新建shell脚本/">mac新建shell脚本</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mac新建shell脚本"><a href="#mac新建shell脚本" class="headerlink" title="mac新建shell脚本"></a>mac新建shell脚本</h1><h3 id="1、文件以-sh为后缀"><a href="#1、文件以-sh为后缀" class="headerlink" title="1、文件以.sh为后缀"></a>1、文件以.sh为后缀</h3><h3 id="2、文件以-bin-sh-开头"><a href="#2、文件以-bin-sh-开头" class="headerlink" title="2、文件以 #! /bin/sh 开头"></a>2、文件以 #! /bin/sh 开头</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/sh</span><br><span class="line">group_1=&quot;115.159.62.18&quot;</span><br><span class="line"></span><br><span class="line">sysname=&quot;authorization-module&quot;</span><br><span class="line"></span><br><span class="line">###################### restart $&#123;sysname&#125;/ ######################</span><br><span class="line"></span><br><span class="line">rsync -avzuP --exclude-from=&quot;/Users/chenyuwu/Desktop/shell/project-outsourcing/$&#123;sysname&#125;/exclude.txt&quot; /Users/chenyuwu/Desktop/workSpace/project-outsourcing/$&#123;sysname&#125;  -e &quot;ssh -p 22&quot; root@$&#123;group_1&#125;:/data/local/tools/</span><br><span class="line"></span><br><span class="line">ssh  -p 22 root@$&#123;group_1&#125; &lt;&lt;eeooff</span><br><span class="line"></span><br><span class="line">cd /data/local/tools/$&#123;sysname&#125;</span><br><span class="line"></span><br><span class="line">forever stop ./bin/www</span><br><span class="line">sleep 4</span><br><span class="line">echo ========================  $&#123;sysname&#125; is stoping ===============</span><br><span class="line"></span><br><span class="line">forever start ./bin/www</span><br><span class="line"></span><br><span class="line">sleep 4</span><br><span class="line">echo ========================  $&#123;sysname&#125; is starting ===============</span><br><span class="line"></span><br><span class="line">exit</span><br><span class="line">eeooff</span><br></pre></td></tr></table></figure>
+<h3 id="3、再文件目录下执行-chmod-x-文件名称-sh"><a href="#3、再文件目录下执行-chmod-x-文件名称-sh" class="headerlink" title="3、再文件目录下执行  chmod +x 文件名称.sh"></a>3、再文件目录下执行  chmod +x 文件名称.sh</h3>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="photo-shell脚本初始化安装node服务" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/22/shell脚本初始化安装node服务/" class="article-date">
+  	<time datetime="2016-06-21T16:00:00.000Z" itemprop="datePublished">2016-06-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/22/shell脚本初始化安装node服务/">shell脚本初始化安装node服务</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#node 服务器从无到有</p>
+<ol>
+<li>使用root用户给自用户 赋软链接权限  chown jason.jason -R /usr/local/bin/</li>
+<li>执行 init-server shell 脚本</li>
+</ol>
+<p>init-server shell 脚本代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/sh</span><br><span class="line"></span><br><span class="line">group_1=&quot;120.26.225.223&quot;</span><br><span class="line"></span><br><span class="line">node_version=&quot;node-v4.4.5-linux-x64.tar.gz&quot;</span><br><span class="line"></span><br><span class="line">node_dir=&quot;node-v4.4.5-linux-x64&quot;</span><br><span class="line"></span><br><span class="line">server_module=&quot;forever&quot;</span><br><span class="line"></span><br><span class="line">ssh  -p 50022 jason@$&#123;group_1&#125; &lt;&lt;eeooff</span><br><span class="line"></span><br><span class="line">cd /data/local/</span><br><span class="line"></span><br><span class="line">if [ ! -d &quot;tools&quot; ];then</span><br><span class="line">    mkdir tools</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">cd ./tools</span><br><span class="line"></span><br><span class="line">if [ ! -d &quot;node&quot; ];then</span><br><span class="line">    mkdir node</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">cd ./node</span><br><span class="line"></span><br><span class="line">if [ ! -f &quot;$node_version&quot; ];then</span><br><span class="line">echo ======================== $&#123;node_version&#125; is downloading ===============</span><br><span class="line"></span><br><span class="line">wget https://nodejs.org/dist/v4.4.5/$&#123;node_version&#125;</span><br><span class="line"></span><br><span class="line">echo ======================== $&#123;node_version&#125; has been downloaded ===============</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ -f &quot;$node_version&quot; ];then</span><br><span class="line">    if [ ! -d &quot;$node_dir&quot; ];then</span><br><span class="line">        tar -zxvf $&#123;node_version&#125;</span><br><span class="line">    fi</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">ln -s /data/local/tools/node/$&#123;node_dir&#125;/bin/node /usr/local/bin/node</span><br><span class="line">ln -s /data/local/tools/node/$&#123;node_dir&#125;/bin/npm /usr/local/bin/npm</span><br><span class="line"></span><br><span class="line">echo ======================== $&#123;server_module&#125; is installing ===============</span><br><span class="line"></span><br><span class="line">npm uninstall -g $&#123;server_module&#125;</span><br><span class="line"></span><br><span class="line">npm install -g $&#123;server_module&#125;</span><br><span class="line"></span><br><span class="line">echo ======================== $&#123;server_module&#125; has been installed. ===============</span><br><span class="line"></span><br><span class="line">ln -s /data/local/tools/node/$&#123;node_dir&#125;/bin/forever /usr/local/bin/forever</span><br><span class="line"></span><br><span class="line">exit</span><br><span class="line">eeooff</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="photo-SVNCommand-bug-1" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/21/SVNCommand-bug-1/" class="article-date">
+  	<time datetime="2016-06-20T16:00:00.000Z" itemprop="datePublished">2016-06-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/21/SVNCommand-bug-1/">svn local delete, incoming delete upon update 解决办法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>svn local delete, incoming delete upon update 解决办法</p>
+<h1 id="1-In-your-working-directory-recreate-that-conflicting-file"><a href="#1-In-your-working-directory-recreate-that-conflicting-file" class="headerlink" title="1.In your working directory, recreate that conflicting file:"></a>1.In your working directory, recreate that conflicting file:</h1><pre><code>$ touch foo
+</code></pre><h1 id="2-Revert-that-file-to-the-state-SVN-likes-that-means-deleted"><a href="#2-Revert-that-file-to-the-state-SVN-likes-that-means-deleted" class="headerlink" title="2.Revert that file to the state SVN likes (that means deleted):"></a>2.Revert that file to the state SVN likes (that means deleted):</h1><pre><code>$ svn revert foo
+</code></pre><h1 id="3-Now-delete-that-file"><a href="#3-Now-delete-that-file" class="headerlink" title="3.Now delete that file:"></a>3.Now delete that file:</h1><p>$ rm foo</p>
+<h1 id="4-Conflict-resolved"><a href="#4-Conflict-resolved" class="headerlink" title="4.Conflict resolved:"></a>4.Conflict resolved:</h1><pre><code>$ svn st
+</code></pre><h1 id="Done"><a href="#Done" class="headerlink" title="Done."></a>Done.</h1><p>最后还需要指定更新文件：svn up application.js</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="photo-防止表单自动填充用户名、密码信息" class="article article-type-photo" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -239,65 +1695,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="web-Website Architecture（1）" class="article article-type-web" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/28/Website Architecture（1）/" class="article-date">
-  	<time datetime="2016-04-27T17:37:05.000Z" itemprop="datePublished">2016-04-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/28/Website Architecture（1）/">易配通公众号网站《工作流》架构搭建（一）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><p><img src="/photo/网站架构/20151024145149_451.png" alt="技术选型"></p>
-<p>为什么使用React＋redux<br>为什么使用ES6<br>为什么使用gulp<br>webpack<br>KoaJs 替换 ejs</p>
-<p>模块：btn、modal、loading</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Website-Architecture/">Website Architecture</a></li></ul>
 	</div>
 
       
@@ -390,793 +1787,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="photo-SVNCommand-add" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/20/SVNCommand-add/" class="article-date">
-  	<time datetime="2016-04-19T16:00:00.000Z" itemprop="datePublished">2016-04-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/20/SVNCommand-add/">SVN子命令add用法浅析</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="名称"><a href="#名称" class="headerlink" title="名称"></a>名称</h3><h5 id="svn-add-—-添加文件、目录或符号链。"><a href="#svn-add-—-添加文件、目录或符号链。" class="headerlink" title="svn add — 添加文件、目录或符号链。"></a>svn add — 添加文件、目录或符号链。</h5><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>SVN子命令add PATH…描述<br>文件、目录或符号链到你的工作拷贝并且预定添加到版本库。它们会在下次提交上传并添加到版本库，如果你在提交之前改变了主意，你可以使用svn revert取消预定。</p>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><p>–targets FILENAME</p>
-<p>–non-recursive (-N)</p>
-<p>–quiet (-q)</p>
-<p>–config-dir DIR</p>
-<p>–no-ignore</p>
-<p>–auto-props</p>
-<p>–no-auto-props</p>
-<p>–force</p>
-<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><p>我们通过一个例子来看一下SVN子命令add，添加一个文件到工作拷贝：</p>
-<p>$ svn add foo.c</p>
-<p>A         foo.c</p>
-<p>当添加一个目录，svn add缺省的行为方式是递归的：</p>
-<p>$ svn add testdir</p>
-<p>A         testdir</p>
-<p>A         testdir/a</p>
-<p>A         testdir/b</p>
-<p>A         testdir/c</p>
-<p>A         testdir/d</p>
-<p>你可以只添加一个目录而不包括其内容：</p>
-<p>$ svn add –non-recursive otherdir</p>
-<p>A         otherdir</p>
-<p>通常情况下，命令svn add *会忽略所有已经在版本控制之下的目录，有时候，你会希望添加所有工作拷贝的未版本化文件，包括那些隐藏在深处的文件，可以使用svn add的–force递归到版本化的目录下：</p>
-<p>$ svn add * –force</p>
-<p>A         foo.c</p>
-<p>A         somedir/bar.c</p>
-<p>A         otherdir/docs/baz.doc。SVN子命令add的用法介绍讲解完毕。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="react-react-native" class="article article-type-react" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/05/react-native/" class="article-date">
-  	<time datetime="2016-04-05T08:01:42.000Z" itemprop="datePublished">2016-04-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/05/react-native/">react-native 入门</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h3><ol>
-<li>OS X －当前仅支持OS X</li>
-<li>推荐使用 <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a> 的方式来安装 nvm、watchman 和 flow。</li>
-<li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a> 4.0或者更新的版本。<ul>
-<li>使用 Homebrew 来安装 nvm 或者参考 <a href="https://github.com/creationix/nvm#installation" target="_blank" rel="external">它的安装指南</a>。接着运行 <code>nvm install node &amp;&amp; nvm alias default node</code>, 它可以让您安装最新版本的 Node.js 并设置您的终端，所以你可以通过键入 node 来运行它。使用 Nvm 可以让您安装多个版本的 Node.js 并且在它们之间轻松切换。</li>
-<li><a href="https://docs.npmjs.com/" target="_blank" rel="external">npm</a> 的更新之处。</li>
-</ul>
-</li>
-<li><code>brew 安装 watchman</code>。我们推荐您安装 <code>watchman</code>, 否则您可能在点击一个节点文件的时候出现错误。</li>
-<li><code>brew 安装 flow</code>。如果您想使用 <code>flow</code>.</li>
-</ol>
-<p>我们建议定期运行 <code>brew update &amp;&amp; brew upgrade</code> 来使您的应用程序保持最新状态。</p>
-<h3 id="安装-IOS"><a href="#安装-IOS" class="headerlink" title="安装 IOS"></a>安装 IOS</h3><p>我们需要 <code>Xcode 6.3</code> 或者更高的版本。 您可以在 App 应用商店里面安装它。</p>
-<h3 id="安装-Android"><a href="#安装-Android" class="headerlink" title="安装 Android"></a>安装 Android</h3><p>如果想要编写 React Native 安卓应用程序， 您需要安装安卓 SDK （如果您不想在真机上运行您的应用程序，那么您还需要一个安卓模拟器）。请参阅<a href="http://wiki.jikexueyuan.com/project/react-native/DevelopmentSetupAndroid.html" target="_blank" rel="external">安卓安装指南</a> 说明来配置你的安卓环境 。</p>
-<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g react-native-cli</span><br><span class="line">$ react-native init AwesomeProject</span><br><span class="line">$ cd AwesomeProject/</span><br></pre></td></tr></table></figure>
-<h5 id="运行-iOS-应用程序"><a href="#运行-iOS-应用程序" class="headerlink" title="运行 iOS 应用程序"></a>运行 iOS 应用程序</h5><ul>
-<li><code>$ react-native run-android</code></li>
-<li>在选定的文本编辑器中打开 <code>index.android.js</code> 并且编辑代码。</li>
-<li>按下菜单按钮 （默认情况下是 F2，或在 Genymotion 中点击 ⌘ M），然后选择 Reload JS 看看发生了什么变化！</li>
-<li>在一个终端中运行 <code>adb logcat *:S ReactNative:V ReactNativeJS:V</code> 来查看您的应用程序日志。</li>
-</ul>
-<p>祝贺你！你已经成功运行并修改了你的第一个 <strong><em>React Native</em></strong> 应用程序。</p>
-<p>_如果您在开始的时候遇到任何问题，请参阅 <a href="http://facebook.github.io/react-native/docs/troubleshooting.html#content" target="_blank" rel="external">故障诊断页面</a></p>
-<h3 id="让安卓支持现有的-React-Native-项目"><a href="#让安卓支持现有的-React-Native-项目" class="headerlink" title="让安卓支持现有的 React Native 项目"></a>让安卓支持现有的 React Native 项目</h3><p>如果您现在已经拥有一个(iOS) React Native 项目并且想让安卓也支持它, 那么您需要在您现有的项目目录中执行以下命令：<br> 1.将您 <code>package.json</code> 文件中的 <code>react-native</code> 目录更新到<a href="https://www.npmjs.com/package/react-native" target="_blank" rel="external">最新的版本</a></p>
-<ol>
-<li><code>$ npm install</code></li>
-<li><code>$ react-native android</code></li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-native/">react-native</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="Swig-Swig使用指南" class="article article-type-Swig" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/30/Swig使用指南/" class="article-date">
-  	<time datetime="2016-03-30T15:48:45.000Z" itemprop="datePublished">2016-03-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/30/Swig使用指南/">Swig 使用指南</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://paularmstrong.github.io/swig/docs/filters/">Swig官方文档</a></p>
-<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">swig.init(&#123;</span><br><span class="line">  allowErrors: false,   </span><br><span class="line">  autoescape: true,</span><br><span class="line">  cache: true,</span><br><span class="line">  encoding: &apos;utf8&apos;,</span><br><span class="line">  filters: &#123;&#125;,</span><br><span class="line">  root: &apos;/&apos;,</span><br><span class="line">  tags: &#123;&#125;,</span><br><span class="line">  extensions: &#123;&#125;,</span><br><span class="line">  tzOffset: 0</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="options"><a href="#options" class="headerlink" title="options"></a>options</h4><ol>
-<li><p>allowErrors</p>
-<p> 默认值为 false。将所有模板解析和编译错误直接输出到模板。如果为 true，则将引发错误，抛出到 Node.js 进程中，可能会使您的应用程序崩溃。</p>
-</li>
-<li><p>autoescape</p>
-<p> 默认true，强烈建议保持。字符转换表请参阅转义过滤器。</p>
-<p> true: HTML安全转义 </p>
-<p> false: 不转义，除非使用转义过滤器或者转义标签 </p>
-<p> ‘js’: js安全转义</p>
-</li>
-<li><p>cache</p>
-<p> 更改为 false 将重新编译每个请求的模板的文件。正式环境建议保持true。</p>
-</li>
-<li><p>encoding</p>
-<p> 模板文件编码</p>
-</li>
-<li><p>root</p>
-<p> 需要搜索模板的目录。如果模板传递给 swig.compileFile 绝对路径(以/开头)，Swig不会在模板root中搜索。如果传递一个数组，使用第一个匹配成功的数组项。 </p>
-</li>
-<li><p>tzOffset</p>
-<p> 设置默认时区偏移量。此设置会使转换日期过滤器会自动的修正相应时区偏移量。</p>
-</li>
-<li><p>filters</p>
-<p>自定义过滤器或者重写默认过滤器，参见自定义过滤器指南。</p>
-</li>
-<li><p>tags</p>
-<p> 自定义标签或者重写默认标签，参见自定义标签指南。</p>
-</li>
-<li><p>extensions</p>
-<p> 添加第三方库，可以在编译模板时使用，参见参见自定义标签指南。</p>
-</li>
-</ol>
-<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var tpl = swig.compileFile(&quot;path/to/template/file.html&quot;);</span><br><span class="line">var renderedHtml = tpl.render(&#123; vars: &apos;to be inserted in template&apos; &#125;);</span><br></pre></td></tr></table></figure>
-<p>or</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var tpl = swig.compile(&quot;Template string here&quot;);</span><br><span class="line">var renderedHtml = tpl(&#123; vars: &apos;to be inserted in template&apos; &#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="结合Express"><a href="#结合Express" class="headerlink" title="结合Express"></a>结合Express</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br><span class="line">npm install consolidate</span><br></pre></td></tr></table></figure>
-<p>然后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.engine(&apos;.html&apos;, cons.swig);</span><br><span class="line">app.set(&apos;view engine&apos;, &apos;html&apos;);</span><br></pre></td></tr></table></figure>
-<h4 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h4><p>Swig浏览器版本的api基本与nodejs版相同，不同点如下：</p>
-<ol>
-<li>不能使用swig.compileFile，浏览器没有文件系统</li>
-<li>你必须提前使用swig.compile编译好模板</li>
-<li>按顺序使用extends, import, and include，同时在swig.compile里使用参数templateKey来查找模板</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var template = swig.compile(&apos;&lt;p&gt;｛% block content %｝｛% endblock %｝&lt;/p&gt;&apos;, &#123; filename: &apos;main&apos; &#125;);</span><br><span class="line">var mypage = swig.compile(&apos;｛% extends &quot;main&quot; %｝｛% block content %｝Oh hey there!｛% endblock %｝&apos;, &#123; filename: &apos;mypage&apos; &#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; foo.bar &#125;&#125;</span><br><span class="line">&#123;&#123; foo[&apos;bar&apos;] &#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>如果变量未定义，输出空字符。</p>
-<p>变量可以通过过滤器来修改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; name|title &#125;&#125; was born on &#123;&#123; birthday|date(&apos;F jS, Y&apos;) &#125;&#125;</span><br><span class="line">// Jane was born on July 6th, 1985</span><br></pre></td></tr></table></figure>
-<h3 id="逻辑标签"><a href="#逻辑标签" class="headerlink" title="逻辑标签"></a>逻辑标签</h3><p>参见标签部分。</p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><h3 id="空白"><a href="#空白" class="headerlink" title="空白"></a>空白</h3><p>模板里的空白在最终输出时默认保留，如果需要去掉空白，可以在逻辑标签前后加上空白控制服-：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">｛% for item in seq -%｝</span><br><span class="line">    &#123;&#123; item &#125;&#125;</span><br><span class="line">｛%- endfor %｝</span><br></pre></td></tr></table></figure>
-<h3 id="模板继承"><a href="#模板继承" class="headerlink" title="模板继承"></a>模板继承</h3><p>Swig 使用 extends 和 block 来实现模板继承</p>
-<h5 id="layout-html"><a href="#layout-html" class="headerlink" title="layout.html"></a>layout.html</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;｛% block title %｝My Site｛% endblock %｝&lt;/title&gt;</span><br><span class="line">    ｛% block head %｝</span><br><span class="line">        &lt;link rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;</span><br><span class="line">    ｛% endblock %｝</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    ｛% block content %｝｛% endblock %｝</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">｛% extends &apos;layout.html&apos; %｝</span><br><span class="line"></span><br><span class="line">｛% block title %｝My Page｛% endblock %｝</span><br><span class="line"></span><br><span class="line">｛% block head %｝</span><br><span class="line">｛% parent %｝</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;custom.css&quot;&gt;</span><br><span class="line">｛% endblock %｝</span><br><span class="line"></span><br><span class="line">｛% block content %｝</span><br><span class="line">    &lt;p&gt;This is just an awesome page.&lt;/p&gt;</span><br><span class="line">｛% endblock %｝</span><br></pre></td></tr></table></figure>
-<h3 id="变量过滤器"><a href="#变量过滤器" class="headerlink" title="变量过滤器"></a>变量过滤器</h3><p>用于修改变量。变量名称后用 | 字符分隔添加过滤器。您可以添加多个过滤器。</p>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; name|title &#125;&#125; was born on &#123;&#123; birthday|date(&apos;F jS, Y&apos;) &#125;&#125; and has &#123;&#123;bikes｜length|default(&apos;zero&apos;)&#125;&#125; bikes.</span><br></pre></td></tr></table></figure>
-<p>也可以使用 filter 标签来为块内容添加过滤器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">｛% filter upper %｝oh hi, paul｛% endfilter %｝</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/页面模板/">页面模板</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/30/Swig使用指南/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="css-css-study/position/clip" class="article article-type-css" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/06/css-study/position/clip/" class="article-date">
-  	<time datetime="2016-03-05T16:33:26.000Z" itemprop="datePublished">2016-03-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/06/css-study/position/clip/">CSS3 clip-path polygon图形构建</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>转载自：<a href="http://www.zhangxinxu.com/wordpress/2015/03/css3-clip-path-polygon-shape-transition-animation/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2015/03/css3-clip-path-polygon-shape-transition-animation/</a></p>
-<h3 id="一、-温故"><a href="#一、-温故" class="headerlink" title="一、 温故"></a>一、 温故</h3><p>关于CSS3 <code>clip-path</code>, 去年圣诞节前前前夕写了篇名为“CSS3/SVG <code>clip-path</code>路径剪裁遮罩属性简介”文章介绍了。不过是简介，很多内容是一笔带过。</p>
-<p>CSS3中的<code>clip-path</code>可以遮罩很多图形，例如矩形<code>rectangle</code>, 圆<code>circle</code>, 椭圆<code>ellipse</code>, 多边形<code>polygon</code>, 以及<code>inset</code>剪裁。</p>
-<p>其中，polygon多边形构建频频出现了我的视野中，不知是贪图我的美色还是其他什么原因，总之，它成功了，成功引起了我关注。于是，按照虐心剧剧本一贯的尿性，男主和X主发生了很多情感上的纠葛。这里特意呈现给大家，满足大家八卦的天性。</p>
-<h3 id="二、成形"><a href="#二、成形" class="headerlink" title="二、成形"></a>二、成形</h3><p><code>clip-path</code>的前身是SVG, 所以，我们的坐标都是二维的。</p>
-<p><code>polygon</code>的作用就是根据二维点坐标，依次连线，最后所形成的区域就是我们的遮罩区域了。</p>
-<p><img src="/photo/css/position/2015-03-25_231542.png" alt=""></p>
-<p>即下图代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html class=&quot;&quot;&gt;&lt;head&gt;</span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;meta name=&quot;robots&quot; content=&quot;noindex&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">div &#123;</span><br><span class="line">  width: 160px;</span><br><span class="line">  height: 160px;</span><br><span class="line">  background: #333;</span><br><span class="line">  float: left;</span><br><span class="line">  margin: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(1) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px, 160px 80px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(2) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px, 0px 80px, 160px 80px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(3) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(40px 149.28203px, 40px 10.71797px, 160px 80px, 40px 149.28203px, 40px 10.71797px, 160px 80px, 40px 149.28203px, 40px 10.71797px, 160px 80px, 40px 149.28203px, 40px 10.71797px, 160px 80px, 40px 149.28203px, 40px 10.71797px, 160px 80px, 40px 149.28203px, 40px 10.71797px, 160px 80px, 40px 149.28203px, 40px 10.71797px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(4) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(80px 160px, 0px 80px, 80px 0px, 160px 80px, 80px 160px, 0px 80px, 80px 0px, 160px 80px, 80px 160px, 0px 80px, 80px 0px, 160px 80px, 80px 160px, 0px 80px, 80px 0px, 160px 80px, 80px 160px, 0px 80px, 80px 0px, 160px 80px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(5) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(104.72136px 156.08452px, 15.27864px 127.02282px, 15.27864px 32.97718px, 104.72136px 3.91548px, 160px 80px, 104.72136px 156.08452px, 15.27864px 127.02282px, 15.27864px 32.97718px, 104.72136px 3.91548px, 160px 80px, 104.72136px 156.08452px, 15.27864px 127.02282px, 15.27864px 32.97718px, 104.72136px 3.91548px, 160px 80px, 104.72136px 156.08452px, 15.27864px 127.02282px, 15.27864px 32.97718px, 104.72136px 3.91548px, 160px 80px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(6) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(120px 149.28203px, 40px 149.28203px, 0px 80px, 40px 10.71797px, 120px 10.71797px, 160px 80px, 120px 149.28203px, 40px 149.28203px, 0px 80px, 40px 10.71797px, 120px 10.71797px, 160px 80px, 120px 149.28203px, 40px 149.28203px, 0px 80px, 40px 10.71797px, 120px 10.71797px, 160px 80px, 120px 149.28203px, 40px 149.28203px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(7) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(129.87918px 142.54652px, 62.19833px 157.99423px, 7.92249px 114.7107px, 7.92249px 45.2893px, 62.19833px 2.00577px, 129.87918px 17.45348px, 160px 80px, 129.87918px 142.54652px, 62.19833px 157.99423px, 7.92249px 114.7107px, 7.92249px 45.2893px, 62.19833px 2.00577px, 129.87918px 17.45348px, 160px 80px, 129.87918px 142.54652px, 62.19833px 157.99423px, 7.92249px 114.7107px, 7.92249px 45.2893px, 62.19833px 2.00577px, 129.87918px 17.45348px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(8) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(136.56854px 136.56854px, 80px 160px, 23.43146px 136.56854px, 0px 80px, 23.43146px 23.43146px, 80px 0px, 136.56854px 23.43146px, 160px 80px, 136.56854px 136.56854px, 80px 160px, 23.43146px 136.56854px, 0px 80px, 23.43146px 23.43146px, 80px 0px, 136.56854px 23.43146px, 160px 80px, 136.56854px 136.56854px, 80px 160px, 23.43146px 136.56854px, 0px 80px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(9) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(141.28356px 131.42301px, 93.89185px 158.78462px, 40px 149.28203px, 4.82459px 107.36161px, 4.82459px 52.63839px, 40px 10.71797px, 93.89185px 1.21538px, 141.28356px 28.57699px, 160px 80px, 141.28356px 131.42301px, 93.89185px 158.78462px, 40px 149.28203px, 4.82459px 107.36161px, 4.82459px 52.63839px, 40px 10.71797px, 93.89185px 1.21538px, 141.28356px 28.57699px, 160px 80px, 141.28356px 131.42301px, 93.89185px 158.78462px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(10) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(144.72136px 127.02282px, 104.72136px 156.08452px, 55.27864px 156.08452px, 15.27864px 127.02282px, 0px 80px, 15.27864px 32.97718px, 55.27864px 3.91548px, 104.72136px 3.91548px, 144.72136px 32.97718px, 160px 80px, 144.72136px 127.02282px, 104.72136px 156.08452px, 55.27864px 156.08452px, 15.27864px 127.02282px, 0px 80px, 15.27864px 32.97718px, 55.27864px 3.91548px, 104.72136px 3.91548px, 144.72136px 32.97718px, 160px 80px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(11) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(147.30028px 123.25127px, 113.2332px 152.77056px, 68.61481px 159.18572px, 27.61114px 140.45997px, 3.24056px 102.5386px, 3.24056px 57.4614px, 27.61114px 19.54003px, 68.61481px 0.81428px, 113.2332px 7.22944px, 147.30028px 36.74873px, 160px 80px, 147.30028px 123.25127px, 113.2332px 152.77056px, 68.61481px 159.18572px, 27.61114px 140.45997px, 3.24056px 102.5386px, 3.24056px 57.4614px, 27.61114px 19.54003px, 68.61481px 0.81428px, 113.2332px 7.22944px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(12) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(149.28203px 120px, 120px 149.28203px, 80px 160px, 40px 149.28203px, 10.71797px 120px, 0px 80px, 10.71797px 40px, 40px 10.71797px, 80px 0px, 120px 10.71797px, 149.28203px 40px, 160px 80px, 149.28203px 120px, 120px 149.28203px, 80px 160px, 40px 149.28203px, 10.71797px 120px, 0px 80px, 10.71797px 40px, 40px 10.71797px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(13) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(150.83648px 117.17785px, 125.44518px 145.83871px, 89.64293px 159.41671px, 51.63161px 154.8013px, 20.11914px 133.04981px, 2.32465px 99.14525px, 2.32465px 60.85475px, 20.11914px 26.95019px, 51.63161px 5.1987px, 89.64293px 0.58329px, 125.44518px 14.16129px, 150.83648px 42.82215px, 160px 80px, 150.83648px 117.17785px, 125.44518px 145.83871px, 89.64293px 159.41671px, 51.63161px 154.8013px, 20.11914px 133.04981px, 2.32465px 99.14525px, 2.32465px 60.85475px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(14) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(152.07751px 114.7107px, 129.87918px 142.54652px, 97.80167px 157.99423px, 62.19833px 157.99423px, 30.12082px 142.54652px, 7.92249px 114.7107px, 0px 80px, 7.92249px 45.2893px, 30.12082px 17.45348px, 62.19833px 2.00577px, 97.80167px 2.00577px, 129.87918px 17.45348px, 152.07751px 45.2893px, 160px 80px, 152.07751px 114.7107px, 129.87918px 142.54652px, 97.80167px 157.99423px, 62.19833px 157.99423px, 30.12082px 142.54652px, 7.92249px 114.7107px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(15) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(153.08364px 112.53893px, 133.53045px 139.45159px, 104.72136px 156.08452px, 71.63772px 159.56175px, 40px 149.28203px, 15.27864px 127.02282px, 1.74819px 96.63294px, 1.74819px 63.36706px, 15.27864px 32.97718px, 40px 10.71797px, 71.63772px 0.43825px, 104.72136px 3.91548px, 133.53045px 20.54841px, 153.08364px 47.46107px, 160px 80px, 153.08364px 112.53893px, 133.53045px 139.45159px, 104.72136px 156.08452px, 71.63772px 159.56175px, 40px 149.28203px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(16) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(153.91036px 110.61467px, 136.56854px 136.56854px, 110.61467px 153.91036px, 80px 160px, 49.38533px 153.91036px, 23.43146px 136.56854px, 6.08964px 110.61467px, 0px 80px, 6.08964px 49.38533px, 23.43146px 23.43146px, 49.38533px 6.08964px, 80px 0px, 110.61467px 6.08964px, 136.56854px 23.43146px, 153.91036px 49.38533px, 160px 80px, 153.91036px 110.61467px, 136.56854px 136.56854px, 110.61467px 153.91036px, 80px 160px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(17) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(154.59778px 108.89933px, 139.12071px 133.89565px, 115.65907px 151.61306px, 87.38147px 159.65873px, 58.10696px 156.94605px, 31.78923px 143.84138px, 11.98263px 122.11457px, 1.36215px 94.69996px, 1.36215px 65.30004px, 11.98263px 37.88543px, 31.78923px 16.15862px, 58.10696px 3.05395px, 87.38147px 0.34127px, 115.65907px 8.38694px, 139.12071px 26.10435px, 154.59778px 51.10067px, 160px 80px, 154.59778px 108.89933px, 139.12071px 133.89565px, 115.65907px 151.61306px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(18) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(155.17541px 107.36161px, 141.28356px 131.42301px, 120px 149.28203px, 93.89185px 158.78462px, 66.10815px 158.78462px, 40px 149.28203px, 18.71644px 131.42301px, 4.82459px 107.36161px, 0px 80px, 4.82459px 52.63839px, 18.71644px 28.57699px, 40px 10.71797px, 66.10815px 1.21538px, 93.89185px 1.21538px, 120px 10.71797px, 141.28356px 28.57699px, 155.17541px 52.63839px, 160px 80px, 155.17541px 107.36161px, 141.28356px 131.42301px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(19) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(155.66538px 105.97596px, 143.13124px 129.13702px, 123.75585px 146.97332px, 99.63884px 157.55202px, 73.39365px 159.72676px, 47.86437px 153.26187px, 25.81747px 138.85791px, 9.6421px 118.07579px, 1.0911px 93.16757px, 1.0911px 66.83243px, 9.6421px 41.92421px, 25.81747px 21.14209px, 47.86437px 6.73813px, 73.39365px 0.27324px, 99.63884px 2.44798px, 123.75585px 13.02668px, 143.13124px 30.86298px, 155.66538px 54.02404px, 160px 80px, 155.66538px 105.97596px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">div:nth-child(20) &#123;</span><br><span class="line">  -webkit-clip-path: polygon(156.08452px 104.72136px, 144.72136px 127.02282px, 127.02282px 144.72136px, 104.72136px 156.08452px, 80px 160px, 55.27864px 156.08452px, 32.97718px 144.72136px, 15.27864px 127.02282px, 3.91548px 104.72136px, 0px 80px, 3.91548px 55.27864px, 15.27864px 32.97718px, 32.97718px 15.27864px, 55.27864px 3.91548px, 80px 0px, 104.72136px 3.91548px, 127.02282px 15.27864px, 144.72136px 32.97718px, 156.08452px 55.27864px, 160px 80px);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;&lt;/head&gt;&lt;body&gt;</span><br><span class="line">&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p>上面截图就是1个点~20个点绘制的多边形效果。大家可以看到趋势，点越多，最后的多边形越接近圆形。所以，如果你要是闲的蛋疼，可以用100个点模拟一个圆。</p>
-<p>我们实际应用的时候，5个角以上的多边形是不会用到的。</p>
-<p>最常用的估计就是三角效果了。</p>
-<p>10年的时候有介绍<a href="http://www.zhangxinxu.com/wordpress/2010/05/css-border%E4%B8%89%E8%A7%92%E3%80%81%E5%9C%86%E8%A7%92%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/" target="_blank" rel="external">“CSS border三角、圆角图形生成技术简介”</a>，可以使用border属性生成各类三角效果：</p>
-<p><img src="/photo/css/position/2010-03-13_003545.png" alt=""></p>
-<p>相比而言，<code>clip-path</code>家族的<code>polygon</code>生成三角要更简单也更强大。</p>
-<p>打个背景色，搞三个点就可以了，例如(自身尺寸20px*20px)：</p>
-<pre><code>.path {
-    clip-path: polygon(5px 10px, 16px 3px, 16px 17px);
-}
-</code></pre><p>于是呈现：</p>
-<p><img src="/photo/css/position/2015-03-25_232746.png" alt=""></p>
-<p>当然，我们可以把其中任意一个点的坐标弄偏一点，于是，我们就可以出炉一个不规则的三角效果，这是之前三角生成技术所不具备的。</p>
-<p><a href="http://www.zhangxinxu.com/study/201503/css3-clip-path-polygon.html" target="_blank" rel="external">CSS3 clip-path之polygon绘图与动画Demo</a></p>
-<p><a href="http://species-in-pieces.com/" target="_blank" rel="external">30个动物，30种变换，主要就是使用clip-path polygon实现</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="css-css-study/position/position_sticky_的使用" class="article article-type-css" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/03/css-study/position/position_sticky_的使用/" class="article-date">
-  	<time datetime="2016-03-03T05:25:28.000Z" itemprop="datePublished">2016-03-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/03/css-study/position/position_sticky_的使用/">position:sticky实现iOS6+下的粘性布局</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="转载自http-efe-baidu-com-blog-position-sticky"><a href="#转载自http-efe-baidu-com-blog-position-sticky" class="headerlink" title="转载自http://efe.baidu.com/blog/position-sticky/"></a>转载自<a href="http://efe.baidu.com/blog/position-sticky/">http://efe.baidu.com/blog/position-sticky/</a></h4><p>用户总是希望在窗口明显的地方方便找到自己想要的操作项，例如停留在浏览器窗口顶端的菜单栏，筛选栏等。所以我们会把用户最常用到或者我们希望用户注意到的内容一直展现在窗口的可视区域，让用户能够一眼就看到。这当中常需要用到一种页面滚动然后元素固定在窗口的某个位置的布局方式（下面简称 <strong>粘性布局</strong>）。<br>要实现这种粘性布局，我们常常都是通过js来模拟，实现方案是通过js监听window的scroll事件，当需要固定的元素滚动到窗口顶部时，把元素的position属性设置为fixed，否则，取消fixed，简单的js代码如下：</p>
-<pre><code>var nav = document.querySelector(&apos;.nav&apos;);
-var navOffsetY = nav.offsetTop;
-function onScroll(e) {
-    window.scrollY &gt;= navOffsetY?nav.classList.add(&apos;fixed&apos;) : nav.classList.remove(&apos;fixed&apos;); 
-}
-window.addEventListener(&apos;scroll&apos;, onScroll);
-</code></pre><p>上面的实现在桌面浏览器的表现还是挺好的，但是在移动端浏览器上粘顶的效果就显得不那么平滑了。</p>
-<p>特别是在iOS设备上，iOS下的浏览器会在页面滚动的时候，暂停所有js的执行，直到滚动停止才会继续去执行js（注意暂停了所有js的执行，所以考虑用<code>setTimeout</code>或<code>setInterval</code>也是没有用的）。所以页面滚动时，<code>scroll</code>事件在iOS的浏览器下并不会持续被触发，而是在页面滚动停止后，才会去触发一次<code>scroll</code>事件。 在Android 2.3及以下的版本的浏览器<code>scroll</code>事件的响应也是跟iOS一样。而Android 2.3以上的版本中虽然有部分浏览器能持续的触发<code>scroll</code>事件，但由于移动设备上惯性滚动的原因，<code>scroll</code>事件的回调函数执行渲染Dom频率还是赶不上滚动的频率，所以即使是在高版本的Android下，滚动快了，还是会看到原来fixed的元素闪跳归位。</p>
-<p>下面我们来做一个<code>scroll</code>事件的测试：</p>
-<pre><code>var count = 0;
-var num = document.querySelector(&apos;#num&apos;);
-window.addEventListener(&apos;scroll&apos;, function () {
-    num.innerHTML = ++count;
-});
-</code></pre><p>下图分别是测试代码在iphone 5s（iOS 7.1.1）和红米 1S（Android 4.3）中的表现：<br><img src="/photo/css/position/ios-scroll-test.gif" alt=""><img src="/photo/css/position/android-scroll-test.gif" alt=""></p>
-<pre><code>&lt;!-- position sticky 的css2兼容方法 --&gt;
-&lt;style&gt;
-body {
-    margin: 0;
-    text-align: center;
-    font-family: sans-serif;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-}
-
-.sticky {
-    width: 100%;
-    background: #F6D565;
-    padding: 25px 0;
-    text-transform: uppercase;
-}
-&lt;/style&gt;
-&lt;p style=&quot;margin-bottom:100px;&quot;&gt;Scroll this page.&lt;/p&gt;
-&lt;div class=&quot;sticky&quot;&gt;
-    &lt;h3&gt;Super amazing header&lt;/h3&gt;&lt;/div&gt;
-&lt;p style=&quot;margin-top:500px;&quot;&gt;Still there?&lt;/p&gt;
-&lt;p style=&quot;margin-top:500px;&quot;&gt;Yep!&lt;/p&gt;
-&lt;p style=&quot;margin-top:500px;&quot;&gt;Scroll so hard!&lt;/p&gt;
-&lt;script&gt;
-var sticky = document.querySelector(&apos;.sticky&apos;);
-var origOffsetY = sticky.offsetTop;
-
-function onScroll(e) {
-    window.scrollY &gt;= origOffsetY ? sticky.classList.add(&apos;fixed&apos;) :
-        sticky.classList.remove(&apos;fixed&apos;);
-}
-
-document.addEventListener(&apos;scroll&apos;, onScroll);
-&lt;/script&gt;
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/03/css-study/position/position_sticky_的使用/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="css-web移动端/Web移动端Fixed布局的解决方案" class="article article-type-css" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/03/web移动端/Web移动端Fixed布局的解决方案/" class="article-date">
-  	<time datetime="2016-03-03T05:23:01.000Z" itemprop="datePublished">2016-03-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/03/web移动端/Web移动端Fixed布局的解决方案/">Web移动端Fixed布局的解决方案</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>转载自:<a href="http://efe.baidu.com/blog/mobile-fixed-layout/" target="_blank" rel="external">http://efe.baidu.com/blog/mobile-fixed-layout/</a></p>
-<p>移动端业务开发，iOS 下经常会有 fixed 元素和输入框(input 元素)同时存在的情况。 但是 fixed 元素在有软键盘唤起的情况下，会出现许多莫名其妙的问题。 这篇文章里就提供一个简单的有输入框情况下的 fixed 布局方案。</p>
-<hr>
-<h3 id="iOS下的-Fixed-Input-BUG现象"><a href="#iOS下的-Fixed-Input-BUG现象" class="headerlink" title="iOS下的 Fixed + Input BUG现象"></a>iOS下的 Fixed + Input BUG现象</h3><p>让我们先举个栗子，最直观的说明一下这个 BUG 的现象。 常规的 fixed 布局，可能使用如下布局（以下仅示意代码）：</p>
-<pre><code>&lt;body class=&quot;layout-fixed&quot;&gt;
-    &lt;!-- fixed定位的头部 --&gt;
-    &lt;header&gt;
-
-    &lt;/header&gt;
-
-    &lt;!-- 可以滚动的区域 --&gt;
-    &lt;main&gt;
-        &lt;!-- 内容在这里... --&gt;
-    &lt;/main&gt;
-
-    &lt;!-- fixed定位的底部 --&gt;
-    &lt;footer&gt;
-        &lt;input type=&quot;text&quot; placeholder=&quot;Footer...&quot;/&gt;
-        &lt;button class=&quot;submit&quot;&gt;提交&lt;/button&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-</code></pre><p>对应的样式如下：</p>
-<pre><code>header, footer, main {
-    display: block;
-}
-
-header {
-    position: fixed;
-    height: 50px;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-
-footer {
-    position: fixed;
-    height: 34px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-main {
-    margin-top: 50px;
-    margin-bottom: 34px;
-    height: 2000px
-}
-</code></pre><p>然后看起来就是下面这个样子。拖动页面时 header 和 footer 已经定位在了对应的位置，目测没问题了。</p>
-<p><img src="/photo/Web移动端Fixed布局的解决方案/fixed.png" alt=""><br><code>fixed定位</code></p>
-<p>但接下来问题就来了！如果底部输入框软键盘被唤起以后，再次滑动页面，就会看到如下图所示：<br><img src="/photo/Web移动端Fixed布局的解决方案/fixed_bug_0.png" alt=""><img src="/photo/Web移动端Fixed布局的解决方案/fixed_bug_1.png" alt=""></p>
-<p>我们看到 fixed 定位好的元素跟随页面滚动了起来… fixed 属性失效了！</p>
-<p>这是为什么呢？简单解释下： <strong>&gt; 软键盘唤起后，页面的 fixed 元素将失效（即无法浮动，也可以理解为变成了 absolute 定位），所以当页面超过一屏且滚动时，失效的 fixed 元素就会跟随滚动了。</strong></p>
-<p>这便是 iOS 上 fixed 元素和输入框的 bug 。其中不仅限于 type=text 的输入框，凡是软键盘（比如时间日期选择、select 选择等等）被唤起，都会遇到同样地问题。</p>
-<hr>
-<p>虽然 <code>isScroll.js</code> 可以很好的解决 fixed 定位滚动的问题，但是不在万不得已的情况下，我们尽量尝试一下不依赖第三方库的布局方案，以简化实现方式。这里抛砖引玉作为参考。</p>
-<h3 id="解决思路："><a href="#解决思路：" class="headerlink" title="解决思路："></a>解决思路：</h3><p>既然在 iOS 下由于软键盘唤出后，页面 fixed 元素会失效，导致跟随页面一起滚动，那么<strong>假如——页面不会过长出现滚动，那么即便 fixed 元素失效，也无法跟随页面滚动，也就不会出现上面的问题了。</strong></p>
-<p>那么按照这个思路，如果使 fixed 元素的父级不出现滚动，而将原 body 滚动的区域域移到 main 内部，而 header 和 footer 的样式不变，代码如下：</p>
-<pre><code>&lt;body class=&quot;layout-scroll-fixed&quot;&gt;
-    &lt;!-- fixed定位的头部 --&gt;
-    &lt;header&gt;
-
-    &lt;/header&gt;
-
-    &lt;!-- 可以滚动的区域 --&gt;
-    &lt;main&gt;
-        &lt;div class=&quot;content&quot;&gt;
-        &lt;!-- 内容在这里... --&gt;
-        &lt;/div&gt;
-    &lt;/main&gt;
-
-    &lt;!-- fixed定位的底部 --&gt;
-    &lt;footer&gt;
-        &lt;input type=&quot;text&quot; placeholder=&quot;Footer...&quot;/&gt;
-        &lt;button class=&quot;submit&quot;&gt;提交&lt;/button&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-
-
-
-
-header, footer, main {
-    display: block;
-}
-
-header {
-    position: fixed;
-    height: 50px;
-    left: 0;
-    right: 0;
-    top: 0;
-}
-
-footer {
-    position: fixed;
-    height: 34px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-main {
-    /* main绝对定位，进行内部滚动 */
-    position: absolute;
-    top: 50px;
-    bottom: 34px;
-    /* 使之可以滚动 */
-    overflow-y: scroll;
-}
-
-main .content {
-    height: 2000px;
-}
-</code></pre><p>这样再来看一下：<br><img src="/photo/Web移动端Fixed布局的解决方案/fixed_scroll_0.png" alt=""></p>
-<p><code>fixed定位</code><br>在原始输入法下， fixed 元素可以定位在页面的正确位置。滚动页面时，由于滚动的是 main 内部的 div，因此 footer 没有跟随页面滚动。</p>
-<p>上面貌似解决了问题，但是如果在手机上实际测试一下，会发现 main 元素内的滚动非常不流畅，滑动的手指松开后，滚动立刻停止，失去了原本的流畅滚动特性。百度一下弹性滚动的问题，发现在 webkit 中，下面的属性可以恢复弹性滚动。</p>
-<blockquote>
-<p>-webkit-overflow-scrolling: touch;</p>
-</blockquote>
-<p>在 main 元素上加上该属性，嗯，丝般顺滑的感觉又回来了！</p>
-<pre><code>main {
-    /* main绝对定位，进行内部滚动 */
-    position: absolute;
-    top: 50px;
-    bottom: 34px;
-    /* 使之可以滚动 */
-    overflow-y: scroll;
-    /* 增加该属性，可以增加弹性 */
-    -webkit-overflow-scrolling: touch;
-}
-</code></pre><p>另外，这里的 header 和 footer 使用的是 fixed 定位，如果考虑到更老一些的 iOS 系统不支持 fixed 元素，完全可以把 fixed 替换成 absolute 。测试后效果是一样的。</p>
-<p>至此一个不依赖第三方库的 fixed 布局就完成了。</p>
-<hr>
-<h4 id="Android-下布局"><a href="#Android-下布局" class="headerlink" title="Android 下布局"></a>Android 下布局</h4><p>谈到了 iOS ，也来简单说一下 Android 下的布局吧。</p>
-<p>在 Android2.3+ 中，因为不支持 overflow-scrolling ，因此部分浏览器内滚动会有不流畅的卡顿。但是目前发现在 body 上的滚动还是很流畅的，因此使用第一种在 iOS 出现问题的 fixed 定位的布局就可以了。</p>
-<p>如果需要考虑 Android2.3 以下系统，因为不支持 fixed 元素，所以依然要需要考虑使用 isScroll.js 来实现内部滚动。</p>
-<p>其实在 fixed 和输入框的问题上，基本思路就是： &gt; 由于 fixed 在软键盘唤起后会失效，导致在页面可以滚动时，会跟随页面一起滚动。因此如果页面无法滚动，那么 fixed 元素即使失效，也不会滚动，也就不会出现 bug 了。</p>
-<p>所以可以在这个方面去考虑解决问题。</p>
-<hr>
-<h4 id="其他的一些细节处理"><a href="#其他的一些细节处理" class="headerlink" title="其他的一些细节处理"></a>其他的一些细节处理</h4><p>在细节处理上，其实还有很多要注意的，挑几个实际遇到比较大的问题来说一下：</p>
-<ol>
-<li>有时候输入框 focus 以后，会出现软键盘遮挡输入框的情况，这时候可以尝试 input 元素的 scrollIntoView 进行修复。</li>
-<li>在 iOS 下使用第三方输入法时，输入法在唤起经常会盖住输入框，只有在输入了一条文字后，输入框才会浮出。目前也不知道有什么好的办法能让唤起输入框时正确显示。这暂时算是 iOS 下的一个坑吧。</li>
-<li>有些第三方浏览器底部的工具栏是浮在页面之上的，因此底部 fixed 定位会被工具栏遮挡。解决办法也比较简单粗暴——适配不同的浏览器，调整 fixed 元素距离底部的距离。</li>
-<li>最好将 header 和 footer 元素的 touchmove 事件禁止，以防止滚动在上面触发了部分浏览器全屏模式切换，而导致顶部地址栏和底部工具栏遮挡住 header 和 footer 元素。</li>
-<li>在页面滚动到上下边缘的时候，如果继续拖拽会将整个 View 一起拖拽走，导致页面的“露底”。</li>
-</ol>
-<p><img src="/photo/Web移动端Fixed布局的解决方案/fixed_pull_over.png" alt=""><br><code>fixed 定位</code></p>
-<p>为了防止页面露底，可以在页面拖拽到边缘的时候，通过判断拖拽方向以及是否为边缘来阻止 touchmove 事件，防止页面继续拖拽。</p>
-<p>以上面内滚动 layout-scroll-fixed 布局为例，给出一段代码作为参考：</p>
-<pre><code>// 防止内容区域滚到底后引起页面整体的滚动
-var content = document.querySelector(&apos;main&apos;);
-var startY;
-
-content.addEventListener(&apos;touchstart&apos;, function (e) {
-    startY = e.touches[0].clientY;
-});
-
-content.addEventListener(&apos;touchmove&apos;, function (e) {
-    // 高位表示向上滚动
-    // 底位表示向下滚动
-    // 1容许 0禁止
-    var status = &apos;11&apos;;
-    var ele = this;
-
-    var currentY = e.touches[0].clientY;
-
-    if (ele.scrollTop === 0) {
-        // 如果内容小于容器则同时禁止上下滚动
-        status = ele.offsetHeight &gt;= ele.scrollHeight ? &apos;00&apos; : &apos;01&apos;;
-    } else if (ele.scrollTop + ele.offsetHeight &gt;= ele.scrollHeight) {
-        // 已经滚到底部了只能向上滚动
-        status = &apos;10&apos;;
-    }
-
-    if (status != &apos;11&apos;) {
-        // 判断当前的滚动方向
-        var direction = currentY - startY &gt; 0 ? &apos;10&apos; : &apos;01&apos;;
-        // 操作方向和当前允许状态求与运算，运算结果为0，就说明不允许该方向滚动，则禁止默认事件，阻止滚动
-        if (!(parseInt(status, 2) &amp; parseInt(direction, 2))) {
-            stopEvent(e);
-        }
-    }
-});
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-移动端/">web 移动端</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="photo-微信工作号调试方案" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/03/微信工作号调试方案/" class="article-date">
-  	<time datetime="2016-03-02T18:44:43.000Z" itemprop="datePublished">2016-03-03</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/03/微信工作号调试方案/">微信工作号调试方案</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一步：Ngrok-内网穿透利器"><a href="#第一步：Ngrok-内网穿透利器" class="headerlink" title="第一步：Ngrok 内网穿透利器"></a>第一步：<a href="http://www.ngrok.cc/" target="_blank" rel="external">Ngrok</a> 内网穿透利器</h2><p>在开发一个项目的时候,经常会遇到我们的项目,需要外网方法测试的情况.比如我们在开发一个callback接口,这时候需要客户那边调我们这个接口,我们才能测试.但是我们是在内网开发,如果要让任何人都能访问我们,我们必须把这个项目放上线,并且配置好域名指向,才可以.</p>
-<p>还有一种情况,就是我们要做一个OAuth的登陆,比如我们的这个项目,支持使用微博登陆或者其它第三方账号登录的情况.OAuth认证成功后,会把相关信息给到我们,给我们的时候,我们需要一个回调地址,但是我们在开发啊,这个时候怎么办.</p>
-<p>还有就是我们正在开发的项目,想让外网访问,以跟用户确认我们目前开发的项目,是符合他们需求的.以避免以后无止境的修改.这个时候,又要怎么办.</p>
-<p>可能有的人会去花生壳或者其它动态域名工具,这确实是一种解决方案,不过我想说的是,这种方法弱爆了.真正好用的工具是Ngrok! 不爽的是,你肯定猜的到,反正好东西,都被墙的差不多了,这个也不例外,好在国内有好心人,提供了国内的服务,而且免费,不用白不用.官方网址: <a href="http://www.ngrok.cc/" target="_blank" rel="external">http://www.ngrok.cc/</a><br>需要先在平台注册 </p>
-<p>下载完ngrok之后,就可以简单的使用了,它有各操作系统版本,我这里是Max os 的.所以简单介绍一下这个东西怎么用</p>
-<pre><code>./ngrok -config ngrok.cfg -subdomain wcy 9528
-</code></pre><p>上面的 <strong>subd0main</strong>中 的 <strong>wcy</strong> 需要在 <a href="http://www.ngrok.cc/" target="_blank" rel="external">http://www.ngrok.cc/</a> 管理后台配置。</p>
-<p><img src="/photo/ngrok/1724657D-FC57-4BAE-84C0-F21F1FE1C0F9.png" alt="ngrok" title=" "></p>
-<p><a href="http://wcy.ngrok.cc来访问你本地的应用了,访问这个地址,就相当于是访问了" target="_blank" rel="external">http://wcy.ngrok.cc来访问你本地的应用了,访问这个地址,就相当于是访问了</a> <a href="http://localhost:9528/,因为我们上面指定了映射到本地的9528端口的" target="_blank" rel="external">http://localhost:9528/,因为我们上面指定了映射到本地的9528端口的</a>.</p>
-<p>这个在我们开发微信公众号或者微博接口的时候,需要回调的时候特别有用.</p>
-<p>我们看到,它还监听了本地的4040端口,来看一下是什么.<br><img src="/photo/ngrok/Ngrok4040.jpg" alt=""></p>
-<h2 id="第二步：下载-微信web开发者工具"><a href="#第二步：下载-微信web开发者工具" class="headerlink" title="第二步：下载 微信web开发者工具"></a>第二步：下载 <a href="http://mp.weixin.qq.com/wiki/10/e5f772f4521da17fa0d7304f68b97d7e.html#.E4.B8.8B.E8.BD.BD.E5.9C.B0.E5.9D.80" target="_blank" rel="external">微信web开发者工具</a></h2><p><img src="/photo/ngrok/238DD01B-BBE8-4FEE-B1C0-8F33E62E9B57.png" alt="微信web开发者工具" title=" "></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信公众号/">微信公众号</a></li></ul>
 	</div>
 
       
