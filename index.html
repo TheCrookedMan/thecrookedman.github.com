@@ -198,6 +198,68 @@
 
       <div class="body-wrap">
   
+    <article id="photo-git flow实践" class="article article-type-photo" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/28/git flow实践/" class="article-date">
+  	<time datetime="2016-10-27T16:00:00.000Z" itemprop="datePublished">2016-10-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/28/git flow实践/">Git Flow 实践</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-Flow-实践"><a href="#Git-Flow-实践" class="headerlink" title="Git Flow 实践"></a>Git Flow 实践</h1><h3 id="创建开发分支-develop"><a href="#创建开发分支-develop" class="headerlink" title="创建开发分支(develop)"></a>创建开发分支(develop)</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch develop</span><br><span class="line">$ git push -u runningcat develop</span><br></pre></td></tr></table></figure>
+<h3 id="开始新的功能开发"><a href="#开始新的功能开发" class="headerlink" title="开始新的功能开发"></a>开始新的功能开发</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//基于develop分支在新增一个新功能开发的分支</span><br><span class="line">$ git checkout -b runningcat-feature-v1.0 develop</span><br><span class="line">$ git push -u runningcat runningcat-feature-v1.0</span><br></pre></td></tr></table></figure>
+<h3 id="功能开发完成，合并分支"><a href="#功能开发完成，合并分支" class="headerlink" title="功能开发完成，合并分支"></a>功能开发完成，合并分支</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 保证开发分支是最新的</span><br><span class="line">$ git pull runningcat develop</span><br><span class="line">// 切换至开发分支</span><br><span class="line">$ git checkout develop</span><br><span class="line">// 合并分支 （将新功能迭代开发的分支合并）</span><br><span class="line">$ git merge --no-ff runningcat-feature-v1.0</span><br><span class="line">// 将分支同步至线上</span><br><span class="line">$ git push runningcat develop</span><br><span class="line">// 删除新功能开发分支</span><br><span class="line">$ git branch <span class="_">-d</span> runningcat-feature-v1.0</span><br><span class="line">// 如果开发分支同步至线上，那么就需要删除线上的分支</span><br><span class="line">$ git push runningcat --delete runningcat-feature-v1.0</span><br></pre></td></tr></table></figure>
+<h3 id="开始-Release"><a href="#开始-Release" class="headerlink" title="开始 Release"></a>开始 Release</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 新增发布分支</span><br><span class="line">$ git checkout -b runningcat/release-0.1.0 develop</span><br><span class="line">// 发布中出现的问题，BUG的修复全部提交至 runningcat/release-0.1.0 分支，事后发布完成把 runningcat/release-0.1.0 分支合并至 develop 分支</span><br></pre></td></tr></table></figure>
+<h3 id="完成-Release"><a href="#完成-Release" class="headerlink" title="完成 Release"></a>完成 Release</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 切换到master分支</span><br><span class="line">$ git checkout master</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/release-0.1.0</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line">// 切换到 develop 分支</span><br><span class="line">$ git checkout develop</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/release-0.1.0</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line">// 删除本地 runningcat/release-0.1.0 分支</span><br><span class="line">$ git branch <span class="_">-d</span> runningcat/release-0.1.0</span><br><span class="line">// 删除线上 runningcat/release-0.1.0 分支（如果线上有的话）</span><br><span class="line">$ git push runningcat --delete runningcat/release-0.1.0</span><br><span class="line">// 标签</span><br><span class="line">$ git tag <span class="_">-a</span> v0.1.0 master</span><br><span class="line">// 同步标签</span><br><span class="line">$ git push --tags</span><br></pre></td></tr></table></figure>
+<h3 id="开始Hotfix"><a href="#开始Hotfix" class="headerlink" title="开始Hotfix"></a>开始Hotfix</h3><p>当我们在Production发现新的Bug时候，我们需要创建一个Hotfix, 完成Hotfix后，我们合并回Master和Develop分支，所以Hotfix的改动会进入下一个Release<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 创建hotfix分支</span><br><span class="line">$ git checkout -b runningcat/hotfix-0.1.1 master</span><br></pre></td></tr></table></figure></p>
+<h3 id="完成Hotfix"><a href="#完成Hotfix" class="headerlink" title="完成Hotfix"></a>完成Hotfix</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 切换到master（production）分支</span><br><span class="line">$ git checkout master</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/hotfix-0.1.1</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line"></span><br><span class="line">// 切换到develop分支</span><br><span class="line">$ git checkout develop</span><br><span class="line">// 合并分支</span><br><span class="line">$ git merge --no-ff runningcat/hotfix-0.1.1</span><br><span class="line">// 同步分支</span><br><span class="line">$ git push</span><br><span class="line">// 删除本地 hotfix（runningcat/hotfix-0.1.1）分支</span><br><span class="line">git branch <span class="_">-d</span> hotfix-0.1.1</span><br><span class="line"></span><br><span class="line">// 打标签</span><br><span class="line">git tag <span class="_">-a</span> v0.1.1 master</span><br><span class="line">// 同步标签</span><br><span class="line">git push --tags</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="photo-编码规范/前端编码规范（三）" class="article article-type-photo" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1740,89 +1802,6 @@ if(includeLabels) {
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="photo-SVNCommand-add" class="article article-type-photo" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/20/SVNCommand-add/" class="article-date">
-  	<time datetime="2016-04-19T16:00:00.000Z" itemprop="datePublished">2016-04-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/20/SVNCommand-add/">SVN子命令add用法浅析</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="名称"><a href="#名称" class="headerlink" title="名称"></a>名称</h3><h5 id="svn-add-—-添加文件、目录或符号链。"><a href="#svn-add-—-添加文件、目录或符号链。" class="headerlink" title="svn add — 添加文件、目录或符号链。"></a>svn add — 添加文件、目录或符号链。</h5><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>SVN子命令add PATH…描述<br>文件、目录或符号链到你的工作拷贝并且预定添加到版本库。它们会在下次提交上传并添加到版本库，如果你在提交之前改变了主意，你可以使用svn revert取消预定。</p>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><p>–targets FILENAME</p>
-<p>–non-recursive (-N)</p>
-<p>–quiet (-q)</p>
-<p>–config-dir DIR</p>
-<p>–no-ignore</p>
-<p>–auto-props</p>
-<p>–no-auto-props</p>
-<p>–force</p>
-<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><p>我们通过一个例子来看一下SVN子命令add，添加一个文件到工作拷贝：</p>
-<p>$ svn add foo.c</p>
-<p>A         foo.c</p>
-<p>当添加一个目录，svn add缺省的行为方式是递归的：</p>
-<p>$ svn add testdir</p>
-<p>A         testdir</p>
-<p>A         testdir/a</p>
-<p>A         testdir/b</p>
-<p>A         testdir/c</p>
-<p>A         testdir/d</p>
-<p>你可以只添加一个目录而不包括其内容：</p>
-<p>$ svn add –non-recursive otherdir</p>
-<p>A         otherdir</p>
-<p>通常情况下，命令svn add *会忽略所有已经在版本控制之下的目录，有时候，你会希望添加所有工作拷贝的未版本化文件，包括那些隐藏在深处的文件，可以使用svn add的–force递归到版本化的目录下：</p>
-<p>$ svn add * –force</p>
-<p>A         foo.c</p>
-<p>A         somedir/bar.c</p>
-<p>A         otherdir/docs/baz.doc。SVN子命令add的用法介绍讲解完毕。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVN/">SVN</a></li></ul>
 	</div>
 
       
